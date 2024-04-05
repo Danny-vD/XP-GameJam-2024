@@ -380,8 +380,8 @@ MonoBehaviour:
   switchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: 
-  sourceBankPath: 
+  sourceProjectPath: ../FMOD/XP2024/XP2024.fspro
+  sourceBankPath: ../FMOD/XP2024/Build
   sourceBankPathUnformatted: 
   BankRefreshCooldown: 5
   ShowBankRefreshWindow: 1
@@ -402,7 +402,8 @@ MonoBehaviour:
   VirtualChannelSettings: []
   RealChannelSettings: []
   Plugins: []
-  MasterBanks: []
+  MasterBanks:
+  - Master
   Banks: []
   BanksToLoad: []
   LiveUpdatePort: 9264
@@ -420,17 +421,17 @@ MonoBehaviour:
   LastEventReferenceScanVersion: 131617
   Platforms:
   - {fileID: -8458621218148639164}
-  - {fileID: -7670866960259732024}
-  - {fileID: -7617884567243418606}
-  - {fileID: -5507490480908563080}
-  - {fileID: -1714874442401538084}
-  - {fileID: 562394030219448572}
-  - {fileID: 1184931391130602156}
-  - {fileID: 1186704370624167631}
   - {fileID: 1203903718693344485}
-  - {fileID: 1955815587092459827}
-  - {fileID: 6295761446277001590}
+  - {fileID: 1184931391130602156}
+  - {fileID: -1714874442401538084}
+  - {fileID: -7670866960259732024}
+  - {fileID: -5507490480908563080}
+  - {fileID: -7617884567243418606}
   - {fileID: 8222146470878390978}
+  - {fileID: 1186704370624167631}
+  - {fileID: 562394030219448572}
+  - {fileID: 6295761446277001590}
+  - {fileID: 1955815587092459827}
   MigratedPlatforms: 080000001200000006000000050000000b000000000000000a000000090000000c000000150000000200000001000000
 --- !u!114 &562394030219448572
 MonoBehaviour:
@@ -721,16 +722,16 @@ MonoBehaviour:
     HasValue: 0
   displaySortOrder: 0
   childIdentifiers:
-  - 52eb9df5db46521439908db3a29a1bbb
-  - de700ef3f37a49b58a57ae3addf01ad9
-  - b7716510a1f36934c87976f3a81dbf3d
-  - 2fea114e74ecf3c4f920e1d5cc1c4c40
-  - c88d16e5272a4e241b0ef0ac2e53b73d
   - 46fbfdf3fc43db0458918377fd40293e
-  - fd7c55dab0fce234b8c25f6ffca523c1
-  - 2c5177b11d81d824dbb064f9ac8527da
-  - e7a046c753c3c3d4aacc91f6597f310d
+  - 2fea114e74ecf3c4f920e1d5cc1c4c40
+  - 52eb9df5db46521439908db3a29a1bbb
+  - b7716510a1f36934c87976f3a81dbf3d
+  - de700ef3f37a49b58a57ae3addf01ad9
   - 0f8eb3f400726694eb47beb1a9f94ce8
+  - fd7c55dab0fce234b8c25f6ffca523c1
+  - c88d16e5272a4e241b0ef0ac2e53b73d
+  - e7a046c753c3c3d4aacc91f6597f310d
+  - 2c5177b11d81d824dbb064f9ac8527da
   codecChannels:
     Value: []
     HasValue: 0

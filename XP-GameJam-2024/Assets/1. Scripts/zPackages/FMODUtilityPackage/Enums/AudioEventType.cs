@@ -8,5 +8,9 @@ namespace FMODUtilityPackage.Enums
 	/// </summary>
 	public enum AudioEventType // Automatically generated from FMOD events, do not edit! (Open the AudioManager inspector or use the "FMOD/Import Events" menu to regenerate)
 	{
+		/// <FMODEventPath>
+		/// event:/TestEvent
+		/// </FMODEventPath>
+		TestEvent,
 	}
 }
