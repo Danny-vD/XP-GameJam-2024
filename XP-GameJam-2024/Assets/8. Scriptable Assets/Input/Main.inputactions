@@ -2,7 +2,7 @@
     "name": "Main",
     "maps": [
         {
-            "name": "Main",
+            "name": "Overworld",
             "id": "ec358ce1-b79b-4272-9bff-dbf6e80f2f8e",
             "actions": [
                 {
@@ -70,6 +70,117 @@
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "2D Vector",
+                    "id": "94afc98b-a33e-47df-840c-4a268ca98eb2",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "ac869085-b2d3-42f4-b543-d257e0fffaf8",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "f0c80e15-5731-4246-9eaa-e0dfb1fc1abb",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "4d560ad8-5665-4e44-8369-61ea2e2a90e7",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "8f838147-575b-4e1d-8f14-1e1c2ecfb970",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                }
+            ]
+        },
+        {
+            "name": "Menu",
+            "id": "6a6c623a-9a50-4a22-8665-2ca3c752db93",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "20567810-a005-4dce-b3c7-b0876eeee99c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "73bbf6de-4d77-481c-a8c9-92d61bbeabb9",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Special",
+            "id": "80e75f11-ac34-47f2-90bf-62ec6dd73542",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "8bdeafa5-3098-4956-a8cf-b42921c33c78",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "0bf98466-d2d2-420a-90c9-668d0aeff605",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }
