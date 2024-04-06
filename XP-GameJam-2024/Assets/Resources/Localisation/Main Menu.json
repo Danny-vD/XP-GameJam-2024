@@ -1,0 +1,72 @@
+{
+  "Variables": [
+	{
+	  "EntryID": "MAIN_MENU_START_GAME",
+	  "Languages": [
+		{
+		  "LanguageID": "NL",
+		  "Value": "Start"
+		},
+		{
+		  "LanguageID": "EN",
+		  "Value": "Start"
+		},
+		{
+		  "LanguageID": "DE",
+		  "Value": "Spielen"
+		}
+	  ]
+	},
+	{
+	  "EntryID": "MAIN_MENU_OPTIONS",
+	  "Languages": [
+		{
+		  "LanguageID": "NL",
+		  "Value": "Instellingen"
+		},
+		{
+		  "LanguageID": "EN",
+		  "Value": "Options"
+		},
+		{
+		  "LanguageID": "DE",
+		  "Value": "Einstellungen"
+		}
+	  ]
+	},
+	{
+	  "EntryID": "MAIN_MENU_CREDITS",
+	  "Languages": [
+		{
+		  "LanguageID": "NL",
+		  "Value": "Credits"
+		},
+		{
+		  "LanguageID": "EN",
+		  "Value": "Credits"
+		},
+		{
+		  "LanguageID": "DE",
+		  "Value": "[DE] Credits"
+		}
+	  ]
+	},
+	{
+	  "EntryID": "MAIN_MENU_QUIT_GAME",
+	  "Languages": [
+		{
+		  "LanguageID": "NL",
+		  "Value": "Sluiten"
+		},
+		{
+		  "LanguageID": "EN",
+		  "Value": "Quit"
+		},
+		{
+		  "LanguageID": "DE",
+		  "Value": "Schließen"
+		}
+	  ]
+	}
+  ]
+}

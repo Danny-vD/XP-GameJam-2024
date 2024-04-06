@@ -182,7 +182,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6028723132939099101}
   m_Layer: 0
-  m_Name: AnchorPoint-Character
+  m_Name: AnchorPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -217,6 +217,7 @@ GameObject:
   - component: {fileID: 4039587676026310865}
   - component: {fileID: 1481287376363874045}
   - component: {fileID: 378392987965244555}
+  - component: {fileID: 814437683407602037}
   m_Layer: 0
   m_Name: Peasant
   m_TagString: Untagged
@@ -278,7 +279,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4802565420961918426}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -337,6 +338,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &814437683407602037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4802565420961918426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e3b308fbab84113a9a745871726975d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentNode: {fileID: 0}
+  interact: {fileID: 4551063502819420570, guid: 4bebb9c2fac873845b09705e10d39ed3, type: 3}
+  movement: {fileID: -5256565308647169393, guid: 4bebb9c2fac873845b09705e10d39ed3, type: 3}
 --- !u!1 &4806259208403598361
 GameObject:
   m_ObjectHideFlags: 0
