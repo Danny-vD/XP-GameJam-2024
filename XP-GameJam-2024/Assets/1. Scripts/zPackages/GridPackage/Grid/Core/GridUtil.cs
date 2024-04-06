@@ -32,7 +32,10 @@ namespace GridPackage.Grid.Core
 		private void Awake()
 		{
 			// Use our own transform if the field was not assigned
-			gridParent ??= CachedTransform;
+			if (gridParent == null)
+			{
+				gridParent = CachedTransform;
+			}
 
 			GridData = GetComponent<GridData>();
 

@@ -11,6 +11,7 @@ namespace Menu
 #if UNITY_EDITOR
 			UnityEditor.EditorApplication.ExitPlaymode();
 			return;
+#pragma warning disable CS0162 // Unreachable code detected
 #endif
 			
 			Application.Quit();

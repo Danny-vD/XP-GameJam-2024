@@ -8,6 +8,6 @@ namespace Input.Enum
         Menus,
         Combat,
         Special,
-        Dialogue
+        Dialogue,
     }
 }

@@ -34,8 +34,10 @@ namespace Input
                 // { ControlTypes.Dialogue, playerControls.Dialogue.Get() }
             };
             
-            actionMapsByType.First().Value.Enable();
-            currentType = actionMapsByType.First().Key;
+            //actionMapsByType.First().Value.Enable();
+            //currentType = actionMapsByType.First().Key;
+            
+            ChangeControls(ControlTypes.Overworld);
 
             base.Awake();
         }
@@ -75,6 +77,5 @@ namespace Input
         {
             OnMenuClosed?.Invoke();
         }
-        
     }
 }
