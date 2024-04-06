@@ -8,6 +8,7 @@ using MapMovement.Waypoints;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 using VDFramework;
 
 namespace MapMovement.NPCs
@@ -20,29 +21,35 @@ namespace MapMovement.NPCs
 
 		private bool listeningMode;
 
-		[SerializeField] 
+		[SerializeField]
 		private Intersection previousNode;
+
 		[SerializeField]
 		private Intersection currentNode;
 
-		[SerializeField] private InputActionReference interact;
-		[SerializeField] private InputActionReference movement;
-		[SerializeField] private GameObject question;
-		
-		
+		[SerializeField]
+		private InputActionReference interact;
+
+		[SerializeField]
+		private InputActionReference movement;
+
+		[FormerlySerializedAs("question")]
+		[SerializeField]
+		private GameObject exclamationMark;
+
+
 		private Queue<AbstractMoveCommand> commandsQueue;
 
 		private Dictionary<Vector2, Func<AbstractMoveCommand>> commandByVector;
 
-		
-		
+
 		private NavMeshAgent agent;
 		private bool isListening;
 
 		private void Awake()
 		{
 			commandsQueue = new Queue<AbstractMoveCommand>();
-			
+
 			commandByVector = new Dictionary<Vector2, Func<AbstractMoveCommand>>
 			{
 				{ Vector2.down, MoveBackwardsCommand.NewInstance },
@@ -53,17 +60,21 @@ namespace MapMovement.NPCs
 
 			interact.action.performed += OnInteract;
 			movement.action.performed += MovementOnPerformed;
-			
+
 			agent = GetComponent<NavMeshAgent>();
 		}
-		
+
 		private void OnTriggerEnter(Collider other)
 		{
 			if (other.gameObject.layer.Equals(6))
 			{
 				Debug.Log("ENTERED SPHERE OF INFLUENCE");
 				isListening = true;
-				question.SetActive(true);
+
+				if (exclamationMark)
+				{
+					exclamationMark.SetActive(true);
+				}
 			}
 			else
 			{
@@ -76,23 +87,25 @@ namespace MapMovement.NPCs
 		{
 			if (other.gameObject.layer.Equals(6))
 			{
-				question.SetActive(false);
 				isListening = false;
+				
+				if (exclamationMark)
+				{
+					exclamationMark.SetActive(false);
+				}
 			}
-
 		}
 
 		private void MovementOnPerformed(InputAction.CallbackContext obj)
 		{
 			if (!isListening) return;
-			
+
 			Vector2 vector = obj.ReadValue<Vector2>();
 
 			if (!commandByVector.TryGetValue(vector, out Func<AbstractMoveCommand> command)) return;
-			
+
 			Debug.Log(vector);
 			commandsQueue.Enqueue(command.Invoke());
-
 		}
 
 		private void OnInteract(InputAction.CallbackContext obj)
@@ -104,21 +117,22 @@ namespace MapMovement.NPCs
 		{
 			if (currentNode.Connections.Count <= 2)
 			{
-				var nextNode = MoveForwardCommand.NewInstance().CalculateNextNode(currentNode, previousNode, transform.position);
+				var nextNode = MoveForwardCommand.NewInstance().CalculateNextNode(currentNode, previousNode, transform);
 				previousNode = currentNode;
-				currentNode = nextNode;
+				currentNode  = nextNode;
 				agent.SetDestination(currentNode.transform.position);
 			}
 			else
 			{
 				if (commandsQueue.Count <= 0) return;
-				var nextNode = commandsQueue.Dequeue()?.CalculateNextNode(currentNode, previousNode, transform.position);
+
+				var nextNode = commandsQueue.Dequeue()?.CalculateNextNode(currentNode, previousNode, transform);
 
 				if (nextNode is null) return;
+
 				agent.SetDestination(nextNode.transform.position);
 				previousNode = currentNode;
-				currentNode = nextNode;
-
+				currentNode  = nextNode;
 			}
 		}
 	}

@@ -6226,6 +6226,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Peasant
       objectReference: {fileID: 0}
+    - target: {fileID: 5299935634013941558, guid: 6de808cc9a903db4d976763b0773c906, type: 3}
+      propertyPath: m_Speed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5299935634013941558, guid: 6de808cc9a903db4d976763b0773c906, type: 3}
+      propertyPath: m_AngularSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5299935634013941558, guid: 6de808cc9a903db4d976763b0773c906, type: 3}
+      propertyPath: m_StoppingDistance
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6471,6 +6483,6 @@ SceneRoots:
   - {fileID: 543450651783681014}
   - {fileID: 2098681850457998497}
   - {fileID: 287763376}
-  - {fileID: 1509923292}
   - {fileID: 1670800985}
   - {fileID: 1134219261}
+  - {fileID: 1509923292}
