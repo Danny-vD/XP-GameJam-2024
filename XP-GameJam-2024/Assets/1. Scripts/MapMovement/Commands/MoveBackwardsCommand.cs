@@ -9,7 +9,7 @@ namespace MapMovement.Commands
     public class MoveBackwardsCommand : AbstractMoveCommand
     {
         public override Intersection CalculateNextNode(Intersection currentNode, Intersection previousNode,
-            Vector3 transformPosition)
+            Transform                                               transform)
         {
             StartingNode = currentNode;
             return previousNode;

@@ -9,10 +9,6 @@ namespace MapMovement.Commands.Interface
     {
         protected Intersection StartingNode;
 
-        public virtual Intersection CalculateNextNode(Intersection currentNode, Intersection previousNode,
-            Vector3 transformPosition)
-        {
-            return IntersectionManager.Instance.IntersectionList.First();
-        }
+        public abstract Intersection CalculateNextNode(Intersection currentNode, Intersection previousNode, Transform transform);
     }
 }

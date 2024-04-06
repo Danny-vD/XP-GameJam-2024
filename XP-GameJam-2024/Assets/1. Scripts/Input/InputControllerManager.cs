@@ -57,6 +57,7 @@ namespace Input
 			{
 				return;
 			}
+			
 			SetControls(controlType);
 		}
 
