@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using Input;
+using MapMovement;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.InputSystem;
@@ -7,8 +9,12 @@ using VDFramework;
 
 namespace PlayerMovement
 {
-	public class PlayerMovement : BetterMonoBehaviour
+	public class PlayerMovement : BetterMonoBehaviour, IActorMover
 	{
+		public event Action OnMovementStart;
+		public event Action OnMovementCancelled;
+		public event Action OnEnterIdle;
+		
 		[SerializeField]
 		[Tooltip("The speed of the player in m/s")]
 		private float speed = 10;

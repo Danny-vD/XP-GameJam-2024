@@ -10,11 +10,11 @@ namespace MapMovement.Waypoints
     [ExecuteInEditMode]    
     public class Intersection : BetterMonoBehaviour
     {
-        [SerializeField] private List<Intersection> connections;
+        [SerializeField] public List<Intersection> Connections;
 
         private void Update()
         {
-            foreach (var intersection in connections)
+            foreach (var intersection in Connections)
             {   
                 Debug.DrawLine(transform.position, intersection.transform.position, Color.red);
             }
