@@ -16,11 +16,12 @@
 			<value>2</value>
 		</property>
 		<property name="maximum">
-			<value>2</value>
+			<value>3</value>
 		</property>
 		<property name="enumerationLabels">
 			<value>Phase 0</value>
 			<value>Phase 1</value>
+			<value>Dead</value>
 		</property>
 		<property name="isGlobal">
 			<value>true</value>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
-	<object class="AudioFile" id="{71575b18-aa44-40f0-a091-5e843a7c7b71}">
+	<object class="AudioFile" id="{0cc316a4-d02f-4026-afa8-7f1b855ff1f1}">
 		<property name="assetPath">
-			<value>TalkSound-001.ogg</value>
+			<value>Sound Effects/Death_GameOver.ogg</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>44.0999985</value>
@@ -11,7 +11,7 @@
 			<value>2</value>
 		</property>
 		<property name="length">
-			<value>1.3999999999999999</value>
+			<value>6.5056009070294785</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{3235ff52-a11c-4f67-8af6-0069b742d23d}</destination>
