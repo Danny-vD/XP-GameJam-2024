@@ -22,7 +22,20 @@ namespace Input
         protected override void Awake()
         {
             mainInput = new MainInput();
-
+            
+            /*
+             * Get a reference to the InputActionAsset
+             *
+             * Use myAsset.actionsMaps to get all the action maps
+             *
+             * Then using a for-loop assign each ActionMap to an Enum Value (the enum value won't exist yet, so cast the index to the ControlType enum)
+             * store the name of the actionMap to use as the enum value afterwards (use an array)
+             *
+             * write your array of names to the enum using the enum writer
+             *
+             * Optionally use a dictionary of <TEnum,InputActionAssets> to map your assets to a specific enum as well 
+             */
+            
             actionMapsByType = new Dictionary<ControlTypes, InputActionMap>
             {
                 //TODO: Automate this
