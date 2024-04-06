@@ -18,8 +18,8 @@ namespace Animations
 
 		private void OnEnable()
 		{
-			InputControllerManager.Instance.mainInput.Overworld.Movement.performed -= StartMoving;
-			InputControllerManager.Instance.mainInput.Overworld.Movement.canceled  -= StopMoving;
+			InputControllerManager.Instance.mainInput.Overworld.Movement.performed += StartMoving;
+			InputControllerManager.Instance.mainInput.Overworld.Movement.canceled  += StopMoving;
 		}
 
 		private void OnDisable()
@@ -35,7 +35,7 @@ namespace Animations
 		
 		private void StopMoving(InputAction.CallbackContext obj)
 		{
-			animator.SetBool(walking, false);
+            animator.SetBool(walking, false);
 		}
 	}
 }
