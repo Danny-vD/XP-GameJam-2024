@@ -1,5 +1,7 @@
 using System;
 using System.Collections;
+using Input;
+using Input.Enum;
 using MapMovement;
 using UnityEngine;
 using UnityEngine.InputSystem;

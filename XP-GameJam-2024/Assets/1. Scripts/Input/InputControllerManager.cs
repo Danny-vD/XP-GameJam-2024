@@ -14,6 +14,9 @@ namespace Input
 		[SerializeField]
 		private InputActionAsset inputActionAsset;
 
+		[SerializeField] private InputActionReference specialInteraction;
+		[SerializeField] private InputActionReference overworldInteraction;
+
 		private readonly Dictionary<ControlType, InputActionMap> actionMapsByType = new Dictionary<ControlType, InputActionMap>();
 		
 		public ControlType CurrentControlType { get; private set; }
@@ -23,9 +26,29 @@ namespace Input
 			base.Awake();
 
 			SetActionsMapsPerControlType();
-
+			
+			specialInteraction.action.performed += OnSpecialInteraction;
+			overworldInteraction.action.performed += OnOverworldInteraction;
+			
 			CurrentControlType = default;
 			SetControls(default);
+		}
+
+		protected override void OnDestroy()
+		{
+			specialInteraction.action.performed -= OnSpecialInteraction;
+			overworldInteraction.action.performed -= OnOverworldInteraction;
+			base.OnDestroy();
+		}
+
+		private void OnOverworldInteraction(InputAction.CallbackContext obj)
+		{
+			ChangeControls(ControlType.Special);
+		}
+
+		private void OnSpecialInteraction(InputAction.CallbackContext obj)
+		{
+			ChangeControls(ControlType.Overworld);
 		}
 
 		public void ChangeControls(ControlType controlType)
@@ -34,7 +57,6 @@ namespace Input
 			{
 				return;
 			}
-			
 			SetControls(controlType);
 		}
 
@@ -45,9 +67,11 @@ namespace Input
 
 		private void SetControls(ControlType controlType)
 		{
+			Debug.Log(CurrentControlType.ToString() + ' ' + controlType.ToString());
 			actionMapsByType[CurrentControlType].Disable();
 			actionMapsByType[controlType].Enable();
 			CurrentControlType = controlType;
+			
 		}
 
 		private void SetActionsMapsPerControlType()

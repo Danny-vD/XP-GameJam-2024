@@ -23,7 +23,7 @@ namespace MapMovement.Commands
             foreach (var currentNodeConnection in currentNode.Connections)
             {
                 var tempAngle = Vector3.SignedAngle(currentNode.transform.forward, currentNodeConnection.transform.up, Vector3.up);
-                if (tempAngle <= 30 && tempAngle <= a)
+                if (tempAngle >= 30 && tempAngle >= a)
                 {
                     b = currentNode.Connections.IndexOf(currentNodeConnection);
                 };
