@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
-	<object class="AudioFile" id="{9cbf1262-efd1-4ed1-9fd9-8598c2a8866c}">
+	<object class="AudioFile" id="{3bb2b5ef-4bc9-46b2-99c0-0312475feaf9}">
 		<property name="assetPath">
-			<value>Music/Dark Overworld v1.2.ogg</value>
+			<value>Music/Gameplay_Quirky.ogg</value>
 		</property>
 		<property name="isStreaming">
 			<value>true</value>
@@ -14,7 +14,7 @@
 			<value>2</value>
 		</property>
 		<property name="length">
-			<value>75.5</value>
+			<value>51.840000000000003</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{3235ff52-a11c-4f67-8af6-0069b742d23d}</destination>
