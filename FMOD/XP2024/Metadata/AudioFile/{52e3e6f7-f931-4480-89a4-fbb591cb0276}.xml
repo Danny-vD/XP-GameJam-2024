@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{52e3e6f7-f931-4480-89a4-fbb591cb0276}">
+		<property name="assetPath">
+			<value>Sound Effects/Animals/Pig00.ogg</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.62671201814058952</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{3235ff52-a11c-4f67-8af6-0069b742d23d}</destination>
+		</relationship>
+	</object>
+</objects>
