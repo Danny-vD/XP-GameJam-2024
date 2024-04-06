@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using MapMovement;
 using UnityEngine;
-using UnityEngine.AI;
 using UnityEngine.InputSystem;
 using VDFramework;
 
