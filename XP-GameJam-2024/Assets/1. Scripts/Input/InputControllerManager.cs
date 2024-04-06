@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using Input.Enum;
-using SerializableDictionaryPackage.SerializableDictionary;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Utils;
@@ -14,34 +13,58 @@ namespace Input
 	{
 		[SerializeField]
 		private InputActionAsset inputActionAsset;
+
+		private readonly Dictionary<ControlType, InputActionMap> actionMapsByType = new Dictionary<ControlType, InputActionMap>();
 		
 		public ControlType CurrentControlType { get; private set; }
-		
-		private SerializableDictionary<ControlType, InputActionMap> actionMapsByType;
 
 		protected override void Awake()
 		{
 			base.Awake();
 
+			SetActionsMapsPerControlType();
+
 			CurrentControlType = default;
-			ChangeControls(default);
+			SetControls(default);
 		}
 
-		public void ChangeControls(ControlType type)
+		public void ChangeControls(ControlType controlType)
 		{
-			if (type == CurrentControlType)
+			if (controlType == CurrentControlType)
 			{
 				return;
 			}
 			
-			actionMapsByType[CurrentControlType].Disable();
-			actionMapsByType[type].Enable();
-			CurrentControlType = type;
+			SetControls(controlType);
 		}
 
 		public InputActionMap GetActionMap(ControlType controlType)
 		{
 			return actionMapsByType[controlType];
+		}
+
+		private void SetControls(ControlType controlType)
+		{
+			actionMapsByType[CurrentControlType].Disable();
+			actionMapsByType[controlType].Enable();
+			CurrentControlType = controlType;
+		}
+
+		private void SetActionsMapsPerControlType()
+		{
+			IEnumerator<ControlType> controlTypes = default(ControlType).GetValues().GetEnumerator();
+			
+			foreach (InputActionMap inputActionMap in inputActionAsset.actionMaps)
+			{
+				if (!controlTypes.MoveNext())
+				{
+					break;
+				}
+
+				actionMapsByType[controlTypes.Current] = inputActionMap;
+			}
+			
+			controlTypes.Dispose();
 		}
 
 #if UNITY_EDITOR
