@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using Input;
+using MapMovement;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.InputSystem;
@@ -7,8 +9,12 @@ using VDFramework;
 
 namespace PlayerMovement
 {
-	public class PlayerMovement : BetterMonoBehaviour
+	public class PlayerMovement : BetterMonoBehaviour, IActorMover
 	{
+		public event Action OnMovementStart = delegate { };
+		public event Action OnMovementCancelled = delegate { };
+		public event Action OnEnterIdle = delegate { };
+
 		[SerializeField]
 		[Tooltip("The speed of the player in m/s")]
 		private float speed = 10;
@@ -48,11 +54,16 @@ namespace PlayerMovement
 			deltaMovement = new Vector3(vector.x, 0, vector.y);
 
 			moveCoroutine ??= StartCoroutine(MovePlayer());
+			
+			OnMovementStart.Invoke();
 		}
 
 		private void StopMoving(InputAction.CallbackContext obj)
 		{
 			isMoving = false;
+			
+			OnEnterIdle.Invoke();
+			OnMovementCancelled.Invoke();
 		}
 
 		private IEnumerator MovePlayer()

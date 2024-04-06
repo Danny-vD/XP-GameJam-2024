@@ -1,6 +1,6 @@
 namespace Input.Enum
 {
-    public enum ControlTypes
+    public enum ControlType
     {
         //TODO: EnumWriter?
         
