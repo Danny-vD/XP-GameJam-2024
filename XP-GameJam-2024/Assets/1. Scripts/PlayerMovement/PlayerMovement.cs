@@ -29,15 +29,15 @@ namespace PlayerMovement
 		{
 			agent = GetComponent<NavMeshAgent>();
 
-			InputControllerManager.Instance.mainInput.Overworld.Movement.performed += StartMoving;
-			InputControllerManager.Instance.mainInput.Overworld.Movement.canceled  += StopMoving;
+			//InputControllerManager.Instance.mainInput.Overworld.Movement.performed += StartMoving;
+			//InputControllerManager.Instance.mainInput.Overworld.Movement.canceled  += StopMoving;
 		}
 
 		private void OnDestroy()
 		{
 			if (!InputControllerManager.IsInitialized) return;
-			InputControllerManager.Instance.mainInput.Overworld.Movement.performed -= StartMoving;
-			InputControllerManager.Instance.mainInput.Overworld.Movement.canceled  -= StopMoving;
+			//InputControllerManager.Instance.mainInput.Overworld.Movement.performed -= StartMoving;
+			//InputControllerManager.Instance.mainInput.Overworld.Movement.canceled  -= StopMoving;
 
 			// InputControllerManager.Instance.mainInput.Overworld.Interact.performed += OnInteract;
 			// InputControllerManager.Instance.mainInput.Overworld.Select.performed += OnSelect;

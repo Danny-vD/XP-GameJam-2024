@@ -1,10 +1,11 @@
-using System;
 using System.Collections.Generic;
+using System.Linq;
 using Input.Enum;
 using SerializableDictionaryPackage.SerializableDictionary;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Utils;
+using VDFramework.Extensions;
 using VDFramework.Singleton;
 
 namespace Input
@@ -12,82 +13,53 @@ namespace Input
 	public class InputControllerManager : Singleton<InputControllerManager>
 	{
 		[SerializeField]
-		private SerializableDictionary<ControlType, InputActionMap> actionMapsByType;
-
-		private ControlType beforeMenu;
-		private ControlType currentType;
-
-		public MainInput mainInput;
-
-		[SerializeField]
 		private InputActionAsset inputActionAsset;
-
-		public event Action OnMenuOpened = delegate { };
-		public event Action OnMenuClosed = delegate { };
+		
+		public ControlType CurrentControlType { get; private set; }
+		
+		private SerializableDictionary<ControlType, InputActionMap> actionMapsByType;
 
 		protected override void Awake()
 		{
-			mainInput = new MainInput();
-
-			actionMapsByType = new Dictionary<ControlType, InputActionMap>
-			{
-				//TODO: Automate this
-				//{ ControlType.Menus, mainInput.Menu.Get() },
-				//{ ControlType.Overworld, mainInput.Overworld.Get() },
-				//{ ControlType.Special, mainInput.Special.Get() },
-
-				// { ControlTypes.Combat, playerControls.Combat.Get() },
-				// { ControlTypes.Dialogue, playerControls.Dialogue.Get() }
-			};
-
-			//actionMapsByType.First().Value.Enable();
-			//currentType = actionMapsByType.First().Key;
-
-			//ChangeControls(ControlType.Overworld);
-
 			base.Awake();
+
+			CurrentControlType = default;
+			ChangeControls(default);
 		}
 
 		public void ChangeControls(ControlType type)
 		{
-			//if (type == ControlType.Menus)
-			//{
-			//	beforeMenu = currentType;
-			//	OpenSettings();
-			//}
-			//else
-			//{
-			//	CloseSettings();
-			//}
-
-			actionMapsByType[currentType].Disable();
+			if (type == CurrentControlType)
+			{
+				return;
+			}
+			
+			actionMapsByType[CurrentControlType].Disable();
 			actionMapsByType[type].Enable();
-			currentType = type;
+			CurrentControlType = type;
 		}
 
-		public void ReturnToPreviousControls()
+		public InputActionMap GetActionMap(ControlType controlType)
 		{
-			actionMapsByType[currentType].Disable();
-			actionMapsByType[beforeMenu].Enable();
-
-			currentType = beforeMenu;
-			CloseSettings();
-		}
-
-		private void OpenSettings()
-		{
-			OnMenuOpened?.Invoke();
-		}
-
-		private void CloseSettings()
-		{
-			OnMenuClosed?.Invoke();
+			return actionMapsByType[controlType];
 		}
 
 #if UNITY_EDITOR
-		[ContextMenu("Test")]
+		private void OnValidate()
+		{
+			if (inputActionAsset != null)
+			{
+				CreateEnums();
+			}
+		}
+
 		private void CreateEnums()
 		{
+			if (default(ControlType).GetValues().Count() == inputActionAsset.actionMaps.Count)
+			{
+				return;
+			}
+			
 			int enumValue = 0;
 			List<string> enumNames = new List<string>();
 

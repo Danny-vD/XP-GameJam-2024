@@ -12,91 +12,95 @@ using VDFramework;
 
 namespace MapMovement.NPCs
 {
-    public class VillagerController : BetterMonoBehaviour, IActorMover
-    {
-        public event Action OnMovementStart;
-        public event Action OnMovementCancelled;
-        public event Action OnEnterIdle;
+	public class VillagerController : BetterMonoBehaviour, IActorMover
+	{
+		public event Action OnMovementStart;
+		public event Action OnMovementCancelled;
+		public event Action OnEnterIdle;
 
-        private bool listeningMode;
+		private bool listeningMode;
 
-        [SerializeField] private Intersection currentNode;
+		[SerializeField]
+		private Intersection currentNode;
 
-        private Queue<AbstractMoveCommand> commandsQueue;
+		private Queue<AbstractMoveCommand> commandsQueue;
 
-        private Dictionary<Vector2, Func<AbstractMoveCommand>> commandByVector;
-        
-        private NavMeshAgent agent;
+		private Dictionary<Vector2, Func<AbstractMoveCommand>> commandByVector;
 
-        private void OnTriggerEnter(Collider other)
-        {
-            if (!listeningMode) NextCommand();
-        }
+		private NavMeshAgent agent;
 
-        private void OnEnable()
-        {
-            commandByVector = new Dictionary<Vector2, Func<AbstractMoveCommand>>
-            {
-                { Vector2.down, MoveBackwardsCommand.NewInstance},
-                { Vector2.up, MoveForwardCommand.NewInstance },
-                { Vector2.left, MoveLeftCommand.NewInstance},
-                { Vector2.right, MoveRightCommand.NewInstance },
-            };
-            
-            agent = GetComponent<NavMeshAgent>();
-            InputControllerManager.Instance.mainInput.Overworld.Movement.performed += MovementOnPerformed;
-            InputControllerManager.Instance.mainInput.Overworld.Interact.performed += OnInteract;
-        }
-        private void OnDisable()
-        {
-            if (!InputControllerManager.IsInitialized) return;
-            InputControllerManager.Instance.mainInput.Overworld.Movement.performed -= MovementOnPerformed;
-            InputControllerManager.Instance.mainInput.Overworld.Interact.performed -= OnInteract;
-        }
+		private void Awake()
+		{
+			commandByVector = new Dictionary<Vector2, Func<AbstractMoveCommand>>
+			{
+				{ Vector2.down, MoveBackwardsCommand.NewInstance },
+				{ Vector2.up, MoveForwardCommand.NewInstance },
+				{ Vector2.left, MoveLeftCommand.NewInstance },
+				{ Vector2.right, MoveRightCommand.NewInstance },
+			};
 
-        private void MovementOnPerformed(InputAction.CallbackContext obj)
-        {
-            if (!listeningMode) return;
+			agent = GetComponent<NavMeshAgent>();
+		}
 
-            Vector2 vector = obj.ReadValue<Vector2>();
-            
-            if (commandByVector.TryGetValue(vector, out Func<AbstractMoveCommand> command))
-            {
-                commandsQueue.Enqueue(command.Invoke());
-            }
-        }
+		private void OnEnable()
+		{
+			//InputControllerManager.Instance.mainInput.Overworld.Movement.performed += MovementOnPerformed;
+			//InputControllerManager.Instance.mainInput.Overworld.Interact.performed += OnInteract;
+		}
 
-        private void OnInteract(InputAction.CallbackContext obj)
-        {
-            if (!listeningMode)
-            {
-                listeningMode = true;
-            }
-            else
-            {
-                listeningMode = false;
-                NextCommand();
-            }
-        }
+		private void OnDisable()
+		{
+			if (!InputControllerManager.IsInitialized) return;
 
-        private void NextCommand()
-        {
-            if (currentNode.Connections.Count <= 2)
-            {
-                agent.SetDestination(MoveForwardCommand.NewInstance().CalculateNextNode(currentNode).transform.position);
-            }
-            else
-            {
-                var nextNode = commandsQueue.Dequeue()?.CalculateNextNode(currentNode);
-                if (nextNode is not null)
-                {
-                    agent.SetDestination(nextNode.transform.position);
-                }
-            }
-            
-        }
+			//InputControllerManager.Instance.mainInput.Overworld.Movement.performed -= MovementOnPerformed;
+			//InputControllerManager.Instance.mainInput.Overworld.Interact.performed -= OnInteract;
+		}
+		
+		private void OnTriggerEnter(Collider other)
+		{
+			if (!listeningMode) NextCommand();
+		}
 
+		private void MovementOnPerformed(InputAction.CallbackContext obj)
+		{
+			if (!listeningMode) return;
 
-        
-    }
+			Vector2 vector = obj.ReadValue<Vector2>();
+
+			if (commandByVector.TryGetValue(vector, out Func<AbstractMoveCommand> command))
+			{
+				commandsQueue.Enqueue(command.Invoke());
+			}
+		}
+
+		private void OnInteract(InputAction.CallbackContext obj)
+		{
+			if (!listeningMode)
+			{
+				listeningMode = true;
+			}
+			else
+			{
+				listeningMode = false;
+				NextCommand();
+			}
+		}
+
+		private void NextCommand()
+		{
+			if (currentNode.Connections.Count <= 2)
+			{
+				agent.SetDestination(MoveForwardCommand.NewInstance().CalculateNextNode(currentNode).transform.position);
+			}
+			else
+			{
+				var nextNode = commandsQueue.Dequeue()?.CalculateNextNode(currentNode);
+
+				if (nextNode is not null)
+				{
+					agent.SetDestination(nextNode.transform.position);
+				}
+			}
+		}
+	}
 }
