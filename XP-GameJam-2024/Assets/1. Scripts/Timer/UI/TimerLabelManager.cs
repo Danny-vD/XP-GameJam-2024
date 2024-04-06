@@ -44,8 +44,6 @@ namespace Timer.UI
 			startTotalSeconds = ToTotalSeconds(StartTime.x, StartTime.y);
 			endTotalSeconds   = ToTotalSeconds(EndTime.x, EndTime.y);
 
-			UpdateText();
-
 			GameTimerExpiredEvent.AddListener(UpdateText);
 		}
 
