@@ -27,12 +27,17 @@ namespace MapMovement.NPCs
 
 		[SerializeField] private InputActionReference interact;
 		[SerializeField] private InputActionReference movement;
-
+		[SerializeField] private GameObject question;
+		
+		
 		private Queue<AbstractMoveCommand> commandsQueue;
 
 		private Dictionary<Vector2, Func<AbstractMoveCommand>> commandByVector;
 
+		
+		
 		private NavMeshAgent agent;
+		private bool isListening;
 
 		private void Awake()
 		{
@@ -54,19 +59,40 @@ namespace MapMovement.NPCs
 		
 		private void OnTriggerEnter(Collider other)
 		{
-			Debug.Log("I HAVE ENTERED NEW SPACE");
-			NextCommand();
+			if (other.gameObject.layer.Equals(6))
+			{
+				Debug.Log("ENTERED SPHERE OF INFLUENCE");
+				isListening = true;
+				question.SetActive(true);
+			}
+			else
+			{
+				Debug.Log("I HAVE ENTERED NEW SPACE");
+				NextCommand();
+			}
+		}
+
+		private void OnTriggerExit(Collider other)
+		{
+			if (other.gameObject.layer.Equals(6))
+			{
+				question.SetActive(false);
+				isListening = false;
+			}
+
 		}
 
 		private void MovementOnPerformed(InputAction.CallbackContext obj)
 		{
-
+			if (!isListening) return;
+			
 			Vector2 vector = obj.ReadValue<Vector2>();
 
 			if (!commandByVector.TryGetValue(vector, out Func<AbstractMoveCommand> command)) return;
 			
 			Debug.Log(vector);
 			commandsQueue.Enqueue(command.Invoke());
+
 		}
 
 		private void OnInteract(InputAction.CallbackContext obj)
