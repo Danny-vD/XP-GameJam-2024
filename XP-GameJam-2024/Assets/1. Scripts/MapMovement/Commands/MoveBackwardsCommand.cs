@@ -2,15 +2,17 @@ using System.Linq;
 using MapMovement.Commands.Interface;
 using MapMovement.Managers;
 using MapMovement.Waypoints;
+using UnityEngine;
 
 namespace MapMovement.Commands
 {
     public class MoveBackwardsCommand : AbstractMoveCommand
     {
-        public override Intersection CalculateNextNode(Intersection currentNode)
+        public override Intersection CalculateNextNode(Intersection currentNode, Intersection previousNode,
+            Vector3 transformPosition)
         {
             StartingNode = currentNode;
-            return StartingNode;
+            return previousNode;
         }
         
         public static AbstractMoveCommand NewInstance()
