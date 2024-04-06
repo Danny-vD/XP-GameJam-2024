@@ -23,6 +23,9 @@ namespace MapMovement.NPCs
 		[SerializeField]
 		private Intersection currentNode;
 
+		[SerializeField] private InputActionReference interact;
+		[SerializeField] private InputActionReference movement;
+
 		private Queue<AbstractMoveCommand> commandsQueue;
 
 		private Dictionary<Vector2, Func<AbstractMoveCommand>> commandByVector;
@@ -39,6 +42,9 @@ namespace MapMovement.NPCs
 				{ Vector2.right, MoveRightCommand.NewInstance },
 			};
 
+			interact.action.performed += OnInteract;
+			movement.action.performed += MovementOnPerformed;
+			
 			agent = GetComponent<NavMeshAgent>();
 		}
 		

@@ -964,6 +964,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentNode: {fileID: 1951045546}
+  interact: {fileID: 4551063502819420570, guid: 4bebb9c2fac873845b09705e10d39ed3, type: 3}
+  movement: {fileID: 4551063502819420570, guid: 4bebb9c2fac873845b09705e10d39ed3, type: 3}
 --- !u!1 &217049835
 GameObject:
   m_ObjectHideFlags: 0
