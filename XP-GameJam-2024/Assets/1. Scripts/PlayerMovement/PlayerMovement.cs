@@ -4,7 +4,6 @@ using Input;
 using Input.Enum;
 using MapMovement;
 using UnityEngine;
-using UnityEngine.AI;
 using UnityEngine.InputSystem;
 using VDFramework;
 

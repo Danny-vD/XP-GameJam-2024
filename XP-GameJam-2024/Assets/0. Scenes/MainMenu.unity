@@ -842,6 +842,7 @@ GameObject:
   - component: {fileID: 269383267}
   - component: {fileID: 269383269}
   - component: {fileID: 269383268}
+  - component: {fileID: 269383270}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -967,6 +968,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 269383266}
   m_CullTransparentMesh: 1
+--- !u!114 &269383270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 269383266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be6e753c0563558479f2854110ec4c50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UseTextAsEntryID: 0
+  textType: MAIN_MENU_QUIT_GAME
 --- !u!1 &274425612
 GameObject:
   m_ObjectHideFlags: 0
@@ -3334,6 +3349,7 @@ GameObject:
   - component: {fileID: 1086344587}
   - component: {fileID: 1086344589}
   - component: {fileID: 1086344588}
+  - component: {fileID: 1086344590}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -3459,6 +3475,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1086344586}
   m_CullTransparentMesh: 1
+--- !u!114 &1086344590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1086344586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be6e753c0563558479f2854110ec4c50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UseTextAsEntryID: 0
+  textType: MAIN_MENU_START_GAME
 --- !u!1 &1152635145
 GameObject:
   m_ObjectHideFlags: 0
@@ -3607,6 +3637,7 @@ GameObject:
   - component: {fileID: 1222852502}
   - component: {fileID: 1222852504}
   - component: {fileID: 1222852503}
+  - component: {fileID: 1222852505}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -3732,6 +3763,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1222852501}
   m_CullTransparentMesh: 1
+--- !u!114 &1222852505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1222852501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be6e753c0563558479f2854110ec4c50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UseTextAsEntryID: 0
+  textType: MAIN_MENU_OPTIONS
 --- !u!1 &1298095185
 GameObject:
   m_ObjectHideFlags: 0
@@ -4304,25 +4349,25 @@ MonoBehaviour:
     - key: 0
       value:
         Guid:
-          Data1: 0
-          Data2: 0
-          Data3: 0
-          Data4: 0
-        Path: 
+          Data1: -1273960952
+          Data2: 1183429897
+          Data3: 33169561
+          Data4: 1335612173
+        Path: event:/TestEvent
     - key: 1
       value:
         Guid:
-          Data1: 0
-          Data2: 0
-          Data3: 0
-          Data4: 0
-        Path: 
+          Data1: 2043038179
+          Data2: 1216934793
+          Data3: -1008175430
+          Data4: -213672460
+        Path: event:/Music/Main Menu
     buses:
     - key: 0
       value: bus:/
     emitterEvents:
     - key: 0
-      value: 1
+      value: 0
   initialVolumes:
   - key: 0
     value: 1
@@ -4501,6 +4546,7 @@ GameObject:
   - component: {fileID: 1749396901}
   - component: {fileID: 1749396903}
   - component: {fileID: 1749396902}
+  - component: {fileID: 1749396904}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -4626,6 +4672,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1749396900}
   m_CullTransparentMesh: 1
+--- !u!114 &1749396904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1749396900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be6e753c0563558479f2854110ec4c50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UseTextAsEntryID: 0
+  textType: MAIN_MENU_CREDITS
 --- !u!1 &1758758225
 GameObject:
   m_ObjectHideFlags: 0
