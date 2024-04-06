@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7522126708249879502}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: AnchorPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 4721808767568691326}
   - component: {fileID: 1657313637899088849}
   - component: {fileID: 8394033642847987166}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -140,13 +140,13 @@ GameObject:
   m_Component:
   - component: {fileID: 4230163333754868918}
   - component: {fileID: 5132358355785161298}
-  - component: {fileID: 7946125402803295598}
   - component: {fileID: 2276885277891285299}
   - component: {fileID: 1975697918093969391}
   - component: {fileID: 4093460658059748772}
   - component: {fileID: 1507396367568232199}
-  - component: {fileID: 3040327102246868495}
-  m_Layer: 0
+  - component: {fileID: 8337038625911396479}
+  - component: {fileID: 2333222528814300053}
+  m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -185,28 +185,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   movement: {fileID: -5256565308647169393, guid: 4bebb9c2fac873845b09705e10d39ed3, type: 3}
---- !u!195 &7946125402803295598
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3546175327979245019}
-  m_Enabled: 0
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 0.5
-  m_Acceleration: 8
-  avoidancePriority: 0
-  m_AngularSpeed: 360
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 0
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!33 &2276885277891285299
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -222,7 +200,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3546175327979245019}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -293,7 +271,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b77c9401716d45ab824a45ae2b3128e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!143 &3040327102246868495
+--- !u!143 &8337038625911396479
 CharacterController:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -319,6 +297,27 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!135 &2333222528814300053
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3546175327979245019}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 5.79
+  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!1 &5282018613957245245
 GameObject:
   m_ObjectHideFlags: 0
@@ -329,7 +328,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4634411963326719602}
   - component: {fileID: 4825799866469925850}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -415,7 +414,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3011129964372299867}
   - component: {fileID: 1800697376502353210}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -500,7 +499,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8886376533338641299}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: AnchorPoint-Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -614,6 +613,10 @@ PrefabInstance:
     - target: {fileID: 7656634510230972074, guid: 7ceb64ae78b2b20418993ad77b4ab58c, type: 3}
       propertyPath: m_Name
       value: Clock-Explosion
+      objectReference: {fileID: 0}
+    - target: {fileID: 7656634510230972074, guid: 7ceb64ae78b2b20418993ad77b4ab58c, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
