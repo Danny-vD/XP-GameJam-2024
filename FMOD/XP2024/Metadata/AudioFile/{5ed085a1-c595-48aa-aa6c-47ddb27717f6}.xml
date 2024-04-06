@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
-	<object class="AudioFile" id="{c208bf33-f493-48c4-a20c-8638521a5b36}">
+	<object class="AudioFile" id="{5ed085a1-c595-48aa-aa6c-47ddb27717f6}">
 		<property name="assetPath">
-			<value>Music/Dark Overworld v1.2.ogg</value>
+			<value>Music/Gameplay_Panic.ogg</value>
 		</property>
 		<property name="isStreaming">
 			<value>true</value>
@@ -14,7 +14,7 @@
 			<value>2</value>
 		</property>
 		<property name="length">
-			<value>75.5</value>
+			<value>18</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{3235ff52-a11c-4f67-8af6-0069b742d23d}</destination>

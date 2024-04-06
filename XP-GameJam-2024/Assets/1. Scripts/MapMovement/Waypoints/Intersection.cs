@@ -16,6 +16,12 @@ namespace MapMovement.Waypoints
         {
             foreach (var intersection in Connections)
             {   
+                if (intersection == null)
+                {
+                    Debug.LogWarning("A connection is not assigned!", this);
+                    continue;
+                }
+
                 Debug.DrawLine(transform.position, intersection.transform.position, Color.red);
             }
         }
