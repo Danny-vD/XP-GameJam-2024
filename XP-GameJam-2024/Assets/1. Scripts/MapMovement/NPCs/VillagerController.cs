@@ -34,6 +34,8 @@ namespace MapMovement.NPCs
 
 		private void Awake()
 		{
+			commandsQueue = new Queue<AbstractMoveCommand>();
+			
 			commandByVector = new Dictionary<Vector2, Func<AbstractMoveCommand>>
 			{
 				{ Vector2.down, MoveBackwardsCommand.NewInstance },
@@ -50,38 +52,31 @@ namespace MapMovement.NPCs
 		
 		private void OnTriggerEnter(Collider other)
 		{
-			if (!listeningMode) NextCommand();
+			Debug.Log("I HAVE ENTERED NEW SPACE");
+			NextCommand();
 		}
 
 		private void MovementOnPerformed(InputAction.CallbackContext obj)
 		{
-			if (!listeningMode) return;
 
 			Vector2 vector = obj.ReadValue<Vector2>();
 
-			if (commandByVector.TryGetValue(vector, out Func<AbstractMoveCommand> command))
-			{
-				commandsQueue.Enqueue(command.Invoke());
-			}
+			if (!commandByVector.TryGetValue(vector, out Func<AbstractMoveCommand> command)) return;
+			
+			Debug.Log(vector);
+			commandsQueue.Enqueue(command.Invoke());
 		}
 
 		private void OnInteract(InputAction.CallbackContext obj)
 		{
-			if (!listeningMode)
-			{
-				listeningMode = true;
-			}
-			else
-			{
-				listeningMode = false;
-				NextCommand();
-			}
+			NextCommand();
 		}
 
 		private void NextCommand()
 		{
 			if (currentNode.Connections.Count <= 2)
 			{
+				currentNode = MoveForwardCommand.NewInstance().CalculateNextNode(currentNode);
 				agent.SetDestination(MoveForwardCommand.NewInstance().CalculateNextNode(currentNode).transform.position);
 			}
 			else
@@ -91,6 +86,7 @@ namespace MapMovement.NPCs
 				if (nextNode is not null)
 				{
 					agent.SetDestination(nextNode.transform.position);
+					currentNode = nextNode;
 				}
 			}
 		}

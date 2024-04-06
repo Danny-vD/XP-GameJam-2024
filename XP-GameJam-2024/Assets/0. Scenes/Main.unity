@@ -465,6 +465,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentNode: {fileID: 1951045546}
+  interact: {fileID: 4551063502819420570, guid: 4bebb9c2fac873845b09705e10d39ed3, type: 3}
+  movement: {fileID: 7743625893090000019, guid: 4bebb9c2fac873845b09705e10d39ed3, type: 3}
 --- !u!1 &331257511
 GameObject:
   m_ObjectHideFlags: 0
@@ -994,7 +996,7 @@ MonoBehaviour:
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
+  m_VoxelSize: 0.046666667
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 23800000, guid: d87d22d39c8134032ac3c87c5e0c6c29, type: 2}
   m_BuildHeightMesh: 0

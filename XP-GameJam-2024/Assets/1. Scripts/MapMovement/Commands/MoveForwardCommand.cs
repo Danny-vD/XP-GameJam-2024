@@ -11,15 +11,9 @@ namespace MapMovement.Commands
         
         public override Intersection CalculateNextNode(Intersection currentNode)
         {
-            StartingNode = currentNode;
 
             var a = Vector3.Angle(currentNode.transform.forward, currentNode.Connections[0].transform.up);
             var b = -1;
-
-            if (currentNode.Connections.Count <= 2)
-            {
-                return IntersectionManager.Instance.IntersectionList.First();
-            }
             
             foreach (var currentNodeConnection in currentNode.Connections)
             {
@@ -29,7 +23,7 @@ namespace MapMovement.Commands
                     b = currentNode.Connections.IndexOf(currentNodeConnection);
                 };
             }
-
+            
             return b == -1 ? null : currentNode.Connections[b];
         }
         
