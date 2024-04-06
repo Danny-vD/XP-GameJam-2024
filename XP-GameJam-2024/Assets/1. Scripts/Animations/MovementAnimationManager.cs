@@ -1,5 +1,7 @@
-﻿using MapMovement;
+﻿using Input;
+using MapMovement;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using VDFramework;
 
 namespace Animations
@@ -28,7 +30,7 @@ namespace Animations
 		private void OnDisable()
 		{
 			actorMover.OnMovementStart -= StartMoving;
-			actorMover.OnEnterIdle     -= StopMoving;
+			actorMover.OnEnterIdle   -= StopMoving;
 		}
 
 		private void StartMoving()
