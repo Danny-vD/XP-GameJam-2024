@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{86ee2007-c5e0-4f2f-8373-08e07fd8405f}">
+		<property name="assetPath">
+			<value>Sound Effects/Animals/DogBark00.ogg</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.33374149659863944</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{3235ff52-a11c-4f67-8af6-0069b742d23d}</destination>
+		</relationship>
+	</object>
+</objects>
