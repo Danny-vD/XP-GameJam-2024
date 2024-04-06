@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
-	<object class="AudioFile" id="{efb34cf0-5c85-49c3-ad94-6882e40d824e}">
+	<object class="AudioFile" id="{6da3e9c3-f601-4628-a738-51ab6d3aa660}">
 		<property name="assetPath">
-			<value>Sound Effects/Player/Footsteps/Footstep02.ogg</value>
+			<value>PlayerWalkChangeDirection.ogg</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>44.0999985</value>
@@ -11,7 +11,7 @@
 			<value>2</value>
 		</property>
 		<property name="length">
-			<value>0.5</value>
+			<value>0.077233560090702952</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{3235ff52-a11c-4f67-8af6-0069b742d23d}</destination>
