@@ -23,16 +23,16 @@ namespace PlayerMovement
 		{
 			agent = GetComponent<NavMeshAgent>();
 
-			InputControllerManager.Instance.mainInput.Overworld.Movement.performed += MovementOnPerformed;
-			InputControllerManager.Instance.mainInput.Overworld.Movement.canceled  += MovementOnCanceled;
+			InputControllerManager.Instance.mainInput.Overworld.Movement.performed += StartMoving;
+			InputControllerManager.Instance.mainInput.Overworld.Movement.canceled  += StopMoving;
 		}
 
 		private void OnDestroy()
 		{
 			if (InputControllerManager.IsInitialized)
 			{
-				InputControllerManager.Instance.mainInput.Overworld.Movement.performed -= MovementOnPerformed;
-				InputControllerManager.Instance.mainInput.Overworld.Movement.canceled  -= MovementOnCanceled;
+				InputControllerManager.Instance.mainInput.Overworld.Movement.performed -= StartMoving;
+				InputControllerManager.Instance.mainInput.Overworld.Movement.canceled  -= StopMoving;
 
 				// InputControllerManager.Instance.mainInput.Overworld.Interact.performed += OnInteract;
 				// InputControllerManager.Instance.mainInput.Overworld.Select.performed += OnSelect;
@@ -40,7 +40,7 @@ namespace PlayerMovement
 			}
 		}
 
-		private void MovementOnPerformed(InputAction.CallbackContext obj)
+		private void StartMoving(InputAction.CallbackContext obj)
 		{
 			isMoving = true;
 
@@ -50,7 +50,7 @@ namespace PlayerMovement
 			moveCoroutine ??= StartCoroutine(MovePlayer());
 		}
 
-		private void MovementOnCanceled(InputAction.CallbackContext obj)
+		private void StopMoving(InputAction.CallbackContext obj)
 		{
 			isMoving = false;
 		}
