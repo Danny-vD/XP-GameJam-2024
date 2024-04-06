@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
-	<object class="AudioFile" id="{3bb2b5ef-4bc9-46b2-99c0-0312475feaf9}">
+	<object class="AudioFile" id="{97b6ac5a-2698-4c9a-8f18-463e86d047fd}">
 		<property name="assetPath">
-			<value>Music/Gameplay_Quirky.ogg</value>
-		</property>
-		<property name="isStreaming">
-			<value>true</value>
+			<value>Sound Effects/Cheer00.ogg</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>44.0999985</value>
@@ -14,7 +11,7 @@
 			<value>2</value>
 		</property>
 		<property name="length">
-			<value>51.840000000000003</value>
+			<value>2.5899999999999999</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{3235ff52-a11c-4f67-8af6-0069b742d23d}</destination>

@@ -4,12 +4,14 @@ using MapMovement.Commands.Interface;
 using MapMovement.Managers;
 using MapMovement.Waypoints;
 using UnityEngine;
+using VDFramework.Extensions;
 
 namespace MapMovement.Commands
 {
     public class MoveRightCommand : AbstractMoveCommand
     {
-        public override Intersection CalculateNextNode(Intersection currentNode)
+        public override Intersection CalculateNextNode(Intersection currentNode, Intersection previousNode,
+            Vector3 transformPosition)
         {
             StartingNode = currentNode;
 
@@ -23,7 +25,10 @@ namespace MapMovement.Commands
             
             foreach (var currentNodeConnection in currentNode.Connections)
             {
-                var tempAngle = Vector3.SignedAngle(currentNode.transform.forward, currentNodeConnection.transform.up, Vector3.up);
+                var tempAngle = Vector2.SignedAngle(currentNode.transform.position * new Vector2(transformPosition.x, transformPosition.z), currentNodeConnection.transform.position * new Vector2(currentNodeConnection.transform.forward.x, currentNodeConnection.transform.forward.z));
+                
+                Debug.Log(currentNodeConnection.ToString() + " " + tempAngle);
+                
                 if (tempAngle <= 30 && tempAngle <= a)
                 {
                     b = currentNode.Connections.IndexOf(currentNodeConnection);

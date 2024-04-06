@@ -1,13 +1,10 @@
 using System;
 using System.Collections;
-using Input;
-using Input.Enum;
-using MapMovement;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using VDFramework;
 
-namespace PlayerMovement
+namespace MapMovement
 {
 	public class PlayerMovement : BetterMonoBehaviour, IActorMover
 	{
