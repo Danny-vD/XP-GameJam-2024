@@ -10,8 +10,7 @@ namespace MapMovement.Commands
 {
     public class MoveRightCommand : AbstractMoveCommand
     {
-        public override Intersection CalculateNextNode(Intersection currentNode, Intersection previousNode,
-            Vector3 transformPosition)
+        public override Intersection CalculateNextNode(Intersection currentNode, Intersection previousNode, Transform transform)
         {
             StartingNode = currentNode;
 
@@ -25,7 +24,7 @@ namespace MapMovement.Commands
             
             foreach (var currentNodeConnection in currentNode.Connections)
             {
-                var tempAngle = Vector2.SignedAngle(currentNode.transform.position * new Vector2(transformPosition.x, transformPosition.z), currentNodeConnection.transform.position * new Vector2(currentNodeConnection.transform.forward.x, currentNodeConnection.transform.forward.z));
+                var tempAngle = Vector2.SignedAngle(currentNode.transform.position * new Vector2(transform.position.x, transform.position.z), currentNodeConnection.transform.position * new Vector2(currentNodeConnection.transform.forward.x, currentNodeConnection.transform.forward.z));
                 
                 Debug.Log(currentNodeConnection.ToString() + " " + tempAngle);
                 
