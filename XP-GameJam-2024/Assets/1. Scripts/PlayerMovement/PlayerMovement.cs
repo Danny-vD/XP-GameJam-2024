@@ -35,15 +35,13 @@ namespace PlayerMovement
 
 		private void OnDestroy()
 		{
-			if (InputControllerManager.IsInitialized)
-			{
-				InputControllerManager.Instance.mainInput.Overworld.Movement.performed -= StartMoving;
-				InputControllerManager.Instance.mainInput.Overworld.Movement.canceled  -= StopMoving;
+			if (!InputControllerManager.IsInitialized) return;
+			InputControllerManager.Instance.mainInput.Overworld.Movement.performed -= StartMoving;
+			InputControllerManager.Instance.mainInput.Overworld.Movement.canceled  -= StopMoving;
 
-				// InputControllerManager.Instance.mainInput.Overworld.Interact.performed += OnInteract;
-				// InputControllerManager.Instance.mainInput.Overworld.Select.performed += OnSelect;
-				// InputControllerManager.Instance.mainInput.Overworld.Start.performed += OnStart;
-			}
+			// InputControllerManager.Instance.mainInput.Overworld.Interact.performed += OnInteract;
+			// InputControllerManager.Instance.mainInput.Overworld.Select.performed += OnSelect;
+			// InputControllerManager.Instance.mainInput.Overworld.Start.performed += OnStart;
 		}
 
 		private void StartMoving(InputAction.CallbackContext obj)
