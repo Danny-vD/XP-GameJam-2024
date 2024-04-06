@@ -13,7 +13,7 @@ namespace MapMovement.Commands
         {
             StartingNode = currentNode;
 
-            var a = Vector3.Angle(currentNode.transform.forward, currentNode.Connections[0].transform.forward);
+            var a = Vector3.Angle(currentNode.transform.forward, currentNode.Connections[0].transform.up);
             var b = -1;
 
             if (currentNode.Connections.Count <= 2)
@@ -23,7 +23,7 @@ namespace MapMovement.Commands
             
             foreach (var currentNodeConnection in currentNode.Connections)
             {
-                var tempAngle = Vector3.Angle(currentNode.transform.forward, currentNodeConnection.transform.forward);
+                var tempAngle = Vector3.Angle(currentNode.transform.forward, currentNodeConnection.transform.up);
                 if (tempAngle <= 30 && tempAngle <= a)
                 {
                     b = currentNode.Connections.IndexOf(currentNodeConnection);
