@@ -20,6 +20,8 @@ namespace MapMovement.NPCs
 
 		private bool listeningMode;
 
+		[SerializeField] 
+		private Intersection previousNode;
 		[SerializeField]
 		private Intersection currentNode;
 
@@ -76,18 +78,21 @@ namespace MapMovement.NPCs
 		{
 			if (currentNode.Connections.Count <= 2)
 			{
-				currentNode = MoveForwardCommand.NewInstance().CalculateNextNode(currentNode);
-				agent.SetDestination(MoveForwardCommand.NewInstance().CalculateNextNode(currentNode).transform.position);
+				var nextNode = MoveForwardCommand.NewInstance().CalculateNextNode(currentNode, previousNode, transform.position);
+				previousNode = currentNode;
+				currentNode = nextNode;
+				agent.SetDestination(currentNode.transform.position);
 			}
 			else
 			{
-				var nextNode = commandsQueue.Dequeue()?.CalculateNextNode(currentNode);
+				if (commandsQueue.Count <= 0) return;
+				var nextNode = commandsQueue.Dequeue()?.CalculateNextNode(currentNode, previousNode, transform.position);
 
-				if (nextNode is not null)
-				{
-					agent.SetDestination(nextNode.transform.position);
-					currentNode = nextNode;
-				}
+				if (nextNode is null) return;
+				agent.SetDestination(nextNode.transform.position);
+				previousNode = currentNode;
+				currentNode = nextNode;
+
 			}
 		}
 	}

@@ -13,7 +13,9 @@ namespace MapMovement.Waypoints
         [SerializeField] public List<Intersection> Connections;
 
         private void Update()
-        {
+        {   
+            
+            Debug.DrawLine(transform.position, (transform.position +  new Vector3(Vector2.up.x * 3, 0, Vector2.up.y * 3)));
             foreach (var intersection in Connections)
             {   
                 if (intersection == null)
