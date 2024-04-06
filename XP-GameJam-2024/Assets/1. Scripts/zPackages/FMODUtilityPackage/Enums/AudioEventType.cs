@@ -12,5 +12,10 @@ namespace FMODUtilityPackage.Enums
 		/// event:/TestEvent
 		/// </FMODEventPath>
 		TestEvent,
+
+		/// <FMODEventPath>
+		/// event:/Music/Main Menu
+		/// </FMODEventPath>
+		Music_Main_Menu,
 	}
 }

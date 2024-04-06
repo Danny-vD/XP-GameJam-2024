@@ -1,1 +1,2 @@
 event:/TestEvent
+event:/Music/Main Menu
