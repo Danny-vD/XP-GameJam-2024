@@ -41,20 +41,6 @@ namespace MapMovement.NPCs
 
 			agent = GetComponent<NavMeshAgent>();
 		}
-
-		private void OnEnable()
-		{
-			//InputControllerManager.Instance.mainInput.Overworld.Movement.performed += MovementOnPerformed;
-			//InputControllerManager.Instance.mainInput.Overworld.Interact.performed += OnInteract;
-		}
-
-		private void OnDisable()
-		{
-			if (!InputControllerManager.IsInitialized) return;
-
-			//InputControllerManager.Instance.mainInput.Overworld.Movement.performed -= MovementOnPerformed;
-			//InputControllerManager.Instance.mainInput.Overworld.Interact.performed -= OnInteract;
-		}
 		
 		private void OnTriggerEnter(Collider other)
 		{
