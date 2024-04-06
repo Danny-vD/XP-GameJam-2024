@@ -21,7 +21,7 @@ namespace PlayerMovement
 		[SerializeField]
 		private InputActionReference movement;
 
-		private NavMeshAgent agent;
+		private CharacterController agent;
 		private Vector3 deltaMovement;
 		private bool isMoving;
 
@@ -29,7 +29,7 @@ namespace PlayerMovement
 
 		private void Awake()
 		{
-			agent = GetComponent<NavMeshAgent>();
+			agent = GetComponent<CharacterController>();
 
 			// Movement
 			movement.action.performed += StartMoving;
