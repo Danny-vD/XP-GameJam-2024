@@ -1,6 +1,5 @@
 using System;
 using System.Collections;
-using Input;
 using MapMovement;
 using UnityEngine;
 using UnityEngine.AI;
@@ -19,6 +18,9 @@ namespace PlayerMovement
 		[Tooltip("The speed of the player in m/s")]
 		private float speed = 10;
 
+		[SerializeField]
+		private InputActionReference movement;
+
 		private NavMeshAgent agent;
 		private Vector3 deltaMovement;
 		private bool isMoving;
@@ -29,21 +31,16 @@ namespace PlayerMovement
 		{
 			agent = GetComponent<NavMeshAgent>();
 
-			InputControllerManager.Instance.mainInput.Overworld.Movement.performed += StartMoving;
-			InputControllerManager.Instance.mainInput.Overworld.Movement.canceled  += StopMoving;
+			// Movement
+			movement.action.performed += StartMoving;
+			movement.action.canceled  += StopMoving;
 		}
 
 		private void OnDestroy()
 		{
-			if (InputControllerManager.IsInitialized)
-			{
-				InputControllerManager.Instance.mainInput.Overworld.Movement.performed -= StartMoving;
-				InputControllerManager.Instance.mainInput.Overworld.Movement.canceled  -= StopMoving;
-
-				// InputControllerManager.Instance.mainInput.Overworld.Interact.performed += OnInteract;
-				// InputControllerManager.Instance.mainInput.Overworld.Select.performed += OnSelect;
-				// InputControllerManager.Instance.mainInput.Overworld.Start.performed += OnStart;
-			}
+			// Movement
+			movement.action.performed -= StartMoving;
+			movement.action.canceled  -= StopMoving;
 		}
 
 		private void StartMoving(InputAction.CallbackContext obj)
@@ -54,14 +51,14 @@ namespace PlayerMovement
 			deltaMovement = new Vector3(vector.x, 0, vector.y);
 
 			moveCoroutine ??= StartCoroutine(MovePlayer());
-			
+
 			OnMovementStart.Invoke();
 		}
 
 		private void StopMoving(InputAction.CallbackContext obj)
 		{
 			isMoving = false;
-			
+
 			OnEnterIdle.Invoke();
 			OnMovementCancelled.Invoke();
 		}
