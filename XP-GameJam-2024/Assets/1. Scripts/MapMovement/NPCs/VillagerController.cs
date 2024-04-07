@@ -33,7 +33,7 @@ namespace MapMovement.NPCs
 		[SerializeField]
 		private GameObject exclamationMark;
 		
-		public bool CannotGiveCommand => !isListening || agent.hasPath && !agent.isStopped;
+		public bool CannotGiveCommand => !isListening || agent.remainingDistance > 5 && !agent.isStopped;
 		public bool CanGiveCommand => !CannotGiveCommand;
 
 		private Queue<AbstractMoveCommand> commandsQueue;
@@ -42,6 +42,8 @@ namespace MapMovement.NPCs
 
 		private NavMeshAgent agent;
 		private bool isListening;
+
+		private Vector3 lastDirection = Vector3.zero;
 
 		private void Awake()
 		{
@@ -59,6 +61,16 @@ namespace MapMovement.NPCs
 			movement.action.performed += MovementOnPerformed;
 
 			agent = GetComponent<NavMeshAgent>();
+		}
+
+		private void LateUpdate()
+		{
+			Vector3 currentDirection = agent.velocity.normalized;
+
+			if (currentDirection.sqrMagnitude > Mathf.Epsilon)
+			{
+				lastDirection = currentDirection;
+			}
 		}
 
 		private void OnTriggerEnter(Collider other)
@@ -129,7 +141,12 @@ namespace MapMovement.NPCs
 
 			if (movementDirection == Vector3.zero)
 			{
-				movementDirection = previousNode.transform.up;
+				movementDirection = lastDirection; // First try the last used direction
+			}
+
+			if (movementDirection == Vector3.zero)
+			{
+				movementDirection = previousNode.transform.up; // If that is also 0,0,0 then use the rotation of the node
 			}
 			
 			if (currentNode.Connections.Count <= 2)
@@ -157,6 +174,12 @@ namespace MapMovement.NPCs
 				previousNode = currentNode;
 				currentNode  = nextNode;
 			}
+		}
+
+		[ContextMenu("Log velocity")]
+		private void LogVelocity()
+		{
+			Debug.LogError(agent.velocity.normalized);
 		}
 	}
 }

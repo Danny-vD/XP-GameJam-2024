@@ -18,7 +18,7 @@ namespace MapMovement.Commands
 				return currentNode.Connections.FirstOrDefault();
 			}
 
-			// The found left might actually be the forward direction, so we have to keep track of the forward direction until we're sure that we are the left (by being below the forward threshold)
+			// The found left might actually be the forward direction, so we also calculate the forward direction to compare afterwards
 			int bestCandidateIndex = -1;
 			int forwardDirectionIndex = -1;
 
