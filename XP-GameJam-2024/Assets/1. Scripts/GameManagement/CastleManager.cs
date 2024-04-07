@@ -1,4 +1,3 @@
-using System;
 using FMODUtilityPackage.Core;
 using FMODUtilityPackage.Enums;
 using GameManagement.Events;

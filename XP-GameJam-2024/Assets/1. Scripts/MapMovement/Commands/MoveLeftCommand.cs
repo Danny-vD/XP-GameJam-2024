@@ -1,7 +1,6 @@
 using System.Linq;
 using MapMovement.Commands.Interface;
 using MapMovement.Enums;
-using MapMovement.Managers;
 using MapMovement.Waypoints;
 using UnityEngine;
 using VDFramework.Extensions;

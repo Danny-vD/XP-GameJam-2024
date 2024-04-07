@@ -1,4 +1,3 @@
-using System;
 using GameManagement.Events;
 using TMPro;
 using VDFramework;

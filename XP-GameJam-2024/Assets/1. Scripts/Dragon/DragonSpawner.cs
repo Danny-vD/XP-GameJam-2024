@@ -1,4 +1,3 @@
-using System;
 using Timer.Events;
 using UnityEngine;
 using VDFramework;

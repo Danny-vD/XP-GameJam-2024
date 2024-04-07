@@ -1,56 +1,56 @@
-using System.Linq;
 using GameManagement;
 using GameManagement.Events;
 using UnityEngine;
 using VDFramework;
 using VDFramework.Extensions;
-using VDFramework.UnityExtensions;
 
 namespace Dragon
 {
-    public class DragonTargetManager : BetterMonoBehaviour
-    {
-        private GameObject[] targets;
-        
-        public GameObject CurrentTarget { get; private set; }
-        public bool HasValidTarget => CurrentTarget != null;
-        public bool TargetsAvailable => targets.Length > 0;
-        
-        private void Awake()
-        {
-            GetAllPossibleTargets();
-        }
+	public class DragonTargetManager : BetterMonoBehaviour
+	{
+		private Villager[] targets;
 
-        private void Start()
-        {
-            VillagerDeathEvent.AddListener(GetAllPossibleTargets);
-        }
+		public Villager CurrentTarget { get; private set; }
+		public bool HasValidTarget => CurrentTarget != null;
+		public bool TargetsAvailable => targets.Length > 0;
 
-        public void SetNewTarget()
-        {
-            if (GetRandomTarget(out GameObject target))
-            {
-                CurrentTarget = target;
-            }
+		private void Awake()
+		{
+			GetAllPossibleTargets();
+		}
 
-            CurrentTarget = null;
-        }
+		private void Start()
+		{
+			VillagerDeathEvent.AddListener(GetAllPossibleTargets, -100);
+			VillagerSaveEvent.AddListener(GetAllPossibleTargets, -100);
+		}
 
-        private bool GetRandomTarget(out GameObject target)
-        {
-            target = targets.GetRandomElement();
+		public void SetNewTarget()
+		{
+			if (GetRandomTarget(out Villager target))
+			{
+				CurrentTarget = target;
+			}
 
-            return target != null;
-        }
+			CurrentTarget = null;
+		}
 
-        private void GetAllPossibleTargets()
-        {
-            targets = FindObjectsByType<Villager>(FindObjectsSortMode.None).ToGameObject().ToArray();
-        }
+		private bool GetRandomTarget(out Villager target)
+		{
+			target = targets.GetRandomElement();
 
-        private void OnDestroy()
-        {
-            VillagerDeathEvent.RemoveListener(GetAllPossibleTargets);
-        }
-    }
+			return target != null;
+		}
+
+		private void GetAllPossibleTargets()
+		{
+			targets = FindObjectsByType<Villager>(FindObjectsSortMode.None);
+		}
+
+		private void OnDestroy()
+		{
+			VillagerDeathEvent.RemoveListener(GetAllPossibleTargets);
+			VillagerSaveEvent.RemoveListener(GetAllPossibleTargets);
+		}
+	}
 }

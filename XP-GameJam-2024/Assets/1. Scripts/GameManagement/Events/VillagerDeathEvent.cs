@@ -4,6 +4,5 @@ namespace GameManagement.Events
 {
     public class VillagerDeathEvent : VDEvent<VillagerDeathEvent>
     {
-        
     }
 }
