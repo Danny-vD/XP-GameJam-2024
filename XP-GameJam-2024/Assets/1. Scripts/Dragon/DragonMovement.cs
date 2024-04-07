@@ -40,7 +40,7 @@ namespace Dragon
 				Vector3 currentPosition = transform.position;
 				Vector3 targetPosition = dragonTargetManager.CurrentTarget.transform.position + Vector3.right * distanceFromTarget;
 
-				Vector3 towardsTarget = (targetPosition - currentPosition);
+				Vector3 towardsTarget = targetPosition - currentPosition;
 
 				currentPosition += speed * Time.deltaTime * towardsTarget.normalized;
 
