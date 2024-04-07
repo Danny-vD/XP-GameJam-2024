@@ -60,6 +60,10 @@ PrefabInstance:
       propertyPath: m_Speed
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 7810458554906362565, guid: 6de808cc9a903db4d976763b0773c906, type: 3}
+      propertyPath: audioEventType
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 7901933045357583286, guid: 6de808cc9a903db4d976763b0773c906, type: 3}
       propertyPath: m_Sprite
       value: 
