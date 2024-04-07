@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2755708386275873796}
   - component: {fileID: 7901933045357583286}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2108297280059238215}
   - component: {fileID: 5198118297083116175}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SpriteShadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -181,7 +181,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6028723132939099101}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AnchorPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -215,7 +215,7 @@ GameObject:
   - component: {fileID: 8764364949518365298}
   - component: {fileID: 4570684284968324837}
   - component: {fileID: 778210793920979080}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Exclamation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -328,10 +328,9 @@ GameObject:
   - component: {fileID: 378392987965244555}
   - component: {fileID: 814437683407602037}
   - component: {fileID: 7940290885325160863}
-  - component: {fileID: 1520282417637584681}
   - component: {fileID: 5914888611096741404}
   - component: {fileID: 347039413086227410}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Peasant
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -366,8 +365,8 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3
-  m_Acceleration: 8
+  m_Speed: 4
+  m_Acceleration: 2
   avoidancePriority: 0
   m_AngularSpeed: 0
   m_StoppingDistance: 1
@@ -490,27 +489,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.0000004, y: 2, z: 1.0000005}
   m_Center: {x: 0.0000057816505, y: 0, z: -0.0000031888485}
---- !u!65 &1520282417637584681
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4802565420961918426}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1.0000004, y: 2, z: 1.0000005}
-  m_Center: {x: 0.0000057816505, y: 0, z: -0.0000031888485}
 --- !u!54 &5914888611096741404
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -559,7 +537,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 440167044744089149}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AnchorPoint-Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}

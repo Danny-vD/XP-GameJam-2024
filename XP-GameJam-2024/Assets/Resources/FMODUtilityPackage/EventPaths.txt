@@ -2,10 +2,19 @@ event:/TestEvent
 event:/Music/Main Menu
 event:/Music/Gameplay
 event:/Sound Effects/Animals/Rooster
-event:/Sound Effects/Footsteps
 event:/Sound Effects/Animals/Cow
 event:/Sound Effects/NPCs/Cheer
 event:/Sound Effects/Animals/Pig
 event:/Sound Effects/Time/TimeSlowdown
 event:/Sound Effects/Animals/Dog
 event:/Sound Effects/NPCs/Talksound
+event:/Sound Effects/Player/ReverseTime
+event:/Sound Effects/UI/Click
+event:/Sound Effects/NPCs/npcDeath
+event:/Sound Effects/Player/Death_GameOver
+event:/Sound Effects/Player/Footsteps
+event:/Sound Effects/Player/ChangeDirection
+event:/Sound Effects/NPCs/npcFootstep
+event:/Sound Effects/NPCs/npcAlertBeep
+event:/Sound Effects/Animals/DragonRoar
+event:/Sound Effects/Animals/DragonWing
