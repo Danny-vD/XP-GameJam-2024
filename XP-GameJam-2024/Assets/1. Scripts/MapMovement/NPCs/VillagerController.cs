@@ -33,7 +33,6 @@ namespace MapMovement.NPCs
 		[SerializeField]
 		private InputActionReference movement;
 
-		[FormerlySerializedAs("question")]
 		[SerializeField]
 		private GameObject exclamationMark;
 
