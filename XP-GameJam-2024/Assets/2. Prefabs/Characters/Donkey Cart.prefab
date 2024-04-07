@@ -251,6 +251,7 @@ GameObject:
   - component: {fileID: 350003268982266208}
   - component: {fileID: 6592608628961990216}
   - component: {fileID: 411422841393533738}
+  - component: {fileID: 4474150292154457346}
   m_Layer: 7
   m_Name: Donkey Cart
   m_TagString: Untagged
@@ -285,7 +286,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 4554990559485615155}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 1.35
+  m_Radius: 0.5
   m_Speed: 2
   m_Acceleration: 8
   avoidancePriority: 0
@@ -385,7 +386,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  arrivalDistance: 3
+  arrivalDistance: 4
 --- !u!208 &411422841393533738
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -393,7 +394,7 @@ NavMeshObstacle:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4554990559485615155}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Shape: 1
   m_Extents: {x: 1.47, y: 1.02, z: 1.235}
@@ -402,6 +403,27 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 3.11, y: 0, z: 0}
   m_TimeToStationary: 0.5
+--- !u!65 &4474150292154457346
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4554990559485615155}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.030947, y: 2, z: 2.2659073}
+  m_Center: {x: 3.1069727, y: 0, z: -0.041279793}
 --- !u!1 &6613219167918700274
 GameObject:
   m_ObjectHideFlags: 0
