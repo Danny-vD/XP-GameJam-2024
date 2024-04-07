@@ -184,18 +184,7 @@ namespace MapMovement.NPCs
 				
 				if (nextNode is null)
 				{
-					OnEnterIdle.Invoke();
-				
-					IsMoving        = false;
-					agent.isStopped = true;
-				
-					commandsQueue.Clear();
-
-					if (isListening && exclamationMark)
-					{
-						exclamationMark.SetActive(true);
-					}
-
+					GoToIdle();
 					return;
 				}
 
@@ -208,6 +197,7 @@ namespace MapMovement.NPCs
 
 			if (commandsQueue.Count <= 0)
 			{
+				GoToIdle();
 				return;
 			}
 
@@ -215,18 +205,7 @@ namespace MapMovement.NPCs
 
 			if (nextNode is null)
 			{
-				OnEnterIdle.Invoke();
-				
-				IsMoving        = false;
-				agent.isStopped = true;
-				
-				commandsQueue.Clear();
-
-				if (isListening && exclamationMark)
-				{
-					exclamationMark.SetActive(true);
-				}
-
+				GoToIdle();
 				return;
 			}
 
@@ -273,6 +252,21 @@ namespace MapMovement.NPCs
 				currentNode  = nextNode;
 			}
 			*/
+		}
+
+		private void GoToIdle()
+		{
+			OnEnterIdle.Invoke();
+				
+			IsMoving        = false;
+			agent.isStopped = true;
+				
+			commandsQueue.Clear();
+
+			if (isListening && exclamationMark)
+			{
+				exclamationMark.SetActive(true);
+			}
 		}
 	}
 }
