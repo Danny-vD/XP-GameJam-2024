@@ -33,8 +33,10 @@ namespace MapMovement.NPCs
 		[SerializeField]
 		private GameObject exclamationMark;
 
-		public bool CannotReceiveCommand => !isListening || agent.isOnNavMesh && agent.remainingDistance > 5 && !agent.isStopped;
+		public bool CannotReceiveCommand => !isListening || agent.remainingDistance > 5 && !agent.isStopped; //note Replace most of this by IsMoving?
 		public bool CanReceiveCommand => !CannotReceiveCommand;
+
+		public bool IsMoving { get; private set; }
 
 		private Queue<AbstractMoveCommand> commandsQueue;
 
@@ -43,8 +45,8 @@ namespace MapMovement.NPCs
 		private NavMeshAgent agent;
 		private bool isListening;
 
-		private Vector3 lastDirection = Vector3.zero;
-		private Collider lastIntersectionColliderHit = null;
+
+		//private Vector3 lastDirection = Vector3.zero;
 
 		private void Awake()
 		{
@@ -62,17 +64,31 @@ namespace MapMovement.NPCs
 			movement.action.performed += MovementOnPerformed;
 
 			agent = GetComponent<NavMeshAgent>();
-
-			lastIntersectionColliderHit = previousNode.GetComponent<Collider>();
 		}
 
 		private void LateUpdate()
 		{
-			Vector3 currentDirection = agent.velocity.normalized;
+			//Vector3 currentDirection = agent.velocity.normalized;
+			//
+			//if (currentDirection.sqrMagnitude > Mathf.Epsilon)
+			//{
+			//	lastDirection = currentDirection;
+			//}
 
-			if (currentDirection.sqrMagnitude > Mathf.Epsilon)
+			if (IsMoving)
 			{
-				lastDirection = currentDirection;
+				CheckIfReachedTarget();
+			}
+		}
+
+		private void CheckIfReachedTarget()
+		{
+			float distance = agent.remainingDistance;
+			distance -= agent.stoppingDistance;
+
+			if (distance <= 0)
+			{
+				NextCommand();
 			}
 		}
 
@@ -87,6 +103,8 @@ namespace MapMovement.NPCs
 					exclamationMark.SetActive(true);
 				}
 			}
+			
+			/*
 			else
 			{
 				if (ReferenceEquals(other, lastIntersectionColliderHit))
@@ -98,7 +116,7 @@ namespace MapMovement.NPCs
 
 				Debug.Log($"reached {other.name}");
 				NextCommand();
-			}
+			}*/
 		}
 
 		private void OnTriggerExit(Collider other)
@@ -145,6 +163,7 @@ namespace MapMovement.NPCs
 					exclamationMark.SetActive(false);
 				}
 
+				IsMoving = true;
 				OnMovementStart.Invoke();
 				Debug.Log("\nStarting movement");
 			}
@@ -183,9 +202,11 @@ namespace MapMovement.NPCs
 			if (nextNode is null)
 			{
 				OnEnterIdle.Invoke();
+				IsMoving = false;
+				
 				commandsQueue.Clear();
 
-				if (isListening && CanReceiveCommand && exclamationMark)
+				if (isListening && CanReceiveCommand && exclamationMark) //NOTE: Always show???
 				{
 					exclamationMark.SetActive(true);
 				}
