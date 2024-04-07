@@ -268,6 +268,7 @@ GameObject:
   - component: {fileID: 70694441}
   - component: {fileID: 70694440}
   - component: {fileID: 70694439}
+  - component: {fileID: 70694442}
   m_Layer: 5
   m_Name: Start
   m_TagString: Untagged
@@ -339,6 +340,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 70694442}
+        m_TargetAssemblyTypeName: FMODUtilityPackage.Audioplayers.AudioPlayerComponent,
+          Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1573667404}
         m_TargetAssemblyTypeName: Menu.MenuFunctionality, Assembly-CSharp
         m_MethodName: LoadNextScene
@@ -389,6 +403,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 70694437}
   m_CullTransparentMesh: 1
+--- !u!114 &70694442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 70694437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2af977d0067041ed981fc89c85ae6688, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioEventType: 11
 --- !u!1 &81811218
 GameObject:
   m_ObjectHideFlags: 0
@@ -573,6 +600,19 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 70694442}
+        m_TargetAssemblyTypeName: FMODUtilityPackage.Audioplayers.AudioPlayerComponent,
+          Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1181,6 +1221,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputActionAsset: {fileID: -944628639613478452, guid: 4bebb9c2fac873845b09705e10d39ed3, type: 3}
+  specialInteraction: {fileID: 0}
+  overworldInteraction: {fileID: 0}
 --- !u!4 &301936653
 Transform:
   m_ObjectHideFlags: 0
@@ -1494,6 +1536,19 @@ MonoBehaviour:
       - m_Target: {fileID: 1573667404}
         m_TargetAssemblyTypeName: Menu.MenuFunctionality, Assembly-CSharp
         m_MethodName: Quit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 70694442}
+        m_TargetAssemblyTypeName: FMODUtilityPackage.Audioplayers.AudioPlayerComponent,
+          Assembly-CSharp
+        m_MethodName: Play
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1984,6 +2039,19 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 70694442}
+        m_TargetAssemblyTypeName: FMODUtilityPackage.Audioplayers.AudioPlayerComponent,
+          Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4362,12 +4430,156 @@ MonoBehaviour:
           Data3: -1008175430
           Data4: -213672460
         Path: event:/Music/Main Menu
+    - key: 2
+      value:
+        Guid:
+          Data1: 0
+          Data2: 0
+          Data3: 0
+          Data4: 0
+        Path: 
+    - key: 3
+      value:
+        Guid:
+          Data1: 0
+          Data2: 0
+          Data3: 0
+          Data4: 0
+        Path: 
+    - key: 4
+      value:
+        Guid:
+          Data1: 0
+          Data2: 0
+          Data3: 0
+          Data4: 0
+        Path: 
+    - key: 5
+      value:
+        Guid:
+          Data1: 0
+          Data2: 0
+          Data3: 0
+          Data4: 0
+        Path: 
+    - key: 6
+      value:
+        Guid:
+          Data1: 0
+          Data2: 0
+          Data3: 0
+          Data4: 0
+        Path: 
+    - key: 7
+      value:
+        Guid:
+          Data1: 0
+          Data2: 0
+          Data3: 0
+          Data4: 0
+        Path: 
+    - key: 8
+      value:
+        Guid:
+          Data1: 0
+          Data2: 0
+          Data3: 0
+          Data4: 0
+        Path: 
+    - key: 9
+      value:
+        Guid:
+          Data1: 0
+          Data2: 0
+          Data3: 0
+          Data4: 0
+        Path: 
+    - key: 10
+      value:
+        Guid:
+          Data1: 0
+          Data2: 0
+          Data3: 0
+          Data4: 0
+        Path: 
+    - key: 11
+      value:
+        Guid:
+          Data1: 938505560
+          Data2: 1196590469
+          Data3: -1384265083
+          Data4: 455085947
+        Path: event:/Sound Effects/UI/Click
+    - key: 12
+      value:
+        Guid:
+          Data1: 0
+          Data2: 0
+          Data3: 0
+          Data4: 0
+        Path: 
+    - key: 13
+      value:
+        Guid:
+          Data1: 0
+          Data2: 0
+          Data3: 0
+          Data4: 0
+        Path: 
+    - key: 14
+      value:
+        Guid:
+          Data1: 0
+          Data2: 0
+          Data3: 0
+          Data4: 0
+        Path: 
+    - key: 15
+      value:
+        Guid:
+          Data1: 0
+          Data2: 0
+          Data3: 0
+          Data4: 0
+        Path: 
+    - key: 16
+      value:
+        Guid:
+          Data1: 0
+          Data2: 0
+          Data3: 0
+          Data4: 0
+        Path: 
+    - key: 17
+      value:
+        Guid:
+          Data1: 0
+          Data2: 0
+          Data3: 0
+          Data4: 0
+        Path: 
+    - key: 18
+      value:
+        Guid:
+          Data1: 0
+          Data2: 0
+          Data3: 0
+          Data4: 0
+        Path: 
+    - key: 19
+      value:
+        Guid:
+          Data1: 0
+          Data2: 0
+          Data3: 0
+          Data4: 0
+        Path: 
     buses:
     - key: 0
       value: bus:/
     emitterEvents:
     - key: 0
-      value: 0
+      value: 1
   initialVolumes:
   - key: 0
     value: 1
