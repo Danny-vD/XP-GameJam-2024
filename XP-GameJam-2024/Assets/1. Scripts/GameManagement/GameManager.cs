@@ -1,5 +1,7 @@
+using System.Linq;
 using GameManagement.Events;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using VDFramework.EventSystem;
 using VDFramework.Singleton;
 
@@ -8,7 +10,7 @@ namespace GameManagement
     public class GameManager : Singleton<GameManager>
     {
 
-        [SerializeField] private GameObject timer;
+        [SerializeField] private GameObject anim;
         public int saved;
         public int dead;
 
@@ -29,25 +31,26 @@ namespace GameManagement
         private void OnVillagerSaved(VillagerSaveEvent @event)
         {
             saved = saved + 1;
+            CheckVillagers();
         }
 
         private void OnVillagerDeath(VillagerDeathEvent @event)
         {
             dead = dead + 1;
 
-            // if (dead >= )
-            // {
-            //     
-            // }
+            CheckVillagers();
         }
 
         private void CheckVillagers()
         {
-            // FindObjectsByType<>()
+            if (FindObjectsByType<Villager>(FindObjectsSortMode.None).Length <= 0)
+            {
+                GameRewind();
+            }
         }
         public void GameRewind()
         {
-            
+            anim.SetActive(true);
         }
          
     }
