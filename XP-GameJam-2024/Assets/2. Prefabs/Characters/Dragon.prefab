@@ -4994,6 +4994,8 @@ GameObject:
   - component: {fileID: 2950330721414206}
   - component: {fileID: 7229416626184863794}
   - component: {fileID: 19131601032837828}
+  - component: {fileID: 4875457326358043724}
+  - component: {fileID: 6484307013472364850}
   m_Layer: 0
   m_Name: Dragon
   m_TagString: Untagged
@@ -5071,6 +5073,34 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
+--- !u!114 &4875457326358043724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7218386845854891146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4aeb64044b86ca843bf37231e6e8dd99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  distanceFromTarget: 1.5
+  distanceForKill: 1
+  secondsWaitAfterKill: 1.5
+--- !u!114 &6484307013472364850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7218386845854891146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a82f148c19507ad4ca5210ee6538ec55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7858906099083737232
 GameObject:
   m_ObjectHideFlags: 0
