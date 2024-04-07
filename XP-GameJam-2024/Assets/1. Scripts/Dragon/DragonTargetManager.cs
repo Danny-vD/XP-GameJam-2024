@@ -1,4 +1,3 @@
-using System.Collections;
 using GameManagement;
 using GameManagement.Events;
 using UnityEngine;
@@ -28,11 +27,10 @@ namespace Dragon
 
 		public void SetNewTarget()
 		{
-			GetAllPossibleTargets();
-			
 			if (GetRandomTarget(out Villager target))
 			{
 				CurrentTarget = target;
+				return;
 			}
 			
 			CurrentTarget = null;
