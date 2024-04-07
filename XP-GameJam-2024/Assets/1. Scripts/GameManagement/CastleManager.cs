@@ -10,7 +10,7 @@ namespace GameManagement
     {
         private void OnTriggerEnter(Collider other)
         {
-            if (!other.gameObject.layer.Equals(6)) return;
+            if (!other.gameObject.layer.Equals(7)) return;
             
             Destroy(other.gameObject);
             EventManager.RaiseEvent<VillagerSaveEvent>(new VillagerSaveEvent());
