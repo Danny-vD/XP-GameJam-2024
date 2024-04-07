@@ -29,11 +29,6 @@ namespace FMODUtilityPackage.Enums
 		Sound_Effects_Animals_Rooster,
 
 		/// <FMODEventPath>
-		/// event:/Sound Effects/Footsteps
-		/// </FMODEventPath>
-		Sound_Effects_Footsteps,
-
-		/// <FMODEventPath>
 		/// event:/Sound Effects/Animals/Cow
 		/// </FMODEventPath>
 		Sound_Effects_Animals_Cow,
@@ -62,5 +57,55 @@ namespace FMODUtilityPackage.Enums
 		/// event:/Sound Effects/NPCs/Talksound
 		/// </FMODEventPath>
 		Sound_Effects_NPCs_Talksound,
+
+		/// <FMODEventPath>
+		/// event:/Sound Effects/Player/ReverseTime
+		/// </FMODEventPath>
+		Sound_Effects_Player_ReverseTime,
+
+		/// <FMODEventPath>
+		/// event:/Sound Effects/UI/Click
+		/// </FMODEventPath>
+		Sound_Effects_UI_Click,
+
+		/// <FMODEventPath>
+		/// event:/Sound Effects/NPCs/npcDeath
+		/// </FMODEventPath>
+		Sound_Effects_NPCs_npcDeath,
+
+		/// <FMODEventPath>
+		/// event:/Sound Effects/Player/Death_GameOver
+		/// </FMODEventPath>
+		Sound_Effects_Player_Death_GameOver,
+
+		/// <FMODEventPath>
+		/// event:/Sound Effects/Player/Footsteps
+		/// </FMODEventPath>
+		Sound_Effects_Player_Footsteps,
+
+		/// <FMODEventPath>
+		/// event:/Sound Effects/Player/ChangeDirection
+		/// </FMODEventPath>
+		Sound_Effects_Player_ChangeDirection,
+
+		/// <FMODEventPath>
+		/// event:/Sound Effects/NPCs/npcFootstep
+		/// </FMODEventPath>
+		Sound_Effects_NPCs_npcFootstep,
+
+		/// <FMODEventPath>
+		/// event:/Sound Effects/NPCs/npcAlertBeep
+		/// </FMODEventPath>
+		Sound_Effects_NPCs_npcAlertBeep,
+
+		/// <FMODEventPath>
+		/// event:/Sound Effects/Animals/DragonRoar
+		/// </FMODEventPath>
+		Sound_Effects_Animals_DragonRoar,
+
+		/// <FMODEventPath>
+		/// event:/Sound Effects/Animals/DragonWing
+		/// </FMODEventPath>
+		Sound_Effects_Animals_DragonWing,
 	}
 }
