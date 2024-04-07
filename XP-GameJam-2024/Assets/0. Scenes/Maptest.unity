@@ -3695,6 +3695,37 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &682179644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 682179627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1071849087
+      Data2: 1116180818
+      Data3: 1107210637
+      Data4: -1427762163
+    Path: event:/Sound Effects/Player/Footsteps
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!4 &699999558 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9082044433825663179, guid: 45b2322988b2fc14ca3fd39a63a4838f, type: 3}
@@ -4283,7 +4314,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2950330721414206, guid: 684218ef3cc5a944fb7aae4ddd790194, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.357997
+      value: -19.1
       objectReference: {fileID: 0}
     - target: {fileID: 2950330721414206, guid: 684218ef3cc5a944fb7aae4ddd790194, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4291,7 +4322,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2950330721414206, guid: 684218ef3cc5a944fb7aae4ddd790194, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -47.087997
+      value: -50.8
       objectReference: {fileID: 0}
     - target: {fileID: 2950330721414206, guid: 684218ef3cc5a944fb7aae4ddd790194, type: 3}
       propertyPath: m_LocalRotation.w
@@ -11112,12 +11143,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8394033642847987166, guid: 0594c2234f0be5748ad793651226f1cb, type: 3}
+    - {fileID: 352400270632739730, guid: 0594c2234f0be5748ad793651226f1cb, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3546175327979245019, guid: 0594c2234f0be5748ad793651226f1cb, type: 3}
       insertIndex: -1
       addedObject: {fileID: 682179635}
+    - targetCorrespondingSourceObject: {fileID: 3546175327979245019, guid: 0594c2234f0be5748ad793651226f1cb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 682179644}
     - targetCorrespondingSourceObject: {fileID: 769762615189882496, guid: 0594c2234f0be5748ad793651226f1cb, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1443651688}
