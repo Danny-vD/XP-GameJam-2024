@@ -46,11 +46,15 @@ namespace Input
 
 		private void OnOverworldInteraction(InputAction.CallbackContext obj)
 		{
+			// Trigger time dilation
+			Time.timeScale = 0.2f;
 			ChangeControls(ControlType.Special);
 		}
 
 		private void OnSpecialInteraction(InputAction.CallbackContext obj)
 		{
+			//Trigger time dilation
+			Time.timeScale = 1.0f;
 			ChangeControls(ControlType.Overworld);
 		}
 

@@ -8,11 +8,13 @@ using VDFramework.EventSystem;
 
 namespace GameManagement
 {
+    
     public class CastleManager : BetterMonoBehaviour
     {
+        [SerializeField] private int layer;
         private void OnTriggerEnter(Collider other)
         {
-            if (!other.gameObject.layer.Equals(7)) return;
+            if (!other.gameObject.layer.Equals(layer)) return;
             
             AudioPlayer.PlayOneShot2D(AudioEventType.Sound_Effects_NPCs_Cheer);
             Destroy(other.gameObject);
