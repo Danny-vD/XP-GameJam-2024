@@ -28,6 +28,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -173942721, guid: 172ab7c8950c04c41a4b139f2b381661, type: 3}
+    - target: {fileID: 7416998109975562127, guid: cc51ad636f316ba4eaf1c8d95f96eedd, type: 3}
+      propertyPath: m_SpriteSortPoint
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8259408861154586340, guid: cc51ad636f316ba4eaf1c8d95f96eedd, type: 3}
       propertyPath: m_Name
       value: HutVariant Variant
