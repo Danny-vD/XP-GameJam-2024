@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1380166185c731648ae0ff73cae6d388
+guid: e0c4c8cb5ba50e74397435b3f9a07dc4
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,22 +97,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: animals_donkey_0
+      name: animals_donkey_cart_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 25
-        height: 16
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 24
+        height: 14
+      alignment: 8
+      pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 43bfc8e3e1aea3a49aec3379d0dbeee7
-      internalID: -587912302
+      spriteID: 7bcf4a8d3123e4b458a58c71bf02655d
+      internalID: -1193254366
       vertices: []
       indices: 
       edges: []
@@ -120,7 +120,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 923aa5d0d00f4934999e69c361350a73
+    spriteID: da097578c4fcf2546944cec266bd65ea
     internalID: 0
     vertices: []
     indices: 
@@ -128,7 +128,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      animals_donkey_0: -587912302
+      animals_donkey_cart_0: -1193254366
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
