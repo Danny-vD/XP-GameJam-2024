@@ -14,7 +14,15 @@ namespace Dragon
 
 		public Villager CurrentTarget { get; private set; }
 		public bool HasValidTarget => CurrentTarget != null;
-		public bool TargetsAvailable => targets.Count > 0;
+		
+		public bool TargetsAvailable
+		{
+			get
+			{
+				GetAllPossibleTargets();
+				return targets.Count > 0;
+			}
+		}
 
 		private void Awake()
 		{
@@ -29,10 +37,10 @@ namespace Dragon
 
 		public void SetNewTarget()
 		{
-			if (CurrentTarget == null)
-			{
-				targets.Remove(CurrentTarget);
-			}
+			//if (CurrentTarget == null)
+			//{
+			//	targets.Remove(CurrentTarget);
+			//}
 			
 			if (GetRandomTarget(out Villager target))
 			{
