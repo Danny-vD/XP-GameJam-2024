@@ -12,7 +12,7 @@ namespace AudioScripts
 
 		private void LateUpdate()
 		{
-			double totalSecondsRemainingNormalized = 1 - timer.TotalSecondsRemainingNormalized;
+			double totalSecondsRemainingNormalized = timer.TotalSecondsRemainingNormalized;
 			
 			if (totalSecondsRemainingNormalized <= 0.33f)
 			{

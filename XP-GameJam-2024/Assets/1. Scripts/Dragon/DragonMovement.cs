@@ -55,6 +55,10 @@ namespace Dragon
 					StartCoroutine(FindNewTarget());
 				}
 			}
+			else if (dragonTargetManager.TargetsAvailable)
+			{
+				dragonTargetManager.SetNewTarget();
+			}
 		}
 
 		private IEnumerator FindNewTarget()
