@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 3735983}
   - component: {fileID: 3735982}
   - component: {fileID: 3735981}
+  - component: {fileID: 3735984}
   m_Layer: 0
   m_Name: Forge T
   m_TagString: Untagged
@@ -149,6 +150,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8e9ca0879bf4db6b82089ac1c95acbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  directionalConnections:
+    serializedDictionary:
+    - key: 0
+      value: {fileID: 1632609158}
+    - key: 1
+      value: {fileID: 736693530}
+    - key: 2
+      value: {fileID: 0}
+    - key: 3
+      value: {fileID: 948099167}
   Connections:
   - {fileID: 1666925944}
   - {fileID: 1632609158}
@@ -222,6 +233,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2080021656}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 314.876}
+--- !u!135 &3735984
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3735980}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.50000006
+  m_Center: {x: 0.000000232063, y: 0.21133336, z: 0.000000004399534}
 --- !u!1 &18261667
 GameObject:
   m_ObjectHideFlags: 0
@@ -233,6 +265,7 @@ GameObject:
   - component: {fileID: 18261670}
   - component: {fileID: 18261669}
   - component: {fileID: 18261668}
+  - component: {fileID: 18261671}
   m_Layer: 0
   m_Name: WP V-R
   m_TagString: Untagged
@@ -252,6 +285,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8e9ca0879bf4db6b82089ac1c95acbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  directionalConnections:
+    serializedDictionary:
+    - key: 0
+      value: {fileID: 0}
+    - key: 1
+      value: {fileID: 0}
+    - key: 2
+      value: {fileID: 0}
+    - key: 3
+      value: {fileID: 0}
   Connections:
   - {fileID: 1403257142}
   - {fileID: 2092343043}
@@ -324,6 +367,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2080021656}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 314.876}
+--- !u!135 &18261671
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 18261667}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.50000006
+  m_Center: {x: 0.000000232063, y: 0.21133336, z: 0.000000004399534}
 --- !u!1 &62759260
 GameObject:
   m_ObjectHideFlags: 0
@@ -503,6 +567,7 @@ GameObject:
   - component: {fileID: 93442095}
   - component: {fileID: 93442094}
   - component: {fileID: 93442093}
+  - component: {fileID: 93442096}
   m_Layer: 0
   m_Name: Farm T
   m_TagString: Untagged
@@ -522,6 +587,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8e9ca0879bf4db6b82089ac1c95acbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  directionalConnections:
+    serializedDictionary:
+    - key: 0
+      value: {fileID: 1420895120}
+    - key: 1
+      value: {fileID: 2057591766}
+    - key: 2
+      value: {fileID: 948099167}
+    - key: 3
+      value: {fileID: 0}
   Connections:
   - {fileID: 1420895120}
   - {fileID: 2057591766}
@@ -595,6 +670,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2080021656}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 314.876}
+--- !u!135 &93442096
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 93442092}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.50000006
+  m_Center: {x: 0.000000232063, y: 0.21133336, z: 0.000000004399534}
 --- !u!1 &105056294
 GameObject:
   m_ObjectHideFlags: 0
@@ -606,6 +702,7 @@ GameObject:
   - component: {fileID: 105056297}
   - component: {fileID: 105056296}
   - component: {fileID: 105056295}
+  - component: {fileID: 105056298}
   m_Layer: 0
   m_Name: Villager T
   m_TagString: Untagged
@@ -625,6 +722,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8e9ca0879bf4db6b82089ac1c95acbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  directionalConnections:
+    serializedDictionary:
+    - key: 0
+      value: {fileID: 0}
+    - key: 1
+      value: {fileID: 968695123}
+    - key: 2
+      value: {fileID: 365923857}
+    - key: 3
+      value: {fileID: 1920229566}
   Connections:
   - {fileID: 968695123}
   - {fileID: 365923857}
@@ -698,6 +805,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2080021656}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 314.876}
+--- !u!135 &105056298
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 105056294}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.50000006
+  m_Center: {x: 0.000000232063, y: 0.21133336, z: 0.000000004399534}
 --- !u!1001 &113005075
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -854,6 +982,7 @@ GameObject:
   - component: {fileID: 113418856}
   - component: {fileID: 113418855}
   - component: {fileID: 113418854}
+  - component: {fileID: 113418857}
   m_Layer: 0
   m_Name: WP F-SC
   m_TagString: Untagged
@@ -873,6 +1002,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8e9ca0879bf4db6b82089ac1c95acbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  directionalConnections:
+    serializedDictionary:
+    - key: 0
+      value: {fileID: 0}
+    - key: 1
+      value: {fileID: 0}
+    - key: 2
+      value: {fileID: 0}
+    - key: 3
+      value: {fileID: 0}
   Connections:
   - {fileID: 1538413674}
   - {fileID: 409265941}
@@ -945,6 +1084,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2080021656}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 314.876}
+--- !u!135 &113418857
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 113418853}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.50000006
+  m_Center: {x: 0.000000232063, y: 0.21133336, z: 0.000000004399534}
 --- !u!1 &115157807
 GameObject:
   m_ObjectHideFlags: 0
@@ -1042,6 +1202,7 @@ GameObject:
   - component: {fileID: 217049838}
   - component: {fileID: 217049837}
   - component: {fileID: 217049836}
+  - component: {fileID: 217049839}
   m_Layer: 0
   m_Name: Mine shortcut
   m_TagString: Untagged
@@ -1061,6 +1222,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8e9ca0879bf4db6b82089ac1c95acbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  directionalConnections:
+    serializedDictionary:
+    - key: 0
+      value: {fileID: 968695123}
+    - key: 1
+      value: {fileID: 1108475477}
+    - key: 2
+      value: {fileID: 0}
+    - key: 3
+      value: {fileID: 1442371097}
   Connections:
   - {fileID: 1363174138}
   - {fileID: 1108475477}
@@ -1134,6 +1305,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2080021656}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 314.876}
+--- !u!135 &217049839
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 217049835}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.50000006
+  m_Center: {x: 0.000000232063, y: 0.21133336, z: 0.000000004399534}
 --- !u!1 &252225548
 GameObject:
   m_ObjectHideFlags: 0
@@ -1294,6 +1486,7 @@ GameObject:
   - component: {fileID: 312369452}
   - component: {fileID: 312369451}
   - component: {fileID: 312369450}
+  - component: {fileID: 312369453}
   m_Layer: 0
   m_Name: SE Square T (Windmill)
   m_TagString: Untagged
@@ -1313,6 +1506,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8e9ca0879bf4db6b82089ac1c95acbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  directionalConnections:
+    serializedDictionary:
+    - key: 0
+      value: {fileID: 894478904}
+    - key: 1
+      value: {fileID: 706354922}
+    - key: 2
+      value: {fileID: 0}
+    - key: 3
+      value: {fileID: 736693530}
   Connections:
   - {fileID: 736693530}
   - {fileID: 706354922}
@@ -1386,6 +1589,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2080021656}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 314.876}
+--- !u!135 &312369453
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 312369449}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.50000006
+  m_Center: {x: 0.000000232063, y: 0.21133336, z: 0.000000004399534}
 --- !u!1 &365923856
 GameObject:
   m_ObjectHideFlags: 0
@@ -1397,6 +1621,7 @@ GameObject:
   - component: {fileID: 365923859}
   - component: {fileID: 365923858}
   - component: {fileID: 365923857}
+  - component: {fileID: 365923860}
   m_Layer: 0
   m_Name: Villager
   m_TagString: Untagged
@@ -1416,6 +1641,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8e9ca0879bf4db6b82089ac1c95acbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  directionalConnections:
+    serializedDictionary:
+    - key: 0
+      value: {fileID: 105056295}
+    - key: 1
+      value: {fileID: 0}
+    - key: 2
+      value: {fileID: 0}
+    - key: 3
+      value: {fileID: 0}
   Connections:
   - {fileID: 105056295}
 --- !u!212 &365923858
@@ -1487,6 +1722,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2080021656}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 314.876}
+--- !u!135 &365923860
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 365923856}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.50000006
+  m_Center: {x: 0.000000232063, y: 0.21133336, z: 0.000000004399534}
 --- !u!1 &409265940
 GameObject:
   m_ObjectHideFlags: 0
@@ -1498,6 +1754,7 @@ GameObject:
   - component: {fileID: 409265943}
   - component: {fileID: 409265942}
   - component: {fileID: 409265941}
+  - component: {fileID: 409265944}
   m_Layer: 0
   m_Name: WP F-SC
   m_TagString: Untagged
@@ -1517,6 +1774,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8e9ca0879bf4db6b82089ac1c95acbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  directionalConnections:
+    serializedDictionary:
+    - key: 0
+      value: {fileID: 0}
+    - key: 1
+      value: {fileID: 0}
+    - key: 2
+      value: {fileID: 0}
+    - key: 3
+      value: {fileID: 0}
   Connections:
   - {fileID: 113418854}
   - {fileID: 93442093}
@@ -1589,6 +1856,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2080021656}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 314.876}
+--- !u!135 &409265944
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 409265940}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.50000006
+  m_Center: {x: 0.000000232063, y: 0.21133336, z: 0.000000004399534}
 --- !u!1 &410252337
 GameObject:
   m_ObjectHideFlags: 0
@@ -1600,6 +1888,7 @@ GameObject:
   - component: {fileID: 410252340}
   - component: {fileID: 410252339}
   - component: {fileID: 410252338}
+  - component: {fileID: 410252341}
   m_Layer: 0
   m_Name: Central T
   m_TagString: Untagged
@@ -1619,6 +1908,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8e9ca0879bf4db6b82089ac1c95acbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  directionalConnections:
+    serializedDictionary:
+    - key: 0
+      value: {fileID: 968695123}
+    - key: 1
+      value: {fileID: 948099167}
+    - key: 2
+      value: {fileID: 948099167}
+    - key: 3
+      value: {fileID: 1420895120}
   Connections:
   - {fileID: 1420895120}
   - {fileID: 968695123}
@@ -1692,6 +1991,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2080021656}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 314.876}
+--- !u!135 &410252341
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 410252337}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.50000006
+  m_Center: {x: 0.000000232063, y: 0.21133336, z: 0.000000004399534}
 --- !u!1 &463651543
 GameObject:
   m_ObjectHideFlags: 0
@@ -1703,6 +2023,7 @@ GameObject:
   - component: {fileID: 463651546}
   - component: {fileID: 463651545}
   - component: {fileID: 463651544}
+  - component: {fileID: 463651547}
   m_Layer: 0
   m_Name: WP V-R
   m_TagString: Untagged
@@ -1722,6 +2043,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8e9ca0879bf4db6b82089ac1c95acbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  directionalConnections:
+    serializedDictionary:
+    - key: 0
+      value: {fileID: 0}
+    - key: 1
+      value: {fileID: 0}
+    - key: 2
+      value: {fileID: 0}
+    - key: 3
+      value: {fileID: 0}
   Connections:
   - {fileID: 1920229566}
   - {fileID: 1403257142}
@@ -1794,6 +2125,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2080021656}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 314.876}
+--- !u!135 &463651547
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 463651543}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.50000006
+  m_Center: {x: 0.000000232063, y: 0.21133336, z: 0.000000004399534}
 --- !u!1 &467143489
 GameObject:
   m_ObjectHideFlags: 0
@@ -1805,6 +2157,7 @@ GameObject:
   - component: {fileID: 467143492}
   - component: {fileID: 467143491}
   - component: {fileID: 467143490}
+  - component: {fileID: 467143493}
   m_Layer: 0
   m_Name: WP F-S
   m_TagString: Untagged
@@ -1824,6 +2177,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8e9ca0879bf4db6b82089ac1c95acbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  directionalConnections:
+    serializedDictionary:
+    - key: 0
+      value: {fileID: 0}
+    - key: 1
+      value: {fileID: 0}
+    - key: 2
+      value: {fileID: 0}
+    - key: 3
+      value: {fileID: 0}
   Connections:
   - {fileID: 736693530}
   - {fileID: 3735981}
@@ -1896,6 +2259,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2080021656}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 314.876}
+--- !u!135 &467143493
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 467143489}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.50000006
+  m_Center: {x: 0.000000232063, y: 0.21133336, z: 0.000000004399534}
 --- !u!1001 &500987721
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1969,6 +2353,7 @@ GameObject:
   - component: {fileID: 609032003}
   - component: {fileID: 609032002}
   - component: {fileID: 609032001}
+  - component: {fileID: 609032004}
   m_Layer: 0
   m_Name: Church
   m_TagString: Untagged
@@ -1988,6 +2373,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8e9ca0879bf4db6b82089ac1c95acbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  directionalConnections:
+    serializedDictionary:
+    - key: 0
+      value: {fileID: 0}
+    - key: 1
+      value: {fileID: 0}
+    - key: 2
+      value: {fileID: 1442371097}
+    - key: 3
+      value: {fileID: 1442371097}
   Connections:
   - {fileID: 1442371097}
 --- !u!212 &609032002
@@ -2059,6 +2454,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2080021656}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 314.876}
+--- !u!135 &609032004
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 609032000}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.50000006
+  m_Center: {x: 0.000000232063, y: 0.21133336, z: 0.000000004399534}
 --- !u!1 &639684040
 GameObject:
   m_ObjectHideFlags: 0
@@ -2364,6 +2780,7 @@ GameObject:
   - component: {fileID: 706354924}
   - component: {fileID: 706354923}
   - component: {fileID: 706354922}
+  - component: {fileID: 706354925}
   m_Layer: 0
   m_Name: Windmill
   m_TagString: Untagged
@@ -2383,6 +2800,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8e9ca0879bf4db6b82089ac1c95acbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  directionalConnections:
+    serializedDictionary:
+    - key: 0
+      value: {fileID: 0}
+    - key: 1
+      value: {fileID: 0}
+    - key: 2
+      value: {fileID: 0}
+    - key: 3
+      value: {fileID: 312369450}
   Connections:
   - {fileID: 312369450}
 --- !u!212 &706354923
@@ -2454,6 +2881,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2080021656}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 314.876}
+--- !u!135 &706354925
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 706354921}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.50000006
+  m_Center: {x: 0.000000232063, y: 0.21133336, z: 0.000000004399534}
 --- !u!1 &718731221
 GameObject:
   m_ObjectHideFlags: 0
@@ -2465,6 +2913,7 @@ GameObject:
   - component: {fileID: 718731224}
   - component: {fileID: 718731223}
   - component: {fileID: 718731222}
+  - component: {fileID: 718731225}
   m_Layer: 0
   m_Name: Watermill
   m_TagString: Untagged
@@ -2484,6 +2933,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8e9ca0879bf4db6b82089ac1c95acbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  directionalConnections:
+    serializedDictionary:
+    - key: 0
+      value: {fileID: 0}
+    - key: 1
+      value: {fileID: 0}
+    - key: 2
+      value: {fileID: 1502148116}
+    - key: 3
+      value: {fileID: 0}
   Connections:
   - {fileID: 1502148116}
 --- !u!212 &718731223
@@ -2555,6 +3014,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2080021656}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 314.876}
+--- !u!135 &718731225
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 718731221}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.50000006
+  m_Center: {x: 0.000000232063, y: 0.21133336, z: 0.000000004399534}
 --- !u!1 &736693529
 GameObject:
   m_ObjectHideFlags: 0
@@ -2566,6 +3046,7 @@ GameObject:
   - component: {fileID: 736693532}
   - component: {fileID: 736693531}
   - component: {fileID: 736693530}
+  - component: {fileID: 736693533}
   m_Layer: 0
   m_Name: SW Square T
   m_TagString: Untagged
@@ -2585,6 +3066,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8e9ca0879bf4db6b82089ac1c95acbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  directionalConnections:
+    serializedDictionary:
+    - key: 0
+      value: {fileID: 1823557125}
+    - key: 1
+      value: {fileID: 312369450}
+    - key: 2
+      value: {fileID: 3735981}
+    - key: 3
+      value: {fileID: 0}
   Connections:
   - {fileID: 467143490}
   - {fileID: 1823557125}
@@ -2658,6 +3149,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2080021656}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 314.876}
+--- !u!135 &736693533
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 736693529}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.50000006
+  m_Center: {x: 0.000000232063, y: 0.21133336, z: 0.000000004399534}
 --- !u!1001 &851594698
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2753,6 +3265,7 @@ GameObject:
   - component: {fileID: 894478906}
   - component: {fileID: 894478905}
   - component: {fileID: 894478904}
+  - component: {fileID: 894478907}
   m_Layer: 0
   m_Name: NE Square T
   m_TagString: Untagged
@@ -2772,6 +3285,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8e9ca0879bf4db6b82089ac1c95acbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  directionalConnections:
+    serializedDictionary:
+    - key: 0
+      value: {fileID: 0}
+    - key: 1
+      value: {fileID: 1108475477}
+    - key: 2
+      value: {fileID: 312369450}
+    - key: 3
+      value: {fileID: 1823557125}
   Connections:
   - {fileID: 2080946372}
   - {fileID: 1823557125}
@@ -2845,6 +3368,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2080021656}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 314.876}
+--- !u!135 &894478907
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 894478903}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.50000006
+  m_Center: {x: 0.000000232063, y: 0.21133336, z: 0.000000004399534}
 --- !u!1 &934104036
 GameObject:
   m_ObjectHideFlags: 0
@@ -2876,6 +3420,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8e9ca0879bf4db6b82089ac1c95acbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  directionalConnections:
+    serializedDictionary:
+    - key: 0
+      value: {fileID: 0}
+    - key: 1
+      value: {fileID: 0}
+    - key: 2
+      value: {fileID: 0}
+    - key: 3
+      value: {fileID: 0}
   Connections:
   - {fileID: 217049836}
   - {fileID: 2065081554}
@@ -2948,8 +3502,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2080021656}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 314.876}
---- !u!136 &934104040
-CapsuleCollider:
+--- !u!135 &934104040
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2966,11 +3520,9 @@ CapsuleCollider:
   m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 1.0000001
-  m_Direction: 1
-  m_Center: {x: -0.00000023841858, y: 0, z: 0}
+  serializedVersion: 3
+  m_Radius: 0.50000006
+  m_Center: {x: 0.000000232063, y: 0.21133336, z: 0.000000004399534}
 --- !u!1 &948099166
 GameObject:
   m_ObjectHideFlags: 0
@@ -3002,6 +3554,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8e9ca0879bf4db6b82089ac1c95acbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  directionalConnections:
+    serializedDictionary:
+    - key: 0
+      value: {fileID: 410252338}
+    - key: 1
+      value: {fileID: 1442371097}
+    - key: 2
+      value: {fileID: 3735981}
+    - key: 3
+      value: {fileID: 93442093}
   Connections:
   - {fileID: 410252338}
   - {fileID: 1442371097}
@@ -3108,6 +3670,8 @@ GameObject:
   - component: {fileID: 968695125}
   - component: {fileID: 968695124}
   - component: {fileID: 968695123}
+  - component: {fileID: 968695127}
+  - component: {fileID: 968695126}
   m_Layer: 0
   m_Name: Castle X
   m_TagString: Untagged
@@ -3127,6 +3691,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8e9ca0879bf4db6b82089ac1c95acbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  directionalConnections:
+    serializedDictionary:
+    - key: 0
+      value: {fileID: 1798896999}
+    - key: 1
+      value: {fileID: 217049836}
+    - key: 2
+      value: {fileID: 410252338}
+    - key: 3
+      value: {fileID: 105056295}
   Connections:
   - {fileID: 1798896999}
   - {fileID: 410252338}
@@ -3201,6 +3775,48 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2080021656}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 314.876}
+--- !u!135 &968695126
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 968695122}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.50000006
+  m_Center: {x: 0.000000232063, y: 0.21133336, z: 0.000000004399534}
+--- !u!135 &968695127
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 968695122}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.50000006
+  m_Center: {x: 0.000000232063, y: 0.21133336, z: 0.000000004399534}
 --- !u!1001 &1031962938
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3352,6 +3968,7 @@ GameObject:
   - component: {fileID: 1108475479}
   - component: {fileID: 1108475478}
   - component: {fileID: 1108475477}
+  - component: {fileID: 1108475480}
   m_Layer: 0
   m_Name: Mine T
   m_TagString: Untagged
@@ -3371,6 +3988,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8e9ca0879bf4db6b82089ac1c95acbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  directionalConnections:
+    serializedDictionary:
+    - key: 0
+      value: {fileID: 1363847796}
+    - key: 1
+      value: {fileID: 894478904}
+    - key: 2
+      value: {fileID: 894478904}
+    - key: 3
+      value: {fileID: 217049836}
   Connections:
   - {fileID: 1875574486}
   - {fileID: 1363847796}
@@ -3444,6 +4071,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2080021656}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 314.876}
+--- !u!135 &1108475480
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1108475476}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.50000006
+  m_Center: {x: 0.000000232063, y: 0.21133336, z: 0.000000004399534}
 --- !u!1 &1134219260
 GameObject:
   m_ObjectHideFlags: 0
@@ -3593,6 +4241,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8e9ca0879bf4db6b82089ac1c95acbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  directionalConnections:
+    serializedDictionary:
+    - key: 0
+      value: {fileID: 0}
+    - key: 1
+      value: {fileID: 0}
+    - key: 2
+      value: {fileID: 0}
+    - key: 3
+      value: {fileID: 0}
   Connections:
   - {fileID: 948099167}
   - {fileID: 1538413674}
@@ -3685,7 +4343,7 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Radius: 0.50000006
-  m_Center: {x: -0.00000011920929, y: 0, z: 0}
+  m_Center: {x: 0.000000232063, y: 0.21133336, z: 0.000000004399534}
 --- !u!1 &1363174137
 GameObject:
   m_ObjectHideFlags: 0
@@ -3697,6 +4355,7 @@ GameObject:
   - component: {fileID: 1363174140}
   - component: {fileID: 1363174139}
   - component: {fileID: 1363174138}
+  - component: {fileID: 1363174141}
   m_Layer: 0
   m_Name: WP Shortcut E
   m_TagString: Untagged
@@ -3716,6 +4375,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8e9ca0879bf4db6b82089ac1c95acbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  directionalConnections:
+    serializedDictionary:
+    - key: 0
+      value: {fileID: 0}
+    - key: 1
+      value: {fileID: 0}
+    - key: 2
+      value: {fileID: 0}
+    - key: 3
+      value: {fileID: 0}
   Connections:
   - {fileID: 217049836}
   - {fileID: 1432179601}
@@ -3788,6 +4457,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2080021656}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 314.876}
+--- !u!135 &1363174141
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1363174137}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.50000006
+  m_Center: {x: 0.000000232063, y: 0.21133336, z: 0.000000004399534}
 --- !u!1 &1363847795
 GameObject:
   m_ObjectHideFlags: 0
@@ -3799,6 +4489,7 @@ GameObject:
   - component: {fileID: 1363847798}
   - component: {fileID: 1363847797}
   - component: {fileID: 1363847796}
+  - component: {fileID: 1363847799}
   m_Layer: 0
   m_Name: Mine
   m_TagString: Untagged
@@ -3818,6 +4509,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8e9ca0879bf4db6b82089ac1c95acbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  directionalConnections:
+    serializedDictionary:
+    - key: 0
+      value: {fileID: 0}
+    - key: 1
+      value: {fileID: 0}
+    - key: 2
+      value: {fileID: 1108475477}
+    - key: 3
+      value: {fileID: 0}
   Connections:
   - {fileID: 1108475477}
 --- !u!212 &1363847797
@@ -3889,6 +4590,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2080021656}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 314.876}
+--- !u!135 &1363847799
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1363847795}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.50000006
+  m_Center: {x: 0.000000232063, y: 0.21133336, z: 0.000000004399534}
 --- !u!1 &1403257141
 GameObject:
   m_ObjectHideFlags: 0
@@ -3900,6 +4622,7 @@ GameObject:
   - component: {fileID: 1403257144}
   - component: {fileID: 1403257143}
   - component: {fileID: 1403257142}
+  - component: {fileID: 1403257145}
   m_Layer: 0
   m_Name: WP V-R
   m_TagString: Untagged
@@ -3919,6 +4642,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8e9ca0879bf4db6b82089ac1c95acbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  directionalConnections:
+    serializedDictionary:
+    - key: 0
+      value: {fileID: 0}
+    - key: 1
+      value: {fileID: 0}
+    - key: 2
+      value: {fileID: 0}
+    - key: 3
+      value: {fileID: 0}
   Connections:
   - {fileID: 463651544}
   - {fileID: 18261668}
@@ -3991,6 +4724,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2080021656}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 314.876}
+--- !u!135 &1403257145
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1403257141}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.50000006
+  m_Center: {x: 0.000000232063, y: 0.21133336, z: 0.000000004399534}
 --- !u!1 &1414507736
 GameObject:
   m_ObjectHideFlags: 0
@@ -4088,6 +4842,7 @@ GameObject:
   - component: {fileID: 1420895122}
   - component: {fileID: 1420895121}
   - component: {fileID: 1420895120}
+  - component: {fileID: 1420895123}
   m_Layer: 0
   m_Name: Left Central T
   m_TagString: Untagged
@@ -4107,6 +4862,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8e9ca0879bf4db6b82089ac1c95acbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  directionalConnections:
+    serializedDictionary:
+    - key: 0
+      value: {fileID: 1502148116}
+    - key: 1
+      value: {fileID: 410252338}
+    - key: 2
+      value: {fileID: 93442093}
+    - key: 3
+      value: {fileID: 0}
   Connections:
   - {fileID: 1502148116}
   - {fileID: 93442093}
@@ -4180,6 +4945,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2080021656}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 314.876}
+--- !u!135 &1420895123
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1420895119}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.50000006
+  m_Center: {x: 0.000000232063, y: 0.21133336, z: 0.000000004399534}
 --- !u!1 &1432179600
 GameObject:
   m_ObjectHideFlags: 0
@@ -4191,6 +4977,7 @@ GameObject:
   - component: {fileID: 1432179603}
   - component: {fileID: 1432179602}
   - component: {fileID: 1432179601}
+  - component: {fileID: 1432179604}
   m_Layer: 0
   m_Name: WP Shortcut W
   m_TagString: Untagged
@@ -4210,6 +4997,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8e9ca0879bf4db6b82089ac1c95acbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  directionalConnections:
+    serializedDictionary:
+    - key: 0
+      value: {fileID: 0}
+    - key: 1
+      value: {fileID: 0}
+    - key: 2
+      value: {fileID: 0}
+    - key: 3
+      value: {fileID: 0}
   Connections:
   - {fileID: 1363174138}
   - {fileID: 968695123}
@@ -4282,6 +5079,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2080021656}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 314.876}
+--- !u!135 &1432179604
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1432179600}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.50000006
+  m_Center: {x: 0.000000232063, y: 0.21133336, z: 0.000000004399534}
 --- !u!1 &1442371096
 GameObject:
   m_ObjectHideFlags: 0
@@ -4293,6 +5111,7 @@ GameObject:
   - component: {fileID: 1442371099}
   - component: {fileID: 1442371098}
   - component: {fileID: 1442371097}
+  - component: {fileID: 1442371100}
   m_Layer: 0
   m_Name: Church X
   m_TagString: Untagged
@@ -4312,6 +5131,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8e9ca0879bf4db6b82089ac1c95acbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  directionalConnections:
+    serializedDictionary:
+    - key: 0
+      value: {fileID: 217049836}
+    - key: 1
+      value: {fileID: 609032001}
+    - key: 2
+      value: {fileID: 1823557125}
+    - key: 3
+      value: {fileID: 948099167}
   Connections:
   - {fileID: 1823557125}
   - {fileID: 609032001}
@@ -4386,6 +5215,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2080021656}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 314.876}
+--- !u!135 &1442371100
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1442371096}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.50000006
+  m_Center: {x: 0.000000232063, y: 0.21133336, z: 0.000000004399534}
 --- !u!1 &1502148115
 GameObject:
   m_ObjectHideFlags: 0
@@ -4397,6 +5247,7 @@ GameObject:
   - component: {fileID: 1502148118}
   - component: {fileID: 1502148117}
   - component: {fileID: 1502148116}
+  - component: {fileID: 1502148119}
   m_Layer: 0
   m_Name: Watermill T
   m_TagString: Untagged
@@ -4416,6 +5267,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8e9ca0879bf4db6b82089ac1c95acbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  directionalConnections:
+    serializedDictionary:
+    - key: 0
+      value: {fileID: 718731222}
+    - key: 1
+      value: {fileID: 1420895120}
+    - key: 2
+      value: {fileID: 1420895120}
+    - key: 3
+      value: {fileID: 1920229566}
   Connections:
   - {fileID: 718731222}
   - {fileID: 1920229566}
@@ -4489,6 +5350,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2080021656}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 314.876}
+--- !u!135 &1502148119
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1502148115}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.50000006
+  m_Center: {x: 0.000000232063, y: 0.21133336, z: 0.000000004399534}
 --- !u!1 &1509923291
 GameObject:
   m_ObjectHideFlags: 0
@@ -4551,6 +5433,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8e9ca0879bf4db6b82089ac1c95acbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  directionalConnections:
+    serializedDictionary:
+    - key: 0
+      value: {fileID: 0}
+    - key: 1
+      value: {fileID: 0}
+    - key: 2
+      value: {fileID: 0}
+    - key: 3
+      value: {fileID: 0}
   Connections:
   - {fileID: 1344925572}
   - {fileID: 113418854}
@@ -4643,7 +5535,7 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Radius: 0.50000006
-  m_Center: {x: 0, y: 0.0000019073486, z: -0.000000007450581}
+  m_Center: {x: 0.000000232063, y: 0.21133336, z: 0.000000004399534}
 --- !u!1 &1632609157
 GameObject:
   m_ObjectHideFlags: 0
@@ -4655,6 +5547,7 @@ GameObject:
   - component: {fileID: 1632609160}
   - component: {fileID: 1632609159}
   - component: {fileID: 1632609158}
+  - component: {fileID: 1632609161}
   m_Layer: 0
   m_Name: Forge
   m_TagString: Untagged
@@ -4674,6 +5567,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8e9ca0879bf4db6b82089ac1c95acbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  directionalConnections:
+    serializedDictionary:
+    - key: 0
+      value: {fileID: 0}
+    - key: 1
+      value: {fileID: 0}
+    - key: 2
+      value: {fileID: 3735981}
+    - key: 3
+      value: {fileID: 0}
   Connections:
   - {fileID: 3735981}
 --- !u!212 &1632609159
@@ -4745,6 +5648,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2080021656}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 314.876}
+--- !u!135 &1632609161
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1632609157}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.50000006
+  m_Center: {x: 0.000000232063, y: 0.21133336, z: 0.000000004399534}
 --- !u!1 &1666925943
 GameObject:
   m_ObjectHideFlags: 0
@@ -4756,6 +5680,7 @@ GameObject:
   - component: {fileID: 1666925946}
   - component: {fileID: 1666925945}
   - component: {fileID: 1666925944}
+  - component: {fileID: 1666925947}
   m_Layer: 0
   m_Name: WP SC-F
   m_TagString: Untagged
@@ -4775,6 +5700,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8e9ca0879bf4db6b82089ac1c95acbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  directionalConnections:
+    serializedDictionary:
+    - key: 0
+      value: {fileID: 0}
+    - key: 1
+      value: {fileID: 0}
+    - key: 2
+      value: {fileID: 0}
+    - key: 3
+      value: {fileID: 0}
   Connections:
   - {fileID: 3735981}
   - {fileID: 948099167}
@@ -4847,6 +5782,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2080021656}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 314.876}
+--- !u!135 &1666925947
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1666925943}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.50000006
+  m_Center: {x: 0.000000232063, y: 0.21133336, z: 0.000000004399534}
 --- !u!1 &1670800984
 GameObject:
   m_ObjectHideFlags: 0
@@ -4926,6 +5882,7 @@ GameObject:
   - component: {fileID: 1798897001}
   - component: {fileID: 1798897000}
   - component: {fileID: 1798896999}
+  - component: {fileID: 1798897002}
   m_Layer: 0
   m_Name: Castle
   m_TagString: Untagged
@@ -4945,6 +5902,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8e9ca0879bf4db6b82089ac1c95acbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  directionalConnections:
+    serializedDictionary:
+    - key: 0
+      value: {fileID: 0}
+    - key: 1
+      value: {fileID: 0}
+    - key: 2
+      value: {fileID: 968695123}
+    - key: 3
+      value: {fileID: 0}
   Connections:
   - {fileID: 968695123}
 --- !u!212 &1798897000
@@ -5016,6 +5983,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2080021656}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 314.876}
+--- !u!135 &1798897002
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1798896998}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.50000006
+  m_Center: {x: 0.000000232063, y: 0.21133336, z: 0.000000004399534}
 --- !u!1 &1823557124
 GameObject:
   m_ObjectHideFlags: 0
@@ -5027,6 +6015,7 @@ GameObject:
   - component: {fileID: 1823557127}
   - component: {fileID: 1823557126}
   - component: {fileID: 1823557125}
+  - component: {fileID: 1823557128}
   m_Layer: 0
   m_Name: NW Square T
   m_TagString: Untagged
@@ -5046,6 +6035,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8e9ca0879bf4db6b82089ac1c95acbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  directionalConnections:
+    serializedDictionary:
+    - key: 0
+      value: {fileID: 0}
+    - key: 1
+      value: {fileID: 894478904}
+    - key: 2
+      value: {fileID: 736693530}
+    - key: 3
+      value: {fileID: 1442371097}
   Connections:
   - {fileID: 894478904}
   - {fileID: 1442371097}
@@ -5119,6 +6118,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2080021656}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 314.876}
+--- !u!135 &1823557128
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1823557124}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.50000006
+  m_Center: {x: 0.000000232063, y: 0.21133336, z: 0.000000004399534}
 --- !u!1 &1875574485
 GameObject:
   m_ObjectHideFlags: 0
@@ -5130,6 +6150,7 @@ GameObject:
   - component: {fileID: 1875574488}
   - component: {fileID: 1875574487}
   - component: {fileID: 1875574486}
+  - component: {fileID: 1875574489}
   m_Layer: 0
   m_Name: WP M - S
   m_TagString: Untagged
@@ -5149,6 +6170,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8e9ca0879bf4db6b82089ac1c95acbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  directionalConnections:
+    serializedDictionary:
+    - key: 0
+      value: {fileID: 0}
+    - key: 1
+      value: {fileID: 0}
+    - key: 2
+      value: {fileID: 0}
+    - key: 3
+      value: {fileID: 0}
   Connections:
   - {fileID: 1108475477}
   - {fileID: 2080946372}
@@ -5221,6 +6252,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2080021656}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 314.876}
+--- !u!135 &1875574489
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1875574485}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.50000006
+  m_Center: {x: 0.000000232063, y: 0.21133336, z: 0.000000004399534}
 --- !u!1 &1920229565
 GameObject:
   m_ObjectHideFlags: 0
@@ -5232,6 +6284,7 @@ GameObject:
   - component: {fileID: 1920229568}
   - component: {fileID: 1920229567}
   - component: {fileID: 1920229566}
+  - component: {fileID: 1920229569}
   m_Layer: 0
   m_Name: Ranch T
   m_TagString: Untagged
@@ -5251,6 +6304,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8e9ca0879bf4db6b82089ac1c95acbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  directionalConnections:
+    serializedDictionary:
+    - key: 0
+      value: {fileID: 0}
+    - key: 1
+      value: {fileID: 1502148116}
+    - key: 2
+      value: {fileID: 1951045546}
+    - key: 3
+      value: {fileID: 105056295}
   Connections:
   - {fileID: 1951045546}
   - {fileID: 1502148116}
@@ -5324,6 +6387,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2080021656}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 354.64}
+--- !u!135 &1920229569
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1920229565}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.50000006
+  m_Center: {x: 0.000000232063, y: 0.21133336, z: 0.000000004399534}
 --- !u!1 &1951045545
 GameObject:
   m_ObjectHideFlags: 0
@@ -5335,6 +6419,7 @@ GameObject:
   - component: {fileID: 1951045548}
   - component: {fileID: 1951045547}
   - component: {fileID: 1951045546}
+  - component: {fileID: 1951045549}
   m_Layer: 0
   m_Name: Ranch
   m_TagString: Untagged
@@ -5354,6 +6439,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8e9ca0879bf4db6b82089ac1c95acbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  directionalConnections:
+    serializedDictionary:
+    - key: 0
+      value: {fileID: 1920229566}
+    - key: 1
+      value: {fileID: 0}
+    - key: 2
+      value: {fileID: 0}
+    - key: 3
+      value: {fileID: 0}
   Connections:
   - {fileID: 1920229566}
 --- !u!212 &1951045547
@@ -5425,6 +6520,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2080021656}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 347.317}
+--- !u!135 &1951045549
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1951045545}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.50000006
+  m_Center: {x: 0.000000232063, y: 0.21133336, z: 0.000000004399534}
 --- !u!1 &2057591765
 GameObject:
   m_ObjectHideFlags: 0
@@ -5436,6 +6552,7 @@ GameObject:
   - component: {fileID: 2057591768}
   - component: {fileID: 2057591767}
   - component: {fileID: 2057591766}
+  - component: {fileID: 2057591769}
   m_Layer: 0
   m_Name: Farm
   m_TagString: Untagged
@@ -5455,6 +6572,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8e9ca0879bf4db6b82089ac1c95acbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  directionalConnections:
+    serializedDictionary:
+    - key: 0
+      value: {fileID: 0}
+    - key: 1
+      value: {fileID: 0}
+    - key: 2
+      value: {fileID: 0}
+    - key: 3
+      value: {fileID: 93442093}
   Connections:
   - {fileID: 93442093}
 --- !u!212 &2057591767
@@ -5526,6 +6653,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2080021656}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 314.876}
+--- !u!135 &2057591769
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2057591765}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.50000006
+  m_Center: {x: 0.000000232063, y: 0.21133336, z: 0.000000004399534}
 --- !u!1 &2065081553
 GameObject:
   m_ObjectHideFlags: 0
@@ -5557,6 +6705,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8e9ca0879bf4db6b82089ac1c95acbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  directionalConnections:
+    serializedDictionary:
+    - key: 0
+      value: {fileID: 0}
+    - key: 1
+      value: {fileID: 0}
+    - key: 2
+      value: {fileID: 0}
+    - key: 3
+      value: {fileID: 0}
   Connections:
   - {fileID: 934104037}
   - {fileID: 1442371097}
@@ -5629,8 +6787,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2080021656}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 314.876}
---- !u!136 &2065081557
-CapsuleCollider:
+--- !u!135 &2065081557
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -5647,11 +6805,9 @@ CapsuleCollider:
   m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 1.0000001
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  serializedVersion: 3
+  m_Radius: 0.50000006
+  m_Center: {x: 0.000000232063, y: 0.21133336, z: 0.000000004399534}
 --- !u!1 &2080021655
 GameObject:
   m_ObjectHideFlags: 0
@@ -5735,6 +6891,7 @@ GameObject:
   - component: {fileID: 2080946374}
   - component: {fileID: 2080946373}
   - component: {fileID: 2080946372}
+  - component: {fileID: 2080946375}
   m_Layer: 0
   m_Name: WP M - S
   m_TagString: Untagged
@@ -5754,6 +6911,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8e9ca0879bf4db6b82089ac1c95acbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  directionalConnections:
+    serializedDictionary:
+    - key: 0
+      value: {fileID: 0}
+    - key: 1
+      value: {fileID: 0}
+    - key: 2
+      value: {fileID: 0}
+    - key: 3
+      value: {fileID: 0}
   Connections:
   - {fileID: 1875574486}
   - {fileID: 894478904}
@@ -5826,6 +6993,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2080021656}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 314.876}
+--- !u!135 &2080946375
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2080946371}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.50000006
+  m_Center: {x: 0.000000232063, y: 0.21133336, z: 0.000000004399534}
 --- !u!1 &2092343041
 GameObject:
   m_ObjectHideFlags: 0
@@ -5837,6 +7025,7 @@ GameObject:
   - component: {fileID: 2092343042}
   - component: {fileID: 2092343044}
   - component: {fileID: 2092343043}
+  - component: {fileID: 2092343045}
   m_Layer: 0
   m_Name: WP V-R
   m_TagString: Untagged
@@ -5871,6 +7060,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8e9ca0879bf4db6b82089ac1c95acbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  directionalConnections:
+    serializedDictionary:
+    - key: 0
+      value: {fileID: 0}
+    - key: 1
+      value: {fileID: 0}
+    - key: 2
+      value: {fileID: 0}
+    - key: 3
+      value: {fileID: 0}
   Connections:
   - {fileID: 18261668}
   - {fileID: 105056295}
@@ -5928,6 +7127,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!135 &2092343045
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2092343041}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.50000006
+  m_Center: {x: 0.000000232063, y: 0.21133336, z: 0.000000004399534}
 --- !u!4 &543450651783681014
 Transform:
   m_ObjectHideFlags: 0
