@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2a995df3d04bc46bdb59a71c00f4da29
+guid: e9bf5d9401e4503439b61769430d628c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: arrow_0
+      name: char_flowergirl_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 10
-        height: 14
+        width: 11
+        height: 20
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,8 +111,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ad08020a8c7b5c6438912c118118a818
-      internalID: -1233763387
+      spriteID: 4f3e52d04dd3bbc4187f1cf2cf3df8f0
+      internalID: -226406975
       vertices: []
       indices: 
       edges: []
@@ -120,7 +120,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 7c5ef0c44668d7741b2f2057186c9751
+    spriteID: a4552d1c226a384478f8d0bb9c76ea1c
     internalID: 0
     vertices: []
     indices: 
@@ -128,7 +128,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      arrow_0: -1233763387
+      char_flowergirl_0: -226406975
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
