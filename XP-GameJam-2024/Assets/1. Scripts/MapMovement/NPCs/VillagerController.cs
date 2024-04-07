@@ -142,7 +142,7 @@ namespace MapMovement.NPCs
 				return;
 			}
 
-			Intersection nextNode = commandsQueue.Dequeue()?.CalculateNextNode(currentNode);
+			Intersection nextNode = commandsQueue.Dequeue()?.GetNextNode(currentNode);
 
 			if (nextNode is null)
 			{
