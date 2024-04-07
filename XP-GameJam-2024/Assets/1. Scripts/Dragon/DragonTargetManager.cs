@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Linq;
 using GameManagement;
 using GameManagement.Events;
 using UnityEngine;
@@ -8,11 +10,11 @@ namespace Dragon
 {
 	public class DragonTargetManager : BetterMonoBehaviour
 	{
-		private Villager[] targets;
+		private List<Villager> targets;
 
 		public Villager CurrentTarget { get; private set; }
 		public bool HasValidTarget => CurrentTarget != null;
-		public bool TargetsAvailable => targets.Length > 0;
+		public bool TargetsAvailable => targets.Count > 0;
 
 		private void Awake()
 		{
@@ -27,6 +29,11 @@ namespace Dragon
 
 		public void SetNewTarget()
 		{
+			if (CurrentTarget == null)
+			{
+				targets.Remove(CurrentTarget);
+			}
+			
 			if (GetRandomTarget(out Villager target))
 			{
 				CurrentTarget = target;
@@ -45,7 +52,7 @@ namespace Dragon
 
 		private void GetAllPossibleTargets()
 		{
-			targets = FindObjectsByType<Villager>(FindObjectsSortMode.None);
+			targets = FindObjectsByType<Villager>(FindObjectsSortMode.None).ToList();
 		}
 
 		private void OnDestroy()
