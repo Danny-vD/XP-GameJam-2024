@@ -18,3 +18,6 @@ event:/Sound Effects/NPCs/npcFootstep
 event:/Sound Effects/NPCs/npcAlertBeep
 event:/Sound Effects/Animals/DragonRoar
 event:/Sound Effects/Animals/DragonWing
+event:/Sound Effects/NPCs/horseFootstep
+event:/Sound Effects/NPCs/dragonFire
+event:/Sound Effects/Time/clockTick

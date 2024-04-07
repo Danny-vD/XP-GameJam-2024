@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using FMODUtilityPackage.Core;
+using FMODUtilityPackage.Enums;
 using MapMovement.Commands;
 using MapMovement.Commands.Interface;
 using MapMovement.Waypoints;
@@ -34,7 +36,10 @@ namespace MapMovement.NPCs
 		[SerializeField]
 		private GameObject exclamationMark;
 
-		public bool CannotReceiveCommand => !isListening || agent.remainingDistance > 5 && !agent.isStopped; //note Replace most of this by IsMoving?
+		[SerializeField]
+		private AudioEventType exclamationSound = AudioEventType.Sound_Effects_NPCs_npcAlertBeep;
+
+        public bool CannotReceiveCommand => !isListening || agent.remainingDistance > 5 && !agent.isStopped; //note Replace most of this by IsMoving?
 		public bool CanReceiveCommand => !CannotReceiveCommand;
 
 		public bool IsMoving { get; private set; }
@@ -101,7 +106,8 @@ namespace MapMovement.NPCs
 
 				if (exclamationMark && CanReceiveCommand)
 				{
-					exclamationMark.SetActive(true);
+                    AudioPlayer.PlayOneShot2D(exclamationSound);
+                    exclamationMark.SetActive(true);
 				}
 			}
 			
@@ -265,6 +271,7 @@ namespace MapMovement.NPCs
 
 			if (isListening && exclamationMark)
 			{
+				AudioPlayer.PlayOneShot2D(exclamationSound);
 				exclamationMark.SetActive(true);
 			}
 		}

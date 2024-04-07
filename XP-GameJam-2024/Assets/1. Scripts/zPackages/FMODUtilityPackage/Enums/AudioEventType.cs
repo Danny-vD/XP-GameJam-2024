@@ -107,5 +107,20 @@ namespace FMODUtilityPackage.Enums
 		/// event:/Sound Effects/Animals/DragonWing
 		/// </FMODEventPath>
 		Sound_Effects_Animals_DragonWing,
+
+		/// <FMODEventPath>
+		/// event:/Sound Effects/NPCs/horseFootstep
+		/// </FMODEventPath>
+		Sound_Effects_NPCs_horseFootstep,
+
+		/// <FMODEventPath>
+		/// event:/Sound Effects/NPCs/dragonFire
+		/// </FMODEventPath>
+		Sound_Effects_NPCs_dragonFire,
+
+		/// <FMODEventPath>
+		/// event:/Sound Effects/Time/clockTick
+		/// </FMODEventPath>
+		Sound_Effects_Time_clockTick,
 	}
 }

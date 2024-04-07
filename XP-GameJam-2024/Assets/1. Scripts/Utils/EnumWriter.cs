@@ -10,6 +10,7 @@ namespace Utils
 {
 	public static class EnumWriter
 	{
+#if UNITY_EDITOR
 		private const string scriptsFolder = "1. Scripts";
 
 		private static readonly string typePath = @$"{Application.dataPath}\{scriptsFolder}\";
@@ -117,4 +118,5 @@ namespace Utils
 			File.WriteAllText(fullPath, builder.ToString());
 		}
 	}
+#endif
 }
