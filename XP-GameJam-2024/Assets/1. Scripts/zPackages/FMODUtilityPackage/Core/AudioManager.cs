@@ -121,5 +121,13 @@ namespace FMODUtilityPackage.Core
 		public void OnAfterDeserialize()
 		{
 		}
+
+#if UNITY_EDITOR
+		[ContextMenu("Set event paths")]
+		private void SetPaths()
+		{
+			EventPaths.SetEventPaths();
+		}
+#endif
 	}
 }
