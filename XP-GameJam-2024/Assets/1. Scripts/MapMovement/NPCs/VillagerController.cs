@@ -199,7 +199,7 @@ namespace MapMovement.NPCs
 					return;
 				}
 
-				agent.SetDestination(currentNode.transform.position);
+				agent.SetDestination(nextNode.transform.position);
 
 				previousNode = currentNode;
 				currentNode  = nextNode;
