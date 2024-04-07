@@ -181,6 +181,23 @@ namespace MapMovement.NPCs
 			if (currentNode.Connections.Count <= 2)
 			{
 				nextNode = currentNode.Connections.FirstOrDefault(connection => connection != previousNode);
+				
+				if (nextNode is null)
+				{
+					OnEnterIdle.Invoke();
+				
+					IsMoving        = false;
+					agent.isStopped = true;
+				
+					commandsQueue.Clear();
+
+					if (isListening && exclamationMark)
+					{
+						exclamationMark.SetActive(true);
+					}
+
+					return;
+				}
 
 				agent.SetDestination(currentNode.transform.position);
 
@@ -205,7 +222,7 @@ namespace MapMovement.NPCs
 				
 				commandsQueue.Clear();
 
-				if (isListening && CanReceiveCommand && exclamationMark) //NOTE: Always show???
+				if (isListening && exclamationMark)
 				{
 					exclamationMark.SetActive(true);
 				}
