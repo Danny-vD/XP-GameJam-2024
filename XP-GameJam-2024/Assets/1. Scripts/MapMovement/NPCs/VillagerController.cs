@@ -102,7 +102,6 @@ namespace MapMovement.NPCs
 
 			if (!commandByVector.TryGetValue(vector, out Func<AbstractMoveCommand> command)) return;
 
-			Debug.Log(vector);
 			commandsQueue.Enqueue(command.Invoke());
 		}
 
@@ -126,9 +125,16 @@ namespace MapMovement.NPCs
 
 		private void NextCommand()
 		{
+			Vector3 movementDirection = agent.velocity.normalized;
+
+			if (movementDirection == Vector3.zero)
+			{
+				movementDirection = previousNode.transform.up;
+			}
+			
 			if (currentNode.Connections.Count <= 2)
 			{
-				Intersection nextNode = MoveForwardCommand.NewInstance().CalculateNextNode(currentNode, previousNode, transform, agent.velocity.normalized);
+				Intersection nextNode = MoveForwardCommand.NewInstance().CalculateNextNode(currentNode, previousNode, transform, movementDirection);
 				previousNode = currentNode;
 				currentNode  = nextNode;
 				agent.SetDestination(currentNode.transform.position);
@@ -140,7 +146,7 @@ namespace MapMovement.NPCs
 					return;
 				}
 
-				Intersection nextNode = commandsQueue.Dequeue()?.CalculateNextNode(currentNode, previousNode, transform, agent.velocity.normalized);
+				Intersection nextNode = commandsQueue.Dequeue()?.CalculateNextNode(currentNode, previousNode, transform, movementDirection);
 
 				if (nextNode is null)
 				{

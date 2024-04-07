@@ -28,7 +28,6 @@ namespace MapMovement.Commands
 				return currentNode.Connections.FirstOrDefault();
 			}
 			
-			//float unsignedAngle = Vector3.Angle(movementDirection, currentNode.Connections[0].transform.position - currentNode.transform.position);
 			int bestCandidateIndex = -1;
 			float lowestAngle = forwardAngleThreshold;
 
