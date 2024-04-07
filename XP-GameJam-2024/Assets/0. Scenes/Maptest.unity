@@ -388,6 +388,11 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.50000006
   m_Center: {x: 0.000000232063, y: 0.21133336, z: 0.000000004399534}
+--- !u!1 &23050671 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5439162652427591783, guid: be22f5e1c66ff264fab6334d8f21bff7, type: 3}
+  m_PrefabInstance: {fileID: 1609703074}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &38521326
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1742,6 +1747,7 @@ GameObject:
   m_Component:
   - component: {fileID: 287763376}
   - component: {fileID: 287763375}
+  - component: {fileID: 287763377}
   m_Layer: 0
   m_Name: ControlManager
   m_TagString: Untagged
@@ -1779,6 +1785,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &287763377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 287763374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07b9587ac8294368a54bb7faa4baf2ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saved: 0
 --- !u!1 &312369449
 GameObject:
   m_ObjectHideFlags: 0
@@ -6947,6 +6966,11 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.50000006
   m_Center: {x: 0.000000232063, y: 0.21133336, z: 0.000000004399534}
+--- !u!1 &1443651686 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 769762615189882496, guid: 0594c2234f0be5748ad793651226f1cb, type: 3}
+  m_PrefabInstance: {fileID: 2098681850457998497}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1494414246
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7431,13 +7455,52 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5439162652427591783, guid: be22f5e1c66ff264fab6334d8f21bff7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1609703081}
+    - targetCorrespondingSourceObject: {fileID: 5439162652427591783, guid: be22f5e1c66ff264fab6334d8f21bff7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1609703080}
   m_SourcePrefab: {fileID: 100100000, guid: be22f5e1c66ff264fab6334d8f21bff7, type: 3}
 --- !u!4 &1609703075 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5890452656119925542, guid: be22f5e1c66ff264fab6334d8f21bff7, type: 3}
   m_PrefabInstance: {fileID: 1609703074}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1609703080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 23050671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7faa55dd16d94627a5227cb58b180cee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!135 &1609703081
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 23050671}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 3.76
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1632609157
 GameObject:
   m_ObjectHideFlags: 0
@@ -10212,6 +10275,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8394033642847987166, guid: 0594c2234f0be5748ad793651226f1cb, type: 3}
+      propertyPath: attenuationObject
+      value: 
+      objectReference: {fileID: 1443651686}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10386,9 +10453,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Peasant
       objectReference: {fileID: 0}
-    - target: {fileID: 5299935634013941558, guid: 6de808cc9a903db4d976763b0773c906, type: 3}
-      propertyPath: m_Speed
-      value: 4
+    - target: {fileID: 7810458554906362565, guid: 6de808cc9a903db4d976763b0773c906, type: 3}
+      propertyPath: audioEventType
+      value: 16
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
