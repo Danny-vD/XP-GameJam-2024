@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 30852799dc4285d4e905b99217f92a8e
+guid: 033192532eaa2a5419b32ae1674e1e37
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,22 +97,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: environment_bush_05_0
+      name: environment_tree_needle03_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 30
-        height: 18
-      alignment: 9
-      pivot: {x: 0.5, y: 0.15}
+        width: 39
+        height: 59
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a764ec00cdea5ff44a87fc8266516aa7
-      internalID: -848108692
+      spriteID: 5747332a45e3fab45a84244259615589
+      internalID: 919039329
       vertices: []
       indices: 
       edges: []
@@ -120,7 +120,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: f4b1487f73351e443874305815624129
+    spriteID: db3bbae583258a94aac34659a3df4aab
     internalID: 0
     vertices: []
     indices: 
@@ -128,7 +128,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      environment_bush_05_0: -848108692
+      environment_tree_needle03_0: 919039329
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
