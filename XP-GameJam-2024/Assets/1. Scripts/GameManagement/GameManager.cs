@@ -8,8 +8,8 @@ namespace GameManagement
     public class GameManager : Singleton<GameManager>
     {
         public int saved;
-        
-        private void Awake()
+
+        protected override void Awake()
         {
             base.Awake();
             saved = 0;
