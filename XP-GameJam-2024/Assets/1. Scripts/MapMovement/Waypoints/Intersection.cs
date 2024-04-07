@@ -12,7 +12,6 @@ namespace MapMovement.Waypoints
 		[SerializeField]
 		private SerializableEnumDictionary<Direction, Intersection> directionalConnections;
 		
-		
 		[SerializeField]
 		public List<Intersection> Connections;
 

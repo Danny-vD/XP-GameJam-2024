@@ -12,9 +12,9 @@ namespace MapMovement.NPCs
 {
 	public class VillagerController : BetterMonoBehaviour, IActorMover
 	{
-		public event Action OnMovementStart;
-		public event Action OnMovementCancelled;
-		public event Action OnEnterIdle;
+		public event Action OnMovementStart = delegate { };
+		public event Action OnMovementCancelled = delegate { };
+		public event Action OnEnterIdle = delegate { };
 
 		private bool listeningMode;
 
@@ -32,7 +32,7 @@ namespace MapMovement.NPCs
 
 		[SerializeField]
 		private GameObject exclamationMark;
-		
+
 		public bool CannotReceiveCommand => !isListening || agent.remainingDistance > 5 && !agent.isStopped;
 		public bool CanReceiveCommand => !CannotReceiveCommand;
 
@@ -95,7 +95,7 @@ namespace MapMovement.NPCs
 			if (other.gameObject.layer.Equals(6))
 			{
 				isListening = false;
-				
+
 				if (exclamationMark)
 				{
 					exclamationMark.SetActive(false);
@@ -130,8 +130,10 @@ namespace MapMovement.NPCs
 				{
 					exclamationMark.SetActive(false);
 				}
+				
+				OnMovementStart.Invoke();
 			}
-			
+
 			NextCommand();
 		}
 
@@ -146,15 +148,27 @@ namespace MapMovement.NPCs
 
 			if (nextNode is null)
 			{
+				OnEnterIdle.Invoke();
 				return;
 			}
 
 			agent.SetDestination(nextNode.transform.position);
 			previousNode = currentNode;
 			currentNode  = nextNode;
-			
+
 			/*
-			
+			Vector3 movementDirection = agent.velocity.normalized;
+
+			if (movementDirection.sqrMagnitude < Mathf.Epsilon)
+			{
+				movementDirection = lastDirection; // First try the last used direction
+			}
+
+			if (movementDirection.sqrMagnitude < Mathf.Epsilon)
+			{
+				movementDirection = previousNode.transform.up; // If that is also 0,0,0 then use the rotation of the node
+			}
+
 			if (currentNode.Connections.Count <= 2)
 			{
 				Intersection nextNode = MoveForwardCommand.NewInstance().CalculateNextNode(currentNode);
