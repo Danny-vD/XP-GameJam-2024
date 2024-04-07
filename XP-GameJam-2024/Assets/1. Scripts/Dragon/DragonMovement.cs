@@ -35,9 +35,6 @@ namespace Dragon
 
 		private void LateUpdate()
 		{
-			Debug.Log($"Dragon targets available: " + dragonTargetManager.TargetsAvailable);
-			Debug.Log($"Current target valid: " + dragonTargetManager.HasValidTarget);
-			
 			if (dragonTargetManager.HasValidTarget)
 			{
 				Vector3 currentPosition = transform.position;
@@ -58,7 +55,7 @@ namespace Dragon
 					StartCoroutine(FindNewTarget());
 				}
 			}
-			else if (dragonTargetManager.TargetsAvailable)
+			else
 			{
 				dragonTargetManager.SetNewTarget();
 			}

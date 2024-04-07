@@ -20,23 +20,21 @@ namespace Dragon
 			GetAllPossibleTargets();
 		}
 
-		private IEnumerator Start()
+		private void Start()
 		{
 			VillagerDeathEvent.AddListener(GetAllPossibleTargets, -100);
 			VillagerSaveEvent.AddListener(GetAllPossibleTargets, -100);
-
-			yield return new WaitForSeconds(1.5f);
-			
-			GetAllPossibleTargets();
 		}
 
 		public void SetNewTarget()
 		{
+			GetAllPossibleTargets();
+			
 			if (GetRandomTarget(out Villager target))
 			{
 				CurrentTarget = target;
 			}
-
+			
 			CurrentTarget = null;
 		}
 
