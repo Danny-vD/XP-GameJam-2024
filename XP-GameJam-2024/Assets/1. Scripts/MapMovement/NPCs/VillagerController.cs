@@ -33,7 +33,7 @@ namespace MapMovement.NPCs
 		[SerializeField]
 		private GameObject exclamationMark;
 
-		public bool CannotReceiveCommand => !isListening || agent.remainingDistance > 5 && agent.isOnNavMesh && !agent.isStopped;
+		public bool CannotReceiveCommand => !isListening || agent.isOnNavMesh && agent.remainingDistance > 5 && !agent.isStopped;
 		public bool CanReceiveCommand => !CannotReceiveCommand;
 
 		private Queue<AbstractMoveCommand> commandsQueue;
