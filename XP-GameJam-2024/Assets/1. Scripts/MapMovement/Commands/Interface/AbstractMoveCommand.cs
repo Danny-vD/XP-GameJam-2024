@@ -5,8 +5,8 @@ namespace MapMovement.Commands.Interface
 {
     public abstract class AbstractMoveCommand
     {
-        protected Intersection StartingNode;
-
+        public abstract Intersection GetNextNode(Intersection currentNode);
+        
         public abstract Intersection CalculateNextNode(Intersection currentNode, Intersection previousNode, Transform transform, Vector3 movementDirection);
     }
 }

@@ -137,21 +137,11 @@ namespace MapMovement.NPCs
 
 		private void NextCommand()
 		{
-			Vector3 movementDirection = agent.velocity.normalized;
-
-			if (movementDirection == Vector3.zero)
-			{
-				movementDirection = lastDirection; // First try the last used direction
-			}
-
-			if (movementDirection == Vector3.zero)
-			{
-				movementDirection = previousNode.transform.up; // If that is also 0,0,0 then use the rotation of the node
-			}
-			
 			if (currentNode.Connections.Count <= 2)
 			{
-				Intersection nextNode = MoveForwardCommand.NewInstance().CalculateNextNode(currentNode, previousNode, transform, movementDirection);
+				//Intersection nextNode = MoveForwardCommand.NewInstance().CalculateNextNode(currentNode);
+				
+				Intersection nextNode = MoveForwardCommand.NewInstance().GetNextNode(currentNode);
 				previousNode = currentNode;
 				currentNode  = nextNode;
 				agent.SetDestination(currentNode.transform.position);
@@ -163,7 +153,8 @@ namespace MapMovement.NPCs
 					return;
 				}
 
-				Intersection nextNode = commandsQueue.Dequeue()?.CalculateNextNode(currentNode, previousNode, transform, movementDirection);
+				//Intersection nextNode = commandsQueue.Dequeue()?.CalculateNextNode(currentNode);
+				Intersection nextNode = commandsQueue.Dequeue()?.GetNextNode(currentNode);
 
 				if (nextNode is null)
 				{
@@ -174,12 +165,6 @@ namespace MapMovement.NPCs
 				previousNode = currentNode;
 				currentNode  = nextNode;
 			}
-		}
-
-		[ContextMenu("Log velocity")]
-		private void LogVelocity()
-		{
-			Debug.LogError(agent.velocity.normalized);
 		}
 	}
 }
