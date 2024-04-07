@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-public class FollowObject : MonoBehaviour
+public class VillagerFollowObject : MonoBehaviour
 {
     public Transform target;
     public float arrivalDistance = 1.0f;
