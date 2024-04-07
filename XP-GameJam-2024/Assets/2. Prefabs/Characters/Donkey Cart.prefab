@@ -252,6 +252,7 @@ GameObject:
   - component: {fileID: 6592608628961990216}
   - component: {fileID: 411422841393533738}
   - component: {fileID: 4474150292154457346}
+  - component: {fileID: -8090510020798895039}
   m_Layer: 7
   m_Name: Donkey Cart
   m_TagString: Untagged
@@ -424,6 +425,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3.030947, y: 2, z: 2.2659073}
   m_Center: {x: 3.1069727, y: 0, z: -0.041279793}
+--- !u!114 &-8090510020798895039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4554990559485615155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e936fb2bf18452091f6bd3e7bb3fd6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6613219167918700274
 GameObject:
   m_ObjectHideFlags: 0
