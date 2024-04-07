@@ -96,6 +96,7 @@ namespace MapMovement.NPCs
 
 				lastIntersectionColliderHit = other;
 
+				Debug.Log($"reached {other.name}");
 				NextCommand();
 			}
 		}
@@ -145,6 +146,7 @@ namespace MapMovement.NPCs
 				}
 
 				OnMovementStart.Invoke();
+				Debug.Log("\nStarting movement");
 			}
 
 			NextCommand();
