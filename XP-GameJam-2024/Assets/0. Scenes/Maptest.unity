@@ -6670,7 +6670,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 650268beb208c914eb3d96708d287a7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dragonPrefab: {fileID: 0}
+  dragonPrefab: {fileID: 7218386845854891146, guid: 684218ef3cc5a944fb7aae4ddd790194, type: 3}
 --- !u!4 &1344971728
 Transform:
   m_ObjectHideFlags: 0
