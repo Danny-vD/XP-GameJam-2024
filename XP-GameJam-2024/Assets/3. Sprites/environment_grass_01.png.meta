@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: cb0b9ffae70fd483695dc241145fbb3f
+guid: 1e78e7ee45658b2448fe228e431be1e2
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: char_child_girl01_0
+      name: environment_grass_01_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
+        width: 27
+        height: 8
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,8 +111,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8557b75dea00eee4691a23aadbd54378
-      internalID: -1949576939
+      spriteID: b4af259e00c34bb4da154907cc86f034
+      internalID: 2064033946
       vertices: []
       indices: 
       edges: []
@@ -120,7 +120,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 4e97618daea2980478a3c0ce09a7c3bb
+    spriteID: 852f8463a862ceb4f86508273c62165c
     internalID: 0
     vertices: []
     indices: 
@@ -128,7 +128,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      char_child_girl01_0: -1949576939
+      environment_grass_01_0: 2064033946
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

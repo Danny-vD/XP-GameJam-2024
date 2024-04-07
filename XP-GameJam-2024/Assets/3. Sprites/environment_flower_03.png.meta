@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: cb0b9ffae70fd483695dc241145fbb3f
+guid: 94929cc99c7a1bd4faf3e199ca2cadf9
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: char_child_girl01_0
+      name: environment_flower_03_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
+        width: 11
+        height: 12
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,8 +111,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8557b75dea00eee4691a23aadbd54378
-      internalID: -1949576939
+      spriteID: da0a6ed27e50a0b4f8b567b005c376a0
+      internalID: -258829483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: environment_flower_03_1
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 0
+        width: 9
+        height: 11
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e86c6a372d5980f408af99a6c4b9b05a
+      internalID: -127111608
       vertices: []
       indices: 
       edges: []
@@ -120,7 +141,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 4e97618daea2980478a3c0ce09a7c3bb
+    spriteID: e6549bcf5165dc341acdc43248bbe2bb
     internalID: 0
     vertices: []
     indices: 
@@ -128,7 +149,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      char_child_girl01_0: -1949576939
+      environment_flower_03_0: -258829483
+      environment_flower_03_1: -127111608
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
