@@ -1,3 +1,4 @@
+using System.Collections;
 using GameManagement;
 using GameManagement.Events;
 using UnityEngine;
@@ -19,10 +20,14 @@ namespace Dragon
 			GetAllPossibleTargets();
 		}
 
-		private void Start()
+		private IEnumerator Start()
 		{
 			VillagerDeathEvent.AddListener(GetAllPossibleTargets, -100);
 			VillagerSaveEvent.AddListener(GetAllPossibleTargets, -100);
+
+			yield return new WaitForSeconds(1.5f);
+			
+			GetAllPossibleTargets();
 		}
 
 		public void SetNewTarget()
