@@ -1,7 +1,5 @@
-﻿using Input;
-using MapMovement;
+﻿using MapMovement;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using VDFramework;
 
 namespace Animations

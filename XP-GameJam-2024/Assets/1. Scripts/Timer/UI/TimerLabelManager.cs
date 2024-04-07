@@ -1,8 +1,6 @@
-﻿using System;
-using Timer.Events;
+﻿using Timer.Events;
 using TMPro;
 using UnityEngine;
-using UnityEngine.PlayerLoop;
 using VDFramework;
 using VDFramework.Utility;
 

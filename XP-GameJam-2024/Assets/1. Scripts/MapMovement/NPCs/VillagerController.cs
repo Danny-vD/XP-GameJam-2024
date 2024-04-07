@@ -1,14 +1,11 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using Input;
 using MapMovement.Commands;
 using MapMovement.Commands.Interface;
 using MapMovement.Waypoints;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.InputSystem;
-using UnityEngine.Serialization;
 using VDFramework;
 
 namespace MapMovement.NPCs
@@ -36,11 +33,9 @@ namespace MapMovement.NPCs
 		[SerializeField]
 		private GameObject exclamationMark;
 
-
 		private Queue<AbstractMoveCommand> commandsQueue;
 
 		private Dictionary<Vector2, Func<AbstractMoveCommand>> commandByVector;
-
 
 		private NavMeshAgent agent;
 		private bool isListening;
@@ -67,7 +62,6 @@ namespace MapMovement.NPCs
 		{
 			if (other.gameObject.layer.Equals(6))
 			{
-				Debug.Log("ENTERED SPHERE OF INFLUENCE");
 				isListening = true;
 
 				if (exclamationMark)
@@ -77,7 +71,6 @@ namespace MapMovement.NPCs
 			}
 			else
 			{
-				Debug.Log("I HAVE ENTERED NEW SPACE");
 				NextCommand();
 			}
 		}
@@ -97,7 +90,12 @@ namespace MapMovement.NPCs
 
 		private void MovementOnPerformed(InputAction.CallbackContext obj)
 		{
-			if (!isListening) return;
+			if (!isListening)
+			{
+				return;
+			}
+
+			Debug.Log("Path = " + agent.hasPath);
 
 			Vector2 vector = obj.ReadValue<Vector2>();
 
@@ -109,6 +107,13 @@ namespace MapMovement.NPCs
 
 		private void OnInteract(InputAction.CallbackContext obj)
 		{
+			if (!isListening)
+			{
+				return;
+			}
+			
+			Debug.Log("[Interact]\nPath = " + agent.hasPath);
+			
 			NextCommand();
 		}
 
@@ -116,7 +121,7 @@ namespace MapMovement.NPCs
 		{
 			if (currentNode.Connections.Count <= 2)
 			{
-				var nextNode = MoveForwardCommand.NewInstance().CalculateNextNode(currentNode, previousNode, transform);
+				Intersection nextNode = MoveForwardCommand.NewInstance().CalculateNextNode(currentNode, previousNode, transform);
 				previousNode = currentNode;
 				currentNode  = nextNode;
 				agent.SetDestination(currentNode.transform.position);
@@ -125,7 +130,7 @@ namespace MapMovement.NPCs
 			{
 				if (commandsQueue.Count <= 0) return;
 
-				var nextNode = commandsQueue.Dequeue()?.CalculateNextNode(currentNode, previousNode, transform);
+				Intersection nextNode = commandsQueue.Dequeue()?.CalculateNextNode(currentNode, previousNode, transform);
 
 				if (nextNode is null) return;
 

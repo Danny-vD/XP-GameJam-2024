@@ -1,5 +1,3 @@
-using System.Linq;
-using MapMovement.Managers;
 using MapMovement.Waypoints;
 using UnityEngine;
 
