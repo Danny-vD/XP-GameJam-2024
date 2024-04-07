@@ -29,7 +29,14 @@ namespace MapMovement.Commands
 
 			for (int i = 0; i < currentNode.Connections.Count; i++)
 			{
-				float signedAngle = Vector3.SignedAngle(movementDirection, currentNode.Connections[i].transform.position - currentNodePosition, Vector3.up);
+				Intersection connection = currentNode.Connections[i];
+
+				if (connection == previousNode) // Skip the node we came from
+				{
+					continue;
+				}
+				
+				float signedAngle = Vector3.SignedAngle(movementDirection, connection.transform.position - currentNodePosition, Vector3.up);
 
 				// Find the lowest signed angle
 				if (signedAngle <= lowestSignedAngle)

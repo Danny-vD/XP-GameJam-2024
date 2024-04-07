@@ -33,8 +33,8 @@ namespace MapMovement.NPCs
 		[SerializeField]
 		private GameObject exclamationMark;
 		
-		public bool CannotGiveCommand => !isListening || agent.remainingDistance > 5 && !agent.isStopped;
-		public bool CanGiveCommand => !CannotGiveCommand;
+		public bool CannotReceiveCommand => !isListening || agent.remainingDistance > 5 && !agent.isStopped;
+		public bool CanReceiveCommand => !CannotReceiveCommand;
 
 		private Queue<AbstractMoveCommand> commandsQueue;
 
@@ -79,7 +79,7 @@ namespace MapMovement.NPCs
 			{
 				isListening = true;
 
-				if (exclamationMark && CanGiveCommand)
+				if (exclamationMark && CanReceiveCommand)
 				{
 					exclamationMark.SetActive(true);
 				}
@@ -105,7 +105,7 @@ namespace MapMovement.NPCs
 
 		private void MovementOnPerformed(InputAction.CallbackContext obj)
 		{
-			if (CannotGiveCommand)
+			if (CannotReceiveCommand)
 			{
 				return;
 			}
@@ -119,7 +119,7 @@ namespace MapMovement.NPCs
 
 		private void OnInteract(InputAction.CallbackContext obj)
 		{
-			if (CannotGiveCommand)
+			if (CannotReceiveCommand)
 			{
 				return;
 			}

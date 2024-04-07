@@ -35,7 +35,14 @@ namespace MapMovement.Commands
 
 			for (int i = 0; i < currentNode.Connections.Count; i++)
 			{
-				float unsignedAngle = Vector3.Angle(movementDirection, currentNode.Connections[i].transform.position - currentNodePosition);
+				Intersection connection = currentNode.Connections[i];
+
+				if (connection == previousNode) // Skip the node we came from
+				{
+					continue;
+				}
+				
+				float unsignedAngle = Vector3.Angle(movementDirection, connection.transform.position - currentNodePosition);
 
 				// Find the lowest unsigned angle
 				if (unsignedAngle <= lowestAngle)
