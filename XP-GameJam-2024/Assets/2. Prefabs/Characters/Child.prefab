@@ -132,8 +132,8 @@ GameObject:
   - component: {fileID: 4406866152295654286}
   - component: {fileID: 5245921255381990902}
   - component: {fileID: 993736199742893547}
-  - component: {fileID: 2376807482088492395}
   - component: {fileID: 4312891559257406176}
+  - component: {fileID: -5797941700332660620}
   m_Layer: 0
   m_Name: Child
   m_TagString: Untagged
@@ -282,19 +282,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
---- !u!114 &2376807482088492395
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1758250998038586010}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2af977d0067041ed981fc89c85ae6688, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioEventType: 16
 --- !u!114 &4312891559257406176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -309,6 +296,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   arrivalDistance: 2
+--- !u!114 &-5797941700332660620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1758250998038586010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 452781213
+      Data2: 1322465629
+      Data3: -1294919794
+      Data4: 1709877514
+    Path: event:/Sound Effects/NPCs/npcFootstep
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &4162158258923607002
 GameObject:
   m_ObjectHideFlags: 0
