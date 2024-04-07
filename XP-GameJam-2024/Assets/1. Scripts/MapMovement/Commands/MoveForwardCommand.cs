@@ -8,7 +8,7 @@ namespace MapMovement.Commands
 {
 	public class MoveForwardCommand : AbstractMoveCommand
 	{
-		private const float forwardAngleThreshold = 45;
+		public const float FORWARD_ANGLE_THRESHOLD = 45;
 		
 		public override Intersection CalculateNextNode(Intersection currentNode, Intersection previousNode, Transform transform, Vector3 movementDirection)
 		{
@@ -29,18 +29,19 @@ namespace MapMovement.Commands
 			}
 			
 			int bestCandidateIndex = -1;
-			float lowestAngle = forwardAngleThreshold;
+			float lowestAngle = FORWARD_ANGLE_THRESHOLD;
 
 			Vector3 currentNodePosition = currentNode.transform.position;
 
 			for (int i = 0; i < currentNode.Connections.Count; i++)
 			{
-				float angle = Vector3.Angle(movementDirection, currentNode.Connections[i].transform.position - currentNodePosition);
+				float unsignedAngle = Vector3.Angle(movementDirection, currentNode.Connections[i].transform.position - currentNodePosition);
 
-				if (angle <= lowestAngle)
+				// Find the lowest unsigned angle
+				if (unsignedAngle <= lowestAngle)
 				{
 					bestCandidateIndex = i;
-					lowestAngle        = angle;
+					lowestAngle        = unsignedAngle;
 				}
 			}
 
