@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+
+#if UNITY_EDITOR
 using UnityEditor.Compilation;
+#endif
 using UnityEngine;
 
 namespace Utils
@@ -117,6 +120,6 @@ namespace Utils
 
 			File.WriteAllText(fullPath, builder.ToString());
 		}
-	}
 #endif
+	}
 }

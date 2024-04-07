@@ -120,28 +120,6 @@ namespace FMODUtilityPackage.Core
 #else
 		private void SetEventPaths()
 		{
-			try
-			{
-				TextAsset file = Resources.Load<TextAsset>("FmodUtils/EventPaths");
-
-				string[] lines = file.ToString().Split(Environment.NewLine);
-				EventType[] eventTypes = default(EventType).GetValues().ToArray();
-
-				for (int i = 0; i < events.Count; i++)
-				{
-					EventReferencePerEvent pair = new EventReferencePerEvent
-					{
-						Key = eventTypes[i],
-						Value = RuntimeManager.PathToEventReference(lines[i]),
-					};
-
-					events[i] = pair;
-				}
-			}
-			catch
-			{
-				// ignore all outside of editor
-			}
 		}
 #endif
 
