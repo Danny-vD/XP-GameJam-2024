@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a19d3575f985ec4408cc8671cb2fd4d0
+guid: 94544c32066f9524dbc12512c703eaee
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: building_castle_flag_0
+      name: arrow_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 23
-        height: 8
+        width: 10
+        height: 14
       alignment: 5
       pivot: {x: 1, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,8 +111,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cad061e2d5cfff842946de4a1ed10160
-      internalID: -1583129070
+      spriteID: d5b153b65ded29e4791e4dd433195511
+      internalID: -131586596
       vertices: []
       indices: 
       edges: []
@@ -120,7 +120,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: d5a6d8ecacdbac6438c13713a8058373
+    spriteID: 17c94b65e21713d4482cd76d4971dc2d
     internalID: 0
     vertices: []
     indices: 
@@ -128,7 +128,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      building_castle_flag_0: -1583129070
+      arrow_0: -131586596
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
