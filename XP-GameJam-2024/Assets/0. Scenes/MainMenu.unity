@@ -4433,75 +4433,75 @@ MonoBehaviour:
     - key: 2
       value:
         Guid:
-          Data1: 0
-          Data2: 0
-          Data3: 0
-          Data4: 0
-        Path: 
+          Data1: -1370107863
+          Data2: 1179638788
+          Data3: -256755323
+          Data4: 1427812769
+        Path: event:/Music/Gameplay
     - key: 3
       value:
         Guid:
-          Data1: 0
-          Data2: 0
-          Data3: 0
-          Data4: 0
-        Path: 
+          Data1: 929222775
+          Data2: 1081387850
+          Data3: 625955745
+          Data4: -723761481
+        Path: event:/Sound Effects/Animals/Rooster
     - key: 4
       value:
         Guid:
-          Data1: 0
-          Data2: 0
-          Data3: 0
-          Data4: 0
-        Path: 
+          Data1: 2129795971
+          Data2: 1141641210
+          Data3: -268695929
+          Data4: 150767647
+        Path: event:/Sound Effects/Animals/Cow
     - key: 5
       value:
         Guid:
-          Data1: 0
-          Data2: 0
-          Data3: 0
-          Data4: 0
-        Path: 
+          Data1: 480345233
+          Data2: 1312000219
+          Data3: 655784602
+          Data4: -1738445237
+        Path: event:/Sound Effects/NPCs/Cheer
     - key: 6
       value:
         Guid:
-          Data1: 0
-          Data2: 0
-          Data3: 0
-          Data4: 0
-        Path: 
+          Data1: 1536738205
+          Data2: 1276573742
+          Data3: 2070939014
+          Data4: -1740272508
+        Path: event:/Sound Effects/Animals/Pig
     - key: 7
       value:
         Guid:
-          Data1: 0
-          Data2: 0
-          Data3: 0
-          Data4: 0
-        Path: 
+          Data1: -1345806106
+          Data2: 1124215223
+          Data3: -1803743588
+          Data4: -1305142818
+        Path: event:/Sound Effects/Time/TimeSlowdown
     - key: 8
       value:
         Guid:
-          Data1: 0
-          Data2: 0
-          Data3: 0
-          Data4: 0
-        Path: 
+          Data1: 654866665
+          Data2: 1229773214
+          Data3: 1254118830
+          Data4: -309849441
+        Path: event:/Sound Effects/Animals/Dog
     - key: 9
       value:
         Guid:
-          Data1: 0
-          Data2: 0
-          Data3: 0
-          Data4: 0
-        Path: 
+          Data1: 601440239
+          Data2: 1246194936
+          Data3: -1514146899
+          Data4: -1148893272
+        Path: event:/Sound Effects/NPCs/Talksound
     - key: 10
       value:
         Guid:
-          Data1: 0
-          Data2: 0
-          Data3: 0
-          Data4: 0
-        Path: 
+          Data1: -1482373358
+          Data2: 1221526559
+          Data3: 1547143856
+          Data4: -1111407892
+        Path: event:/Sound Effects/Player/ReverseTime
     - key: 11
       value:
         Guid:
@@ -4513,67 +4513,67 @@ MonoBehaviour:
     - key: 12
       value:
         Guid:
-          Data1: 0
-          Data2: 0
-          Data3: 0
-          Data4: 0
-        Path: 
+          Data1: -1023717798
+          Data2: 1082917371
+          Data3: 902163353
+          Data4: 81899050
+        Path: event:/Sound Effects/NPCs/npcDeath
     - key: 13
       value:
         Guid:
-          Data1: 0
-          Data2: 0
-          Data3: 0
-          Data4: 0
-        Path: 
+          Data1: 1703945843
+          Data2: 1179845071
+          Data3: 19594676
+          Data4: 797282578
+        Path: event:/Sound Effects/Player/Death_GameOver
     - key: 14
       value:
         Guid:
-          Data1: 0
-          Data2: 0
-          Data3: 0
-          Data4: 0
-        Path: 
+          Data1: 1071849087
+          Data2: 1116180818
+          Data3: 1107210637
+          Data4: -1427762163
+        Path: event:/Sound Effects/Player/Footsteps
     - key: 15
       value:
         Guid:
-          Data1: 0
-          Data2: 0
-          Data3: 0
-          Data4: 0
-        Path: 
+          Data1: -1022291319
+          Data2: 1222460124
+          Data3: 949892026
+          Data4: 2129402155
+        Path: event:/Sound Effects/Player/ChangeDirection
     - key: 16
       value:
         Guid:
-          Data1: 0
-          Data2: 0
-          Data3: 0
-          Data4: 0
-        Path: 
+          Data1: 452781213
+          Data2: 1322465629
+          Data3: -1294919794
+          Data4: 1709877514
+        Path: event:/Sound Effects/NPCs/npcFootstep
     - key: 17
       value:
         Guid:
-          Data1: 0
-          Data2: 0
-          Data3: 0
-          Data4: 0
-        Path: 
+          Data1: 1210325943
+          Data2: 1156277125
+          Data3: 1992902581
+          Data4: 1057295350
+        Path: event:/Sound Effects/NPCs/npcAlertBeep
     - key: 18
       value:
         Guid:
-          Data1: 0
-          Data2: 0
-          Data3: 0
-          Data4: 0
-        Path: 
+          Data1: 1888975045
+          Data2: 1090764983
+          Data3: -1406100830
+          Data4: 1491027075
+        Path: event:/Sound Effects/Animals/DragonRoar
     - key: 19
       value:
         Guid:
-          Data1: 0
-          Data2: 0
-          Data3: 0
-          Data4: 0
-        Path: 
+          Data1: -1116270367
+          Data2: 1161405830
+          Data3: -1269779288
+          Data4: 2015512387
+        Path: event:/Sound Effects/Animals/DragonWing
     buses:
     - key: 0
       value: bus:/
@@ -5116,6 +5116,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2023258869}
   - component: {fileID: 2023258870}
+  - component: {fileID: 2023258871}
   m_Layer: 0
   m_Name: MusicManager
   m_TagString: Untagged
@@ -5151,6 +5152,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   reactTo: 4
+  emitterType: 0
+--- !u!114 &2023258871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2023258867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bb839d558e44895bdfdb749b3151697, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reactTo: 8
   emitterType: 0
 --- !u!1 &2084917858
 GameObject:
