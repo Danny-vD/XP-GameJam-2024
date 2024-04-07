@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2a995df3d04bc46bdb59a71c00f4da29
+guid: 684836fa54479d0438a8586a93109003
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: arrow_0
+      name: char_basketboy_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 10
-        height: 14
+        height: 19
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,8 +111,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ad08020a8c7b5c6438912c118118a818
-      internalID: -1233763387
+      spriteID: fbdcd93310308fa4d81cbad6b8a57e4e
+      internalID: 1567609424
       vertices: []
       indices: 
       edges: []
@@ -120,7 +120,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 7c5ef0c44668d7741b2f2057186c9751
+    spriteID: fb63efff457a6984d96e927266da1b53
     internalID: 0
     vertices: []
     indices: 
@@ -128,7 +128,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      arrow_0: -1233763387
+      char_basketboy_0: 1567609424
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
