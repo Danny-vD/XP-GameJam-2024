@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using MapMovement.Commands;
 using MapMovement.Commands.Interface;
 using MapMovement.Waypoints;
@@ -12,9 +13,9 @@ namespace MapMovement.NPCs
 {
 	public class VillagerController : BetterMonoBehaviour, IActorMover
 	{
-		public event Action OnMovementStart;
-		public event Action OnMovementCancelled;
-		public event Action OnEnterIdle;
+		public event Action OnMovementStart = delegate { };
+		public event Action OnMovementCancelled = delegate { };
+		public event Action OnEnterIdle = delegate { };
 
 		private bool listeningMode;
 
@@ -32,9 +33,11 @@ namespace MapMovement.NPCs
 
 		[SerializeField]
 		private GameObject exclamationMark;
-		
-		public bool CannotReceiveCommand => !isListening || agent.remainingDistance > 5 && !agent.isStopped;
+
+		public bool CannotReceiveCommand => !isListening || agent.remainingDistance > 5 && !agent.isStopped; //note Replace most of this by IsMoving?
 		public bool CanReceiveCommand => !CannotReceiveCommand;
+
+		public bool IsMoving { get; private set; }
 
 		private Queue<AbstractMoveCommand> commandsQueue;
 
@@ -43,7 +46,8 @@ namespace MapMovement.NPCs
 		private NavMeshAgent agent;
 		private bool isListening;
 
-		private Vector3 lastDirection = Vector3.zero;
+
+		//private Vector3 lastDirection = Vector3.zero;
 
 		private void Awake()
 		{
@@ -65,11 +69,27 @@ namespace MapMovement.NPCs
 
 		private void LateUpdate()
 		{
-			Vector3 currentDirection = agent.velocity.normalized;
+			//Vector3 currentDirection = agent.velocity.normalized;
+			//
+			//if (currentDirection.sqrMagnitude > Mathf.Epsilon)
+			//{
+			//	lastDirection = currentDirection;
+			//}
 
-			if (currentDirection.sqrMagnitude > Mathf.Epsilon)
+			if (IsMoving)
 			{
-				lastDirection = currentDirection;
+				CheckIfReachedTarget();
+			}
+		}
+
+		private void CheckIfReachedTarget()
+		{
+			float distance = agent.remainingDistance;
+			distance -= agent.stoppingDistance;
+
+			if (distance <= 0)
+			{
+				NextCommand();
 			}
 		}
 
@@ -84,10 +104,20 @@ namespace MapMovement.NPCs
 					exclamationMark.SetActive(true);
 				}
 			}
+			
+			/*
 			else
 			{
+				if (ReferenceEquals(other, lastIntersectionColliderHit))
+				{
+					return;
+				}
+
+				lastIntersectionColliderHit = other;
+
+				Debug.Log($"reached {other.name}");
 				NextCommand();
-			}
+			}*/
 		}
 
 		private void OnTriggerExit(Collider other)
@@ -95,7 +125,7 @@ namespace MapMovement.NPCs
 			if (other.gameObject.layer.Equals(6))
 			{
 				isListening = false;
-				
+
 				if (exclamationMark)
 				{
 					exclamationMark.SetActive(false);
@@ -112,7 +142,10 @@ namespace MapMovement.NPCs
 
 			Vector2 vector = obj.ReadValue<Vector2>();
 
-			if (!commandByVector.TryGetValue(vector, out Func<AbstractMoveCommand> command)) return;
+			if (!commandByVector.TryGetValue(vector, out Func<AbstractMoveCommand> command))
+			{
+				return;
+			}
 
 			commandsQueue.Enqueue(command.Invoke());
 		}
@@ -130,28 +163,76 @@ namespace MapMovement.NPCs
 				{
 					exclamationMark.SetActive(false);
 				}
+
+				agent.isStopped = false;
+				IsMoving        = true;
+				OnMovementStart.Invoke();
+				
+				Debug.Log("\nStarting movement");
 			}
-			
+
 			NextCommand();
 		}
 
 		private void NextCommand()
 		{
+			Intersection nextNode = null;
+
+			if (currentNode.Connections.Count <= 2)
+			{
+				nextNode = currentNode.Connections.FirstOrDefault(connection => connection != previousNode);
+
+				agent.SetDestination(currentNode.transform.position);
+
+				previousNode = currentNode;
+				currentNode  = nextNode;
+				return;
+			}
+
+			if (commandsQueue.Count <= 0)
+			{
+				return;
+			}
+
+			nextNode = commandsQueue.Dequeue()?.GetNextNode(currentNode);
+
+			if (nextNode is null)
+			{
+				OnEnterIdle.Invoke();
+				
+				IsMoving        = false;
+				agent.isStopped = true;
+				
+				commandsQueue.Clear();
+
+				if (isListening && CanReceiveCommand && exclamationMark) //NOTE: Always show???
+				{
+					exclamationMark.SetActive(true);
+				}
+
+				return;
+			}
+
+			agent.SetDestination(nextNode.transform.position);
+			previousNode = currentNode;
+			currentNode  = nextNode;
+
+			/*
 			Vector3 movementDirection = agent.velocity.normalized;
 
-			if (movementDirection == Vector3.zero)
+			if (movementDirection.sqrMagnitude < Mathf.Epsilon)
 			{
 				movementDirection = lastDirection; // First try the last used direction
 			}
 
-			if (movementDirection == Vector3.zero)
+			if (movementDirection.sqrMagnitude < Mathf.Epsilon)
 			{
 				movementDirection = previousNode.transform.up; // If that is also 0,0,0 then use the rotation of the node
 			}
-			
+
 			if (currentNode.Connections.Count <= 2)
 			{
-				Intersection nextNode = MoveForwardCommand.NewInstance().CalculateNextNode(currentNode, previousNode, transform, movementDirection);
+				Intersection nextNode = MoveForwardCommand.NewInstance().CalculateNextNode(currentNode);
 				previousNode = currentNode;
 				currentNode  = nextNode;
 				agent.SetDestination(currentNode.transform.position);
@@ -163,7 +244,7 @@ namespace MapMovement.NPCs
 					return;
 				}
 
-				Intersection nextNode = commandsQueue.Dequeue()?.CalculateNextNode(currentNode, previousNode, transform, movementDirection);
+				Intersection nextNode = commandsQueue.Dequeue()?.CalculateNextNode(currentNode);
 
 				if (nextNode is null)
 				{
@@ -174,12 +255,7 @@ namespace MapMovement.NPCs
 				previousNode = currentNode;
 				currentNode  = nextNode;
 			}
-		}
-
-		[ContextMenu("Log velocity")]
-		private void LogVelocity()
-		{
-			Debug.LogError(agent.velocity.normalized);
+			*/
 		}
 	}
 }

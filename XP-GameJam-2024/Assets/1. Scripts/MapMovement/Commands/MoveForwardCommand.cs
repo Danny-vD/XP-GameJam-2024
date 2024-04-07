@@ -1,5 +1,6 @@
 using System.Linq;
 using MapMovement.Commands.Interface;
+using MapMovement.Enums;
 using MapMovement.Waypoints;
 using UnityEngine;
 using VDFramework.Extensions;
@@ -9,7 +10,9 @@ namespace MapMovement.Commands
 	public class MoveForwardCommand : AbstractMoveCommand
 	{
 		public const float FORWARD_ANGLE_THRESHOLD = 45;
-		
+
+		public override Intersection GetNextNode(Intersection currentNode) => currentNode.GetConnectingIntersection(Direction.Up);
+
 		public override Intersection CalculateNextNode(Intersection currentNode, Intersection previousNode, Transform transform, Vector3 movementDirection)
 		{
 			if (currentNode.Connections.Count == 2)

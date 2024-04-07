@@ -1,5 +1,6 @@
 using System.Linq;
 using MapMovement.Commands.Interface;
+using MapMovement.Enums;
 using MapMovement.Managers;
 using MapMovement.Waypoints;
 using UnityEngine;
@@ -9,10 +10,10 @@ namespace MapMovement.Commands
 {
 	public class MoveLeftCommand : AbstractMoveCommand
 	{
+		public override Intersection GetNextNode(Intersection currentNode) => currentNode.GetConnectingIntersection(Direction.Left);
+
 		public override Intersection CalculateNextNode(Intersection currentNode, Intersection previousNode, Transform transform, Vector3 movementDirection)
 		{
-			StartingNode = currentNode;
-
 			if (currentNode.Connections.CountIsZeroOrOne())
 			{
 				return currentNode.Connections.FirstOrDefault();

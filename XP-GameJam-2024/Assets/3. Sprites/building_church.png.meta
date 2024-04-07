@@ -101,11 +101,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 123
+        y: 0
         width: 113
-        height: 61
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 184
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -113,48 +113,6 @@ TextureImporter:
       bones: []
       spriteID: 47b9fcad9b4932c429e175fa56df3f7f
       internalID: -367807414
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: building_church_1
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 62
-        width: 113
-        height: 61
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7dafefbef4fa38647b21f386092f9e93
-      internalID: -747399145
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: building_church_2
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 1
-        width: 113
-        height: 61
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a5a7a9f0e92a8a54aadb4d0c5665a82c
-      internalID: 1649761755
       vertices: []
       indices: 
       edges: []
@@ -171,8 +129,6 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       building_church_0: -367807414
-      building_church_1: -747399145
-      building_church_2: 1649761755
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
