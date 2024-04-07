@@ -58,12 +58,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2360697150559511535}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.89, y: 0, z: 4.01}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0.61, y: -0, z: 4.31}
   m_LocalScale: {x: 1.8697, y: 1.8697, z: 1.8697}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3673786620473452683}
+  m_Father: {fileID: 7955012905049323358}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!95 &5845818288765270546
 Animator:
@@ -313,6 +313,38 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!1 &6993608151664462854
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7955012905049323358}
+  m_Layer: 7
+  m_Name: ExclGroup
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7955012905049323358
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6993608151664462854}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.78, y: 0, z: 1.51}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5561732401628569373}
+  m_Father: {fileID: 3673786620473452683}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7385793553962824970
 GameObject:
   m_ObjectHideFlags: 0
@@ -440,7 +472,7 @@ Transform:
   - {fileID: 8582878025131360864}
   - {fileID: 1489593338149551902}
   - {fileID: 5071147141359431334}
-  - {fileID: 5561732401628569373}
+  - {fileID: 7955012905049323358}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!195 &2381005549785108187
@@ -527,7 +559,7 @@ Animator:
   m_GameObject: {fileID: 7995675810943076604}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 97a6d168d1d7f3a4b839f95c90615941, type: 2}
+  m_Controller: {fileID: 9100000, guid: 5f3257ac30376c5478e85451dc810e9b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
