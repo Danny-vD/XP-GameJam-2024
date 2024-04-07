@@ -14,11 +14,14 @@ namespace Input
 		[SerializeField]
 		private InputActionAsset inputActionAsset;
 
-		[SerializeField] private InputActionReference specialInteraction;
-		[SerializeField] private InputActionReference overworldInteraction;
+		[SerializeField]
+		private InputActionReference specialInteraction;
+
+		[SerializeField]
+		private InputActionReference overworldInteraction;
 
 		private readonly Dictionary<ControlType, InputActionMap> actionMapsByType = new Dictionary<ControlType, InputActionMap>();
-		
+
 		public ControlType CurrentControlType { get; private set; }
 
 		protected override void Awake()
@@ -26,17 +29,17 @@ namespace Input
 			base.Awake();
 
 			SetActionsMapsPerControlType();
-			
-			specialInteraction.action.performed += OnSpecialInteraction;
+
+			specialInteraction.action.performed   += OnSpecialInteraction;
 			overworldInteraction.action.performed += OnOverworldInteraction;
-			
+
 			CurrentControlType = default;
 			SetControls(default);
 		}
 
 		protected override void OnDestroy()
 		{
-			specialInteraction.action.performed -= OnSpecialInteraction;
+			specialInteraction.action.performed   -= OnSpecialInteraction;
 			overworldInteraction.action.performed -= OnOverworldInteraction;
 			base.OnDestroy();
 		}
@@ -57,7 +60,7 @@ namespace Input
 			{
 				return;
 			}
-			
+
 			SetControls(controlType);
 		}
 
@@ -68,17 +71,15 @@ namespace Input
 
 		private void SetControls(ControlType controlType)
 		{
-			Debug.Log(CurrentControlType.ToString() + ' ' + controlType.ToString());
 			actionMapsByType[CurrentControlType].Disable();
 			actionMapsByType[controlType].Enable();
 			CurrentControlType = controlType;
-			
 		}
 
 		private void SetActionsMapsPerControlType()
 		{
 			IEnumerator<ControlType> controlTypes = default(ControlType).GetValues().GetEnumerator();
-			
+
 			foreach (InputActionMap inputActionMap in inputActionAsset.actionMaps)
 			{
 				if (!controlTypes.MoveNext())
@@ -88,7 +89,7 @@ namespace Input
 
 				actionMapsByType[controlTypes.Current] = inputActionMap;
 			}
-			
+
 			controlTypes.Dispose();
 		}
 
@@ -107,7 +108,7 @@ namespace Input
 			{
 				return;
 			}
-			
+
 			int enumValue = 0;
 			List<string> enumNames = new List<string>();
 
@@ -116,12 +117,12 @@ namespace Input
 				ControlType controlType = (ControlType)enumValue;
 
 				actionMapsByType[controlType] = inputActionMap;
-				
+
 				enumNames.Add(inputActionMap.name);
-				
+
 				++enumValue;
 			}
-			
+
 			EnumWriter.WriteToEnum<ControlType>(enumNames, null);
 		}
 #endif

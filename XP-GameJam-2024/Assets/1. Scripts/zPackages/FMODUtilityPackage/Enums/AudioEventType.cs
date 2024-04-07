@@ -17,5 +17,50 @@ namespace FMODUtilityPackage.Enums
 		/// event:/Music/Main Menu
 		/// </FMODEventPath>
 		Music_Main_Menu,
+
+		/// <FMODEventPath>
+		/// event:/Music/Gameplay
+		/// </FMODEventPath>
+		Music_Gameplay,
+
+		/// <FMODEventPath>
+		/// event:/Sound Effects/Animals/Rooster
+		/// </FMODEventPath>
+		Sound_Effects_Animals_Rooster,
+
+		/// <FMODEventPath>
+		/// event:/Sound Effects/Footsteps
+		/// </FMODEventPath>
+		Sound_Effects_Footsteps,
+
+		/// <FMODEventPath>
+		/// event:/Sound Effects/Animals/Cow
+		/// </FMODEventPath>
+		Sound_Effects_Animals_Cow,
+
+		/// <FMODEventPath>
+		/// event:/Sound Effects/NPCs/Cheer
+		/// </FMODEventPath>
+		Sound_Effects_NPCs_Cheer,
+
+		/// <FMODEventPath>
+		/// event:/Sound Effects/Animals/Pig
+		/// </FMODEventPath>
+		Sound_Effects_Animals_Pig,
+
+		/// <FMODEventPath>
+		/// event:/Sound Effects/Time/TimeSlowdown
+		/// </FMODEventPath>
+		Sound_Effects_Time_TimeSlowdown,
+
+		/// <FMODEventPath>
+		/// event:/Sound Effects/Animals/Dog
+		/// </FMODEventPath>
+		Sound_Effects_Animals_Dog,
+
+		/// <FMODEventPath>
+		/// event:/Sound Effects/NPCs/Talksound
+		/// </FMODEventPath>
+		Sound_Effects_NPCs_Talksound,
 	}
 }

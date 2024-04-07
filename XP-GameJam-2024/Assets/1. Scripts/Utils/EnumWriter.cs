@@ -101,9 +101,12 @@ namespace Utils
 
 				if (hasDocumentation && i != enumValues.Length - 1)
 				{
-					builder.AppendLine();
-
 					hasDocumentation = i < enumDocumentation.Length;
+
+					if (hasDocumentation)
+					{
+						builder.AppendLine();
+					}
 				}
 			}
 

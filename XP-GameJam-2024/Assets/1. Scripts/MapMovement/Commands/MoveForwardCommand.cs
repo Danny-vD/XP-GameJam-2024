@@ -1,22 +1,21 @@
+using System.Linq;
 using MapMovement.Commands.Interface;
 using MapMovement.Waypoints;
 using UnityEngine;
+using VDFramework.Extensions;
 
 namespace MapMovement.Commands
 {
 	public class MoveForwardCommand : AbstractMoveCommand
 	{
-		public override Intersection CalculateNextNode(Intersection currentNode, Intersection previousNode, Transform transform)
+		private const float forwardAngleThreshold = 45;
+		
+		public override Intersection CalculateNextNode(Intersection currentNode, Intersection previousNode, Transform transform, Vector3 movementDirection)
 		{
-			float a = Vector3.Angle(currentNode.transform.forward, currentNode.Connections[0].transform.up);
-			int b = -1;
-
 			if (currentNode.Connections.Count == 2)
 			{
 				foreach (Intersection currentNodeConnection in currentNode.Connections)
 				{
-					Debug.Log(currentNodeConnection + "  " + previousNode);
-
 					if (currentNodeConnection != previousNode)
 					{
 						return currentNodeConnection;
@@ -24,20 +23,29 @@ namespace MapMovement.Commands
 				}
 			}
 
-			foreach (Intersection currentNodeConnection in currentNode.Connections)
+			if (currentNode.Connections.CountIsZeroOrOne())
 			{
-				float tempAngle = Vector2.SignedAngle(currentNode.transform.position * new Vector2(transform.position.x, transform.position.z),
-					currentNodeConnection.transform.position * new Vector2(currentNodeConnection.transform.forward.x, currentNodeConnection.transform.forward.z));
+				return currentNode.Connections.FirstOrDefault();
+			}
+			
+			//float unsignedAngle = Vector3.Angle(movementDirection, currentNode.Connections[0].transform.position - currentNode.transform.position);
+			int bestCandidateIndex = -1;
+			float lowestAngle = forwardAngleThreshold;
 
-				if (tempAngle <= 30 && tempAngle <= a)
+			Vector3 currentNodePosition = currentNode.transform.position;
+
+			for (int i = 0; i < currentNode.Connections.Count; i++)
+			{
+				float angle = Vector3.Angle(movementDirection, currentNode.Connections[i].transform.position - currentNodePosition);
+
+				if (angle <= lowestAngle)
 				{
-					b = currentNode.Connections.IndexOf(currentNodeConnection);
+					bestCandidateIndex = i;
+					lowestAngle        = angle;
 				}
-
-				;
 			}
 
-			return b == -1 ? null : currentNode.Connections[b];
+			return bestCandidateIndex == -1 ? null : currentNode.Connections[bestCandidateIndex];
 		}
 
 

@@ -32,6 +32,9 @@ namespace MapMovement.NPCs
 
 		[SerializeField]
 		private GameObject exclamationMark;
+		
+		public bool CannotGiveCommand => !isListening || agent.hasPath && !agent.isStopped;
+		public bool CanGiveCommand => !CannotGiveCommand;
 
 		private Queue<AbstractMoveCommand> commandsQueue;
 
@@ -64,7 +67,7 @@ namespace MapMovement.NPCs
 			{
 				isListening = true;
 
-				if (exclamationMark)
+				if (exclamationMark && CanGiveCommand)
 				{
 					exclamationMark.SetActive(true);
 				}
@@ -90,12 +93,10 @@ namespace MapMovement.NPCs
 
 		private void MovementOnPerformed(InputAction.CallbackContext obj)
 		{
-			if (!isListening)
+			if (CannotGiveCommand)
 			{
 				return;
 			}
-
-			Debug.Log("Path = " + agent.hasPath);
 
 			Vector2 vector = obj.ReadValue<Vector2>();
 
@@ -107,12 +108,18 @@ namespace MapMovement.NPCs
 
 		private void OnInteract(InputAction.CallbackContext obj)
 		{
-			if (!isListening)
+			if (CannotGiveCommand)
 			{
 				return;
 			}
-			
-			Debug.Log("[Interact]\nPath = " + agent.hasPath);
+
+			if (commandsQueue.Count > 0)
+			{
+				if (exclamationMark)
+				{
+					exclamationMark.SetActive(false);
+				}
+			}
 			
 			NextCommand();
 		}
@@ -121,18 +128,24 @@ namespace MapMovement.NPCs
 		{
 			if (currentNode.Connections.Count <= 2)
 			{
-				Intersection nextNode = MoveForwardCommand.NewInstance().CalculateNextNode(currentNode, previousNode, transform);
+				Intersection nextNode = MoveForwardCommand.NewInstance().CalculateNextNode(currentNode, previousNode, transform, agent.velocity.normalized);
 				previousNode = currentNode;
 				currentNode  = nextNode;
 				agent.SetDestination(currentNode.transform.position);
 			}
 			else
 			{
-				if (commandsQueue.Count <= 0) return;
+				if (commandsQueue.Count <= 0)
+				{
+					return;
+				}
 
-				Intersection nextNode = commandsQueue.Dequeue()?.CalculateNextNode(currentNode, previousNode, transform);
+				Intersection nextNode = commandsQueue.Dequeue()?.CalculateNextNode(currentNode, previousNode, transform, agent.velocity.normalized);
 
-				if (nextNode is null) return;
+				if (nextNode is null)
+				{
+					return;
+				}
 
 				agent.SetDestination(nextNode.transform.position);
 				previousNode = currentNode;

@@ -1,2 +1,11 @@
 event:/TestEvent
 event:/Music/Main Menu
+event:/Music/Gameplay
+event:/Sound Effects/Animals/Rooster
+event:/Sound Effects/Footsteps
+event:/Sound Effects/Animals/Cow
+event:/Sound Effects/NPCs/Cheer
+event:/Sound Effects/Animals/Pig
+event:/Sound Effects/Time/TimeSlowdown
+event:/Sound Effects/Animals/Dog
+event:/Sound Effects/NPCs/Talksound
