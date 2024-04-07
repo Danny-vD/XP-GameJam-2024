@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c70926ac0c8b84702bbd622483b349fd
+guid: 770f15736285ca146806ddd158f20b9a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,22 +97,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: building_church_0
+      name: parrticle_dust_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 113
-        height: 184
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 3
+        height: 3
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 47b9fcad9b4932c429e175fa56df3f7f
-      internalID: -367807414
+      spriteID: 7f6557a63abd75f409303355a4b35d4f
+      internalID: 2090334578
       vertices: []
       indices: 
       edges: []
@@ -120,7 +120,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 4522ebc54acd0294c9060694a2de161e
+    spriteID: bd4f049277bee0646b069cfcc748ca59
     internalID: 0
     vertices: []
     indices: 
@@ -128,7 +128,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      building_church_0: -367807414
+      parrticle_dust_0: 2090334578
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

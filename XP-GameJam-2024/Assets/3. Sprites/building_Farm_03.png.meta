@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c70926ac0c8b84702bbd622483b349fd
+guid: a94b9e8757d4b664e997f375c2db4bd6
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: building_church_0
+      name: building_Farm_03_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 113
-        height: 184
+        width: 155
+        height: 73
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,8 +111,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 47b9fcad9b4932c429e175fa56df3f7f
-      internalID: -367807414
+      spriteID: d70ffcc89a0d4a2488904f3aa78344d5
+      internalID: -1693862494
       vertices: []
       indices: 
       edges: []
@@ -120,7 +120,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 4522ebc54acd0294c9060694a2de161e
+    spriteID: 8d0bd609cea81f742b2ccf8a1d4ed57f
     internalID: 0
     vertices: []
     indices: 
@@ -128,7 +128,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      building_church_0: -367807414
+      building_Farm_03_0: -1693862494
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
