@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using MapMovement.Commands;
 using MapMovement.Commands.Interface;
 using MapMovement.Waypoints;
@@ -163,8 +164,10 @@ namespace MapMovement.NPCs
 					exclamationMark.SetActive(false);
 				}
 
-				IsMoving = true;
+				agent.isStopped = false;
+				IsMoving        = true;
 				OnMovementStart.Invoke();
+				
 				Debug.Log("\nStarting movement");
 			}
 
@@ -177,13 +180,7 @@ namespace MapMovement.NPCs
 
 			if (currentNode.Connections.Count <= 2)
 			{
-				foreach (Intersection currentNodeConnection in currentNode.Connections)
-				{
-					if (currentNodeConnection != previousNode)
-					{
-						nextNode = currentNodeConnection;
-					}
-				}
+				nextNode = currentNode.Connections.FirstOrDefault(connection => connection != previousNode);
 
 				agent.SetDestination(currentNode.transform.position);
 
@@ -202,7 +199,9 @@ namespace MapMovement.NPCs
 			if (nextNode is null)
 			{
 				OnEnterIdle.Invoke();
-				IsMoving = false;
+				
+				IsMoving        = false;
+				agent.isStopped = true;
 				
 				commandsQueue.Clear();
 
