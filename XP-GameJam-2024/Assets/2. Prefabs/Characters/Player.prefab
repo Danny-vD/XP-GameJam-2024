@@ -146,6 +146,7 @@ GameObject:
   - component: {fileID: 1507396367568232199}
   - component: {fileID: 8337038625911396479}
   - component: {fileID: 2333222528814300053}
+  - component: {fileID: 352400270632739730}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -318,6 +319,19 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 5.79
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!114 &352400270632739730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3546175327979245019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2af977d0067041ed981fc89c85ae6688, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioEventType: 14
 --- !u!1 &5282018613957245245
 GameObject:
   m_ObjectHideFlags: 0

@@ -1626,6 +1626,52 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.50000006
   m_Center: {x: 0.000000232063, y: 0.21133336, z: 0.000000004399534}
+--- !u!1 &251292454
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 251292456}
+  - component: {fileID: 251292457}
+  m_Layer: 0
+  m_Name: MusicManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &251292456
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 251292454}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 20.518642, y: -53.535603, z: 18.733145}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &251292457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 251292454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b43bac1a82e4b1da489dd7572c71c4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reactTo: 4
+  emitterType: 0
 --- !u!1 &252225548
 GameObject:
   m_ObjectHideFlags: 0
@@ -2837,6 +2883,11 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: 9082044433825663179, guid: 45b2322988b2fc14ca3fd39a63a4838f, type: 3}
   m_PrefabInstance: {fileID: 2099964653}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &573670567 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 769762615189882496, guid: 0594c2234f0be5748ad793651226f1cb, type: 3}
+  m_PrefabInstance: {fileID: 2098681850457998497}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &609032000
 GameObject:
@@ -9288,6 +9339,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8394033642847987166, guid: 0594c2234f0be5748ad793651226f1cb, type: 3}
+      propertyPath: attenuationObject
+      value: 
+      objectReference: {fileID: 573670567}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9839,3 +9894,4 @@ SceneRoots:
   - {fileID: 1670800985}
   - {fileID: 1134219261}
   - {fileID: 1509923292}
+  - {fileID: 251292456}
