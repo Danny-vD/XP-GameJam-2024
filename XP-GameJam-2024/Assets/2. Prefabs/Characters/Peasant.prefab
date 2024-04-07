@@ -330,6 +330,7 @@ GameObject:
   - component: {fileID: 7940290885325160863}
   - component: {fileID: 5914888611096741404}
   - component: {fileID: 347039413086227410}
+  - component: {fileID: 7810458554906362565}
   m_Layer: 7
   m_Name: Peasant
   m_TagString: Untagged
@@ -528,6 +529,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b77c9401716d45ab824a45ae2b3128e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7810458554906362565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4802565420961918426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2af977d0067041ed981fc89c85ae6688, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioEventType: 14
 --- !u!1 &4806259208403598361
 GameObject:
   m_ObjectHideFlags: 0
