@@ -5080,12 +5080,38 @@ MonoBehaviour:
           Data3: -1269779288
           Data4: 2015512387
         Path: event:/Sound Effects/Animals/DragonWing
+    - key: 20
+      value:
+        Guid:
+          Data1: 0
+          Data2: 0
+          Data3: 0
+          Data4: 0
+        Path: 
+    - key: 21
+      value:
+        Guid:
+          Data1: 0
+          Data2: 0
+          Data3: 0
+          Data4: 0
+        Path: 
+    - key: 22
+      value:
+        Guid:
+          Data1: 0
+          Data2: 0
+          Data3: 0
+          Data4: 0
+        Path: 
     buses:
     - key: 0
       value: bus:/
     emitterEvents:
     - key: 0
       value: 1
+    - key: 1
+      value: 2
   initialVolumes:
   - key: 0
     value: 1
