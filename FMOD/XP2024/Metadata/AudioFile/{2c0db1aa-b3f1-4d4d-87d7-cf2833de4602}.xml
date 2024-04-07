@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{2c0db1aa-b3f1-4d4d-87d7-cf2833de4602}">
+		<property name="assetPath">
+			<value>chickens02.ogg</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.68664399092970518</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{3235ff52-a11c-4f67-8af6-0069b742d23d}</destination>
+		</relationship>
+	</object>
+</objects>
