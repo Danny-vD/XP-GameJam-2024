@@ -44,6 +44,7 @@ namespace MapMovement.NPCs
 		private bool isListening;
 
 		private Vector3 lastDirection = Vector3.zero;
+		private Collider lastIntersectionColliderHit = null;
 
 		private void Awake()
 		{
@@ -61,6 +62,8 @@ namespace MapMovement.NPCs
 			movement.action.performed += MovementOnPerformed;
 
 			agent = GetComponent<NavMeshAgent>();
+
+			lastIntersectionColliderHit = previousNode.GetComponent<Collider>();
 		}
 
 		private void LateUpdate()
@@ -86,6 +89,13 @@ namespace MapMovement.NPCs
 			}
 			else
 			{
+				if (ReferenceEquals(other, lastIntersectionColliderHit))
+				{
+					return;
+				}
+
+				lastIntersectionColliderHit = other;
+
 				NextCommand();
 			}
 		}
@@ -112,7 +122,10 @@ namespace MapMovement.NPCs
 
 			Vector2 vector = obj.ReadValue<Vector2>();
 
-			if (!commandByVector.TryGetValue(vector, out Func<AbstractMoveCommand> command)) return;
+			if (!commandByVector.TryGetValue(vector, out Func<AbstractMoveCommand> command))
+			{
+				return;
+			}
 
 			commandsQueue.Enqueue(command.Invoke());
 		}
@@ -130,7 +143,7 @@ namespace MapMovement.NPCs
 				{
 					exclamationMark.SetActive(false);
 				}
-				
+
 				OnMovementStart.Invoke();
 			}
 
@@ -139,16 +152,42 @@ namespace MapMovement.NPCs
 
 		private void NextCommand()
 		{
+			Intersection nextNode = null;
+
+			if (currentNode.Connections.Count <= 2)
+			{
+				foreach (Intersection currentNodeConnection in currentNode.Connections)
+				{
+					if (currentNodeConnection != previousNode)
+					{
+						nextNode = currentNodeConnection;
+					}
+				}
+
+				agent.SetDestination(currentNode.transform.position);
+
+				previousNode = currentNode;
+				currentNode  = nextNode;
+				return;
+			}
+
 			if (commandsQueue.Count <= 0)
 			{
 				return;
 			}
 
-			Intersection nextNode = commandsQueue.Dequeue()?.GetNextNode(currentNode);
+			nextNode = commandsQueue.Dequeue()?.GetNextNode(currentNode);
 
 			if (nextNode is null)
 			{
 				OnEnterIdle.Invoke();
+				commandsQueue.Clear();
+
+				if (isListening && CanReceiveCommand && exclamationMark)
+				{
+					exclamationMark.SetActive(true);
+				}
+
 				return;
 			}
 
