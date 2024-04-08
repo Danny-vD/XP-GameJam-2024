@@ -27,9 +27,9 @@ namespace Timer.UI
 
 		[SerializeField]
 		private TMP_Text[] timerLabels;
-		
+
 		private double lastTime;
-		
+
 		private StringVariableWriter timerWriter;
 
 		private double startTotalSeconds = 0;
@@ -72,7 +72,7 @@ namespace Timer.UI
 			{
 				double currentSeconds = Lerp(startTotalSeconds, endTotalSeconds, 1 - gameTimer.TotalSecondsRemainingNormalized);
 				ToTime(currentSeconds, out int minutes, out int seconds);
-				
+
 				if (currentSeconds - lastTime > inGameMinutesUpdateInterval)
 				{
 					string newText = timerWriter.UpdateText(minutes, seconds);
@@ -81,8 +81,9 @@ namespace Timer.UI
 					{
 						timerLabel.text = newText;
 					}
-					
-					lastTime        = currentSeconds;
+
+					lastTime = currentSeconds;
+
 					playClockTick.start();
 				}
 			}
@@ -106,6 +107,7 @@ namespace Timer.UI
 
 		private void OnDestroy()
 		{
+			playClockTick.release();
 			GameTimerExpiredEvent.RemoveListener(UpdateText);
 		}
 	}
