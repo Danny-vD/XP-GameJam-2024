@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.InputSystem;
 using VDFramework;
 
@@ -34,6 +35,12 @@ namespace CameraScripts
 		{
 			camera1.SetActive(false);
 			camera2.SetActive(true);
+		}
+
+		private void OnDestroy()
+		{
+			overworldInteract.action.performed -= SwitchToCamera2;
+			specialInteract.action.performed   -= SwitchToCamera1;
 		}
 	}
 }
