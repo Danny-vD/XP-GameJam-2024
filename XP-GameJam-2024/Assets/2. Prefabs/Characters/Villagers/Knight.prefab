@@ -677,11 +677,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: 452781213
-      Data2: 1322465629
-      Data3: -1294919794
-      Data4: 1709877514
-    Path: event:/Sound Effects/NPCs/npcFootstep
+      Data1: -484156092
+      Data2: 1261689280
+      Data3: -123471741
+      Data4: -1048081853
+    Path: event:/Sound Effects/NPCs/horseFootstep
   Event: 
   PlayEvent: 0
   StopEvent: 0
