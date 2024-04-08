@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{0f2d7ac6-62d9-43f2-a730-c8557162c2c9}">
 		<property name="name">
-			<value>TimeSpeedUp</value>
+			<value>TimeSpeedup</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>
@@ -107,7 +107,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{24f0e9ed-e160-4ff5-b916-c6505fa9bc4f}">
 		<property name="volume">
-			<value>-9</value>
+			<value>-7</value>
 		</property>
 		<property name="name">
 			<value>Audio 1</value>
