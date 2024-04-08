@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{0bdf4be1-7a56-4693-bd12-32f41e0c017e}">
 		<property name="assetPath">
-			<value>donkeyCart.ogg</value>
+			<value>Sound Effects/Animals/donkeyCart.ogg</value>
 		</property>
 		<property name="isStreaming">
 			<value>true</value>

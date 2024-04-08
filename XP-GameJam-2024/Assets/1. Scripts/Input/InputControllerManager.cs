@@ -25,11 +25,14 @@ namespace Input
 
 		public ControlType CurrentControlType { get; private set; }
 
+		private FMOD.Studio.EventInstance playSlowdown;
+
 		protected override void Awake()
 		{
 			base.Awake();
 			
 			AudioParameterManager.SetGlobalParameter("TimeSlowed", 0);
+			playSlowdown = AudioPlayer.GetEventInstance(FMODUtilityPackage.Enums.AudioEventType.Sound_Effects_Time_TimeSlowdown);
 
 			SetActionsMapsPerControlType();
 
@@ -52,6 +55,7 @@ namespace Input
 			// Trigger time dilation
 			Time.timeScale = 0.2f;
 			AudioParameterManager.SetGlobalParameter("TimeSlowed", 1); // TODO Don't do this here
+			playSlowdown.start();
 			
 			ChangeControls(ControlType.Special);
 		}

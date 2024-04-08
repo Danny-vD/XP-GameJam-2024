@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{0b7e10f7-b92a-4bb4-a17a-49eb7d4ee12b}">
 		<property name="assetPath">
-			<value>dragonFire03.ogg</value>
+			<value>Sound Effects/Animals/dragonFire03.ogg</value>
 		</property>
 		<property name="isStreaming">
 			<value>true</value>
