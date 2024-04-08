@@ -99,6 +99,8 @@ GameObject:
   - component: {fileID: 155389604234130589}
   - component: {fileID: 570965137677754928}
   - component: {fileID: 4679323982093145537}
+  - component: {fileID: 2789975952964730427}
+  - component: {fileID: 760560927955407829}
   m_Layer: 0
   m_Name: Castle
   m_TagString: Untagged
@@ -210,6 +212,40 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2789975952964730427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5439162652427591783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7faa55dd16d94627a5227cb58b180cee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layer: 7
+--- !u!135 &760560927955407829
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5439162652427591783}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 3.76
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8334295696964938606
 GameObject:
   m_ObjectHideFlags: 0
