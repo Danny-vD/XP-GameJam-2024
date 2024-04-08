@@ -92,9 +92,6 @@
 		<property name="length">
 			<value>2.5899999999999999</value>
 		</property>
-		<property name="pitch">
-			<value>1</value>
-		</property>
 		<relationship name="modulators">
 			<destination>{ef106bde-2e14-43a7-9c20-44cbb6f6d006}</destination>
 		</relationship>
@@ -104,7 +101,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{4189bbc0-0d92-4e3e-affb-4b07c516a1c5}">
 		<property name="volume">
-			<value>-6</value>
+			<value>-7</value>
 		</property>
 		<property name="name">
 			<value>Audio 1</value>
@@ -131,7 +128,7 @@
 			<value>pitch</value>
 		</property>
 		<property name="amount">
-			<value>4</value>
+			<value>6</value>
 		</property>
 	</object>
 	<object class="MixerBusEffectChain" id="{9f16bb43-d92c-4447-9b6f-a4a4ddd6451c}">
