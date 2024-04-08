@@ -1,4 +1,7 @@
-﻿using Timer.Events;
+﻿using FMOD.Studio;
+using FMODUtilityPackage.Core;
+using FMODUtilityPackage.Enums;
+using Timer.Events;
 using TMPro;
 using UnityEngine;
 using VDFramework;
@@ -22,23 +25,23 @@ namespace Timer.UI
 		[SerializeField]
 		private GameTimer gameTimer;
 
+		[SerializeField]
+		private TMP_Text[] timerLabels;
+		
 		private double lastTime;
-
-		private TMP_Text timerLabel;
+		
 		private StringVariableWriter timerWriter;
 
 		private double startTotalSeconds = 0;
 		private double endTotalSeconds = 0;
 
-		FMOD.Studio.EventInstance playClockTick;
+		private EventInstance playClockTick;
 
 		private void Awake()
 		{
-			timerLabel = GetComponent<TMP_Text>();
+			timerWriter = new StringVariableWriter(timerLabels[0].text);
 
-			timerWriter = new StringVariableWriter(timerLabel.text);
-
-			playClockTick = FMODUnity.RuntimeManager.CreateInstance("event:/Sound Effects/Time/clockTick");
+			playClockTick = AudioPlayer.GetEventInstance(AudioEventType.Sound_Effects_Time_clockTick);
 		}
 
 		private void Start()
@@ -58,7 +61,12 @@ namespace Timer.UI
 		{
 			if (gameTimer.TotalSecondsRemainingNormalized == 0)
 			{
-				timerLabel.text = timerWriter.UpdateText(EndTime.x, EndTime.y);
+				string newText = timerWriter.UpdateText(EndTime.x, EndTime.y);
+
+				foreach (TMP_Text timerLabel in timerLabels)
+				{
+					timerLabel.text = newText;
+				}
 			}
 			else
 			{
@@ -67,25 +75,31 @@ namespace Timer.UI
 				
 				if (currentSeconds - lastTime > inGameMinutesUpdateInterval)
 				{
-					timerLabel.text = timerWriter.UpdateText(minutes, seconds);
+					string newText = timerWriter.UpdateText(minutes, seconds);
+
+					foreach (TMP_Text timerLabel in timerLabels)
+					{
+						timerLabel.text = newText;
+					}
+					
 					lastTime        = currentSeconds;
 					playClockTick.start();
 				}
 			}
 		}
 
-		private double ToTotalSeconds(double minutes, double seconds)
+		private static double ToTotalSeconds(double minutes, double seconds)
 		{
 			return seconds + minutes * 60;
 		}
 
-		private void ToTime(double totalSeconds, out int minutes, out int seconds)
+		private static void ToTime(double totalSeconds, out int minutes, out int seconds)
 		{
 			minutes = (int)(totalSeconds / 60);
 			seconds = (int)(totalSeconds % 60);
 		}
 
-		private double Lerp(double a, double b, double t)
+		private static double Lerp(double a, double b, double t)
 		{
 			return a + (b - a) * t;
 		}

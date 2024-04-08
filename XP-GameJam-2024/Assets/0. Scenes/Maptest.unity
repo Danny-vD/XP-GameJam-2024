@@ -1627,6 +1627,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6558234945876784933, guid: 5ee1dd19a96224b1b89e46076d812b4a, type: 3}
+      propertyPath: m_Name
+      value: Timer Shadow
+      objectReference: {fileID: 0}
+    - target: {fileID: 6558234945876784933, guid: 5ee1dd19a96224b1b89e46076d812b4a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7028417389235788423, guid: 5ee1dd19a96224b1b89e46076d812b4a, type: 3}
+      propertyPath: timerLabels.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7028417389235788423, guid: 5ee1dd19a96224b1b89e46076d812b4a, type: 3}
+      propertyPath: 'timerLabels.Array.data[0]'
+      value: 
+      objectReference: {fileID: 144631148}
+    - target: {fileID: 7028417389235788423, guid: 5ee1dd19a96224b1b89e46076d812b4a, type: 3}
+      propertyPath: 'timerLabels.Array.data[1]'
+      value: 
+      objectReference: {fileID: 144631147}
     - target: {fileID: 7170980734845445717, guid: 5ee1dd19a96224b1b89e46076d812b4a, type: 3}
       propertyPath: m_Name
       value: UI Canvas
@@ -1645,6 +1665,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 06d44c144d274f6db768dd40a368338d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &144631147 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7930176630852605129, guid: 5ee1dd19a96224b1b89e46076d812b4a, type: 3}
+  m_PrefabInstance: {fileID: 144631145}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &144631148 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6888219202578905989, guid: 5ee1dd19a96224b1b89e46076d812b4a, type: 3}
+  m_PrefabInstance: {fileID: 144631145}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &217049835
@@ -8154,7 +8196,7 @@ GameObject:
   - component: {fileID: 1509923292}
   - component: {fileID: 1509923293}
   m_Layer: 0
-  m_Name: '[TEMP] Timer Updater'
+  m_Name: Timer Updater
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
