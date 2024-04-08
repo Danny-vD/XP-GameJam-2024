@@ -4,5 +4,11 @@ namespace GameManagement.Events
 {
     public class VillagerDeathEvent : VDEvent<VillagerDeathEvent>
     {
+        public readonly Villager KilledVillager;
+
+        public VillagerDeathEvent(Villager killedVillager)
+        {
+            KilledVillager = killedVillager;
+        }
     }
 }

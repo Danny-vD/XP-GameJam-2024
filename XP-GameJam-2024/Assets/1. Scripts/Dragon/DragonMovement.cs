@@ -18,6 +18,9 @@ namespace Dragon
 		[SerializeField]
 		private float secondsWaitAfterKill = 1.5f;
 
+		
+		//TODO: make the dragon stop? (the buggy movement looks kinda cool though)
+		
 		private DragonTargetManager dragonTargetManager;
 
 		private void Awake()

@@ -15,14 +15,7 @@ namespace Dragon
 		public Villager CurrentTarget { get; private set; }
 		public bool HasValidTarget => CurrentTarget != null;
 		
-		public bool TargetsAvailable
-		{
-			get
-			{
-				GetAllPossibleTargets();
-				return targets.Count > 0;
-			}
-		}
+		public bool TargetsAvailable => targets.Count > 0;
 
 		private void Awake()
 		{
@@ -31,16 +24,16 @@ namespace Dragon
 
 		private void Start()
 		{
-			VillagerDeathEvent.AddListener(GetAllPossibleTargets, -100);
-			VillagerSaveEvent.AddListener(GetAllPossibleTargets, -100);
+			VillagerDeathEvent.AddListener(UpdatePossibleTargets, -100);
+			VillagerSavedEvent.AddListener(UpdatePossibleTargets, -100);
 		}
 
 		public void SetNewTarget()
 		{
-			//if (CurrentTarget == null)
-			//{
-			//	targets.Remove(CurrentTarget);
-			//}
+			if (CurrentTarget == null)
+			{
+				targets.Remove(CurrentTarget);
+			}
 			
 			if (GetRandomTarget(out Villager target))
 			{
@@ -63,10 +56,20 @@ namespace Dragon
 			targets = FindObjectsByType<Villager>(FindObjectsSortMode.None).ToList();
 		}
 
+		private void UpdatePossibleTargets(VillagerDeathEvent villagerDeathEvent)
+		{
+			targets.Remove(villagerDeathEvent.KilledVillager);
+		}
+
+		private void UpdatePossibleTargets(VillagerSavedEvent villagerSavedEvent)
+		{
+			targets.Remove(villagerSavedEvent.SavedVillager);
+		}
+
 		private void OnDestroy()
 		{
 			VillagerDeathEvent.RemoveListener(GetAllPossibleTargets);
-			VillagerSaveEvent.RemoveListener(GetAllPossibleTargets);
+			VillagerSavedEvent.RemoveListener(GetAllPossibleTargets);
 		}
 	}
 }

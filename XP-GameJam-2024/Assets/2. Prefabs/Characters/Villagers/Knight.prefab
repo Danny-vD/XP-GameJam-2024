@@ -448,8 +448,8 @@ GameObject:
   - component: {fileID: 7697447487626738739}
   - component: {fileID: 1008894033388418423}
   - component: {fileID: 6247133916079127995}
-  - component: {fileID: 3247799151379181065}
   - component: {fileID: 3295121294954559968}
+  - component: {fileID: 846452775571993447}
   m_Layer: 7
   m_Name: Knight
   m_TagString: Untagged
@@ -637,7 +637,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1.0000001, y: 2, z: 1.0000002}
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &6247133916079127995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -650,7 +650,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b77c9401716d45ab824a45ae2b3128e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &3247799151379181065
+--- !u!114 &3295121294954559968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7995675810943076604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e936fb2bf18452091f6bd3e7bb3fd6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &846452775571993447
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -665,11 +677,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: -484156092
-      Data2: 1261689280
-      Data3: -123471741
-      Data4: -1048081853
-    Path: event:/Sound Effects/NPCs/horseFootstep
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   Event: 
   PlayEvent: 0
   StopEvent: 0
@@ -679,20 +691,8 @@ MonoBehaviour:
   AllowNonRigidbodyDoppler: 0
   Params: []
   OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
---- !u!114 &3295121294954559968
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7995675810943076604}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e936fb2bf18452091f6bd3e7bb3fd6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  OverrideMinDistance: -1
+  OverrideMaxDistance: -1
 --- !u!1 &8279433671768658019
 GameObject:
   m_ObjectHideFlags: 0

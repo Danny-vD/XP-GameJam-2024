@@ -71,6 +71,7 @@ namespace FMODUtilityPackage.Core
 		/// <param name="location">The object to attach this event to</param>
 		public static void PlayOneShot3D(AudioEventType audioEvent, GameObject location)
 		{
+			// BUG: OneShotAttached requires a rigidbody if the physics package is installed
 			RuntimeManager.PlayOneShotAttached(AudioManager.Instance.EventPaths.GetEventReference(audioEvent), location);
 		}
 

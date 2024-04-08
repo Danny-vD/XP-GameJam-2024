@@ -12,15 +12,15 @@ namespace GameManagement.UIElements
         private void Awake()
         {
             label = GetComponent<TMP_Text>();
-            EventManager.AddListener<VillagerSaveEvent>(OnVillagerSaved, -10);
+            EventManager.AddListener<VillagerSavedEvent>(OnVillagerSaved, -10);
         }
 
         private void OnDisable()
         {
-            EventManager.RemoveListener<VillagerSaveEvent>(OnVillagerSaved);
+            EventManager.RemoveListener<VillagerSavedEvent>(OnVillagerSaved);
         }
 
-        private void OnVillagerSaved(VillagerSaveEvent @event)
+        private void OnVillagerSaved(VillagerSavedEvent @event)
         {
             label.text = "Villagers Saved: " + GameManager.Instance.saved;
         }

@@ -275,5 +275,11 @@ namespace MapMovement.NPCs
 				exclamationMark.SetActive(true);
 			}
 		}
+
+		private void OnDestroy()
+		{
+			interact.action.performed -= OnInteract;
+			movement.action.performed -= MovementOnPerformed;
+		}
 	}
 }
