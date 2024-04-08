@@ -5083,27 +5083,43 @@ MonoBehaviour:
     - key: 20
       value:
         Guid:
-          Data1: 0
-          Data2: 0
-          Data3: 0
-          Data4: 0
-        Path: 
+          Data1: -484156092
+          Data2: 1261689280
+          Data3: -123471741
+          Data4: -1048081853
+        Path: event:/Sound Effects/NPCs/horseFootstep
     - key: 21
       value:
         Guid:
-          Data1: 0
-          Data2: 0
-          Data3: 0
-          Data4: 0
-        Path: 
+          Data1: -532383365
+          Data2: 1305948387
+          Data3: -1482922313
+          Data4: -576465372
+        Path: event:/Sound Effects/NPCs/dragonFire
     - key: 22
       value:
         Guid:
-          Data1: 0
-          Data2: 0
-          Data3: 0
-          Data4: 0
-        Path: 
+          Data1: -1536100446
+          Data2: 1112016393
+          Data3: 692083389
+          Data4: 1920172434
+        Path: event:/Sound Effects/Time/clockTick
+    - key: 23
+      value:
+        Guid:
+          Data1: 1397364655
+          Data2: 1141441975
+          Data3: 2058823815
+          Data4: 1505980527
+        Path: event:/Sound Effects/NPCs/donkeyCart
+    - key: 24
+      value:
+        Guid:
+          Data1: 347587836
+          Data2: 1308168669
+          Data3: 544706989
+          Data4: -891269118
+        Path: event:/Sound Effects/NPCs/windMill
     buses:
     - key: 0
       value: bus:/
@@ -5442,6 +5458,7 @@ GameObject:
   - component: {fileID: 1758758229}
   - component: {fileID: 1758758228}
   - component: {fileID: 1758758227}
+  - component: {fileID: 1758758230}
   m_Layer: 5
   m_Name: Back
   m_TagString: Untagged
@@ -5563,6 +5580,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1758758225}
   m_CullTransparentMesh: 1
+--- !u!114 &1758758230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1758758225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33f8ccc313d404d46bd93b72bebeebfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickRestartsSound: 1
+  audioEventToPlayOnClick: 11
+  parameters:
+    parameters:
+      serializedDictionary: []
 --- !u!1 &1823166396
 GameObject:
   m_ObjectHideFlags: 0
