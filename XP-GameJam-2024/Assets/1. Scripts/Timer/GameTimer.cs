@@ -1,4 +1,5 @@
-﻿using Timer.Events;
+﻿using System;
+using Timer.Events;
 using UnityEngine;
 using VDFramework;
 using VDFramework.Utility.TimerUtil;
@@ -34,6 +35,11 @@ namespace Timer
 			timerHandle?.Stop();
 
 			timerHandle = TimerManager.StartNewTimer(GetStartTime(), GameTimerExpiredEvent.RaiseEvent, false);
+		}
+
+		private void OnDestroy()
+		{
+			timerHandle?.Stop();
 		}
 	}
 }
