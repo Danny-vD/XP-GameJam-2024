@@ -30,11 +30,15 @@ namespace Timer.UI
 		private double startTotalSeconds = 0;
 		private double endTotalSeconds = 0;
 
+		FMOD.Studio.EventInstance playClockTick;
+
 		private void Awake()
 		{
 			timerLabel = GetComponent<TMP_Text>();
 
 			timerWriter = new StringVariableWriter(timerLabel.text);
+
+			playClockTick = FMODUnity.RuntimeManager.CreateInstance("event:/Sound Effects/Time/clockTick");
 		}
 
 		private void Start()
@@ -65,6 +69,7 @@ namespace Timer.UI
 				{
 					timerLabel.text = timerWriter.UpdateText(minutes, seconds);
 					lastTime        = currentSeconds;
+					playClockTick.start();
 				}
 			}
 		}
