@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{7be9f477-c39e-43e5-ba96-ebe2fe43fa28}">
+		<property name="assetPath">
+			<value>dragonFire01.ogg</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>15.692312925170068</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{3235ff52-a11c-4f67-8af6-0069b742d23d}</destination>
+		</relationship>
+	</object>
+</objects>
