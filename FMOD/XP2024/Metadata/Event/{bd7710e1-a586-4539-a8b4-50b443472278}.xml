@@ -58,7 +58,7 @@
 	</object>
 	<object class="EventAutomatableProperties" id="{c2d1c780-b426-4906-a8fe-28222ba200fa}">
 		<property name="maximumDistance">
-			<value>50</value>
+			<value>70</value>
 		</property>
 	</object>
 	<object class="MarkerTrack" id="{5cf60559-7162-49df-b073-ee4b0e17cca4}" />
@@ -94,7 +94,7 @@
 	<object class="MixerBusPanner" id="{e3e68add-e799-4949-af61-e3cdde3a1422}" />
 	<object class="MultiSound" id="{adcc6ae2-52f2-4642-ba4d-76c4c138c114}">
 		<property name="pitch">
-			<value>-2.4000001</value>
+			<value>-4.5</value>
 		</property>
 		<relationship name="modulators">
 			<destination>{1bddaeff-8e13-4aae-bd3f-38c09254e1d3}</destination>
@@ -108,7 +108,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{b6ddab29-7c39-4124-9802-268455b24e67}">
 		<property name="volume">
-			<value>4</value>
+			<value>9</value>
 		</property>
 		<property name="name">
 			<value>Audio 1</value>
