@@ -21,3 +21,5 @@ event:/Sound Effects/Animals/DragonWing
 event:/Sound Effects/NPCs/horseFootstep
 event:/Sound Effects/NPCs/dragonFire
 event:/Sound Effects/Time/clockTick
+event:/Sound Effects/NPCs/donkeyCart
+event:/Sound Effects/NPCs/windMill

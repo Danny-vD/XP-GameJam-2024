@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using FMODUtilityPackage.Core;
 using Input.Enum;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -27,6 +28,8 @@ namespace Input
 		protected override void Awake()
 		{
 			base.Awake();
+			
+			AudioParameterManager.SetGlobalParameter("TimeSlowed", 0);
 
 			SetActionsMapsPerControlType();
 
@@ -48,6 +51,8 @@ namespace Input
 		{
 			// Trigger time dilation
 			Time.timeScale = 0.2f;
+			AudioParameterManager.SetGlobalParameter("TimeSlowed", 1); // TODO Don't do this here
+			
 			ChangeControls(ControlType.Special);
 		}
 
@@ -55,6 +60,8 @@ namespace Input
 		{
 			//Trigger time dilation
 			Time.timeScale = 1.0f;
+			AudioParameterManager.SetGlobalParameter("TimeSlowed", 0); // TODO Don't do this here
+			
 			ChangeControls(ControlType.Overworld);
 		}
 

@@ -122,5 +122,15 @@ namespace FMODUtilityPackage.Enums
 		/// event:/Sound Effects/Time/clockTick
 		/// </FMODEventPath>
 		Sound_Effects_Time_clockTick,
+
+		/// <FMODEventPath>
+		/// event:/Sound Effects/NPCs/donkeyCart
+		/// </FMODEventPath>
+		Sound_Effects_NPCs_donkeyCart,
+
+		/// <FMODEventPath>
+		/// event:/Sound Effects/NPCs/windMill
+		/// </FMODEventPath>
+		Sound_Effects_NPCs_windMill,
 	}
 }

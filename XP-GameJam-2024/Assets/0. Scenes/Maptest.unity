@@ -11886,6 +11886,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RewindAnimation
       objectReference: {fileID: 0}
+    - target: {fileID: 6922648194689836502, guid: 3e66b882c526fa54a86d51d96d4f0e25, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8961760746250347730, guid: 3e66b882c526fa54a86d51d96d4f0e25, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.6005378
