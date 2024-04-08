@@ -173,8 +173,6 @@ namespace MapMovement.NPCs
 				agent.isStopped = false;
 				IsMoving        = true;
 				OnMovementStart.Invoke();
-				
-				Debug.Log("\nStarting movement");
 			}
 
 			NextCommand();
