@@ -16,7 +16,7 @@ namespace Input
 		private InputActionAsset inputActionAsset;
 
 		[SerializeField]
-		private InputActionReference specialInteraction;
+		private InputActionReference specialInteraction; // TODO: Move to a seperate class!
 
 		[SerializeField]
 		private InputActionReference overworldInteraction;
@@ -30,7 +30,9 @@ namespace Input
 		protected override void Awake()
 		{
 			base.Awake();
-			
+
+			// TODO: Don't do this here
+			Time.timeScale = 1;
 			AudioParameterManager.SetGlobalParameter("TimeSlowed", 0);
 			playSlowdown = AudioPlayer.GetEventInstance(FMODUtilityPackage.Enums.AudioEventType.Sound_Effects_Time_TimeSlowdown);
 
