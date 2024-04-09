@@ -5136,7 +5136,7 @@ MonoBehaviour:
   Params: []
   OverrideAttenuation: 0
   OverrideMinDistance: 1
-  OverrideMaxDistance: 50
+  OverrideMaxDistance: 70
 --- !u!114 &4875457326358043724
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5150,7 +5150,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
-  distanceFromTarget: 1.5
+  distanceFromTarget: 5
   distanceForKill: 1
   secondsWaitAfterKill: 1.5
 --- !u!114 &6484307013472364850

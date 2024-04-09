@@ -132,5 +132,10 @@ namespace FMODUtilityPackage.Enums
 		/// event:/Sound Effects/NPCs/windMill
 		/// </FMODEventPath>
 		Sound_Effects_NPCs_windMill,
+
+		/// <FMODEventPath>
+		/// event:/Sound Effects/Time/TimeSpeedup
+		/// </FMODEventPath>
+		Sound_Effects_Time_TimeSpeedup,
 	}
 }

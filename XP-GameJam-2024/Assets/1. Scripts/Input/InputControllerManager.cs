@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using FMODUtilityPackage.Core;
+using FMODUtilityPackage.Enums;
 using Input.Enum;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -35,8 +36,9 @@ namespace Input
 			// TODO: Don't do this here
 			Time.timeScale = 1;
 			AudioParameterManager.SetGlobalParameter("TimeSlowed", 0);
-			playSlowdown = AudioPlayer.GetEventInstance(FMODUtilityPackage.Enums.AudioEventType.Sound_Effects_Time_TimeSlowdown);
-			playSpeedup = FMODUnity.RuntimeManager.CreateInstance("event:/Sound Effects/Time/TimeSpeedup"); //I know Danny recommended I shouldn't hard-code paths like this but for some reason Unity couldn't find the event otherwise
+			playSlowdown = AudioPlayer.GetEventInstance(AudioEventType.Sound_Effects_Time_TimeSlowdown);
+			playSpeedup = playSlowdown = AudioPlayer.GetEventInstance(AudioEventType.Sound_Effects_Time_TimeSpeedup);
+
 			SetActionsMapsPerControlType();
 
 			specialInteraction.action.performed   += OnSpecialInteraction;
@@ -59,7 +61,7 @@ namespace Input
 			Time.timeScale = 0.2f;
 			AudioParameterManager.SetGlobalParameter("TimeSlowed", 1); // TODO Don't do this here
 			playSlowdown.start();
-			
+
 			ChangeControls(ControlType.Special);
 		}
 
@@ -69,7 +71,7 @@ namespace Input
 			Time.timeScale = 1.0f;
 			AudioParameterManager.SetGlobalParameter("TimeSlowed", 0); // TODO Don't do this here
 			playSpeedup.start();
-			
+
 			ChangeControls(ControlType.Overworld);
 		}
 
