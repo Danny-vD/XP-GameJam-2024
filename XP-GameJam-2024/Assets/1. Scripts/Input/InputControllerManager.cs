@@ -26,6 +26,7 @@ namespace Input
 		public ControlType CurrentControlType { get; private set; }
 
 		private FMOD.Studio.EventInstance playSlowdown;
+		private FMOD.Studio.EventInstance playSpeedup;
 
 		protected override void Awake()
 		{
@@ -35,7 +36,7 @@ namespace Input
 			Time.timeScale = 1;
 			AudioParameterManager.SetGlobalParameter("TimeSlowed", 0);
 			playSlowdown = AudioPlayer.GetEventInstance(FMODUtilityPackage.Enums.AudioEventType.Sound_Effects_Time_TimeSlowdown);
-
+			playSpeedup = FMODUnity.RuntimeManager.CreateInstance("event:/Sound Effects/Time/TimeSpeedup"); //I know Danny recommended I shouldn't hard-code paths like this but for some reason Unity couldn't find the event otherwise
 			SetActionsMapsPerControlType();
 
 			specialInteraction.action.performed   += OnSpecialInteraction;
@@ -67,6 +68,7 @@ namespace Input
 			//Trigger time dilation
 			Time.timeScale = 1.0f;
 			AudioParameterManager.SetGlobalParameter("TimeSlowed", 0); // TODO Don't do this here
+			playSpeedup.start();
 			
 			ChangeControls(ControlType.Overworld);
 		}
