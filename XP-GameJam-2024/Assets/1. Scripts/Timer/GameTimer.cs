@@ -1,5 +1,4 @@
-﻿using System;
-using Timer.Events;
+﻿using Timer.Events;
 using UnityEngine;
 using VDFramework;
 using VDFramework.Utility.TimerUtil;

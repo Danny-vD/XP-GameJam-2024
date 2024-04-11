@@ -16,12 +16,6 @@ namespace Input
 		[SerializeField]
 		private InputActionAsset inputActionAsset;
 
-		[SerializeField]
-		private InputActionReference specialInteraction; // TODO: Move to a seperate class!
-
-		[SerializeField]
-		private InputActionReference overworldInteraction;
-
 		private readonly Dictionary<ControlType, InputActionMap> actionMapsByType = new Dictionary<ControlType, InputActionMap>();
 
 		public ControlType CurrentControlType { get; private set; }
@@ -41,18 +35,8 @@ namespace Input
 
 			SetActionsMapsPerControlType();
 
-			specialInteraction.action.performed   += OnSpecialInteraction;
-			overworldInteraction.action.performed += OnOverworldInteraction;
-
 			CurrentControlType = default;
 			SetControls(default);
-		}
-
-		protected override void OnDestroy()
-		{
-			specialInteraction.action.performed   -= OnSpecialInteraction;
-			overworldInteraction.action.performed -= OnOverworldInteraction;
-			base.OnDestroy();
 		}
 
 		private void OnOverworldInteraction(InputAction.CallbackContext obj)

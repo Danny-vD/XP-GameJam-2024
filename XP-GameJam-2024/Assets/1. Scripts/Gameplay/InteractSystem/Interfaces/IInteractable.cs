@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace InteractSystem.Interfaces
+namespace Gameplay.InteractSystem.Interfaces
 {
 	public interface IInteractable
 	{
