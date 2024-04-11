@@ -1,6 +1,8 @@
-﻿namespace Gameplay.DirectionsSystem.NPCs
+﻿using VDFramework;
+
+namespace Gameplay.DirectionsSystem.NPCs
 {
-	public class DirectionsReceiver
+	public class DirectionsReceiver : BetterMonoBehaviour
 	{
 		
 	}

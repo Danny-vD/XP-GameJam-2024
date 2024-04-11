@@ -11,29 +11,48 @@ namespace Gameplay.InteractSystem.Player
 	public class PlayerInteract : BetterMonoBehaviour
 	{
 		public event Action<List<IInteractable>> OnInteract = delegate { };
-		public event Action<List<DirectionsReceiver>> OnInteractWithVillagers = delegate { };
+		public event Action<List<DirectionsReceiver>> OnInteractWithDirectionReceivers = delegate { };
 
 		[SerializeField]
-		private InputActionReference overworldInteract;
+		private InputActionReference overworldInteractInput;
 
 		private readonly List<IInteractable> interactables = new List<IInteractable>();
-		private readonly List<DirectionsReceiver> villagers = new List<DirectionsReceiver>();
+		private readonly List<DirectionsReceiver> directionsReceivers = new List<DirectionsReceiver>();
+
+		private InteractablesChecker interactablesChecker;
+
+		private void Awake()
+		{
+			interactablesChecker = GetComponentInChildren<InteractablesChecker>();
+		}
 
 		private void OnEnable()
 		{
-			overworldInteract.action.performed += Interact;
+			interactablesChecker.OnDirectionsReceiverEnteredRadius += AddDirectionsReceiver;
+			interactablesChecker.OnInteractableEnteredRadius       += AddInteractable;
+
+			interactablesChecker.OnDirectionsReceiverLeftRadius += RemoveDirectionsReceiver;
+			interactablesChecker.OnInteractableLeftRadius       += RemoveInteractable;
+
+			overworldInteractInput.action.performed += Interact;
 		}
 
 		private void OnDisable()
 		{
-			overworldInteract.action.performed -= Interact;
+			interactablesChecker.OnDirectionsReceiverEnteredRadius -= AddDirectionsReceiver;
+			interactablesChecker.OnInteractableEnteredRadius       -= AddInteractable;
+
+			interactablesChecker.OnDirectionsReceiverLeftRadius -= RemoveDirectionsReceiver;
+			interactablesChecker.OnInteractableLeftRadius       -= RemoveInteractable;
+
+			overworldInteractInput.action.performed -= Interact;
 		}
 
 		private void Interact(InputAction.CallbackContext obj)
 		{
-			if (villagers.Count > 0)
+			if (directionsReceivers.Count > 0)
 			{
-				OnInteractWithVillagers.Invoke(villagers);
+				OnInteractWithDirectionReceivers.Invoke(directionsReceivers);
 
 				return;
 			}
@@ -44,27 +63,37 @@ namespace Gameplay.InteractSystem.Player
 				{
 					interactable.Interact();
 				}
-			
+
 				OnInteract.Invoke(interactables);
 
 				return;
 			}
 		}
 
-		private void OnTriggerEnter(Collider other)
+		private void AddDirectionsReceiver(DirectionsReceiver directionsReceiver)
 		{
-			if (other.TryGetComponent(out IInteractable interactable))
+			if (!directionsReceivers.Contains(directionsReceiver))
+			{
+				directionsReceivers.Add(directionsReceiver);
+			}
+		}
+
+		private void RemoveDirectionsReceiver(DirectionsReceiver directionsReceiver)
+		{
+			directionsReceivers.Remove(directionsReceiver);
+		}
+
+		private void AddInteractable(IInteractable interactable)
+		{
+			if (!interactables.Contains(interactable))
 			{
 				interactables.Add(interactable);
 			}
 		}
 
-		private void OnTriggerExit(Collider other)
+		private void RemoveInteractable(IInteractable interactable)
 		{
-			if (other.TryGetComponent(out IInteractable interactable))
-			{
-				interactables.Remove(interactable);
-			}
+			interactables.Remove(interactable);
 		}
 	}
 }

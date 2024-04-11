@@ -25,13 +25,13 @@ namespace Input
 		private void OnEnable()
 		{
 			specialInteractInput.action.performed  += SwitchToNormalInput;
-			playerInteract.OnInteractWithVillagers += SwitchToSpecialInput;
+			playerInteract.OnInteractWithDirectionReceivers += SwitchToSpecialInput;
 		}
 
 		private void OnDisable()
 		{
 			specialInteractInput.action.performed  -= SwitchToNormalInput;
-			playerInteract.OnInteractWithVillagers -= SwitchToSpecialInput;
+			playerInteract.OnInteractWithDirectionReceivers -= SwitchToSpecialInput;
 		}
 
 		private static void SwitchToNormalInput(InputAction.CallbackContext context)
