@@ -131,13 +131,15 @@ GameObject:
   - component: {fileID: 6861376988926662442}
   - component: {fileID: 9213631101501590772}
   - component: {fileID: 6579159123521337369}
-  - component: {fileID: 8840198033997384459}
   - component: {fileID: 9047673860462274152}
   - component: {fileID: 1106570088395607122}
   - component: {fileID: 7976735674771957453}
   - component: {fileID: -6161739357013460143}
   - component: {fileID: 1437638832482476506}
   - component: {fileID: 186044076004881677}
+  - component: {fileID: 8311404996690355861}
+  - component: {fileID: -5568503817029272995}
+  - component: {fileID: -3533194202911057445}
   m_Layer: 7
   m_Name: Shepherd
   m_TagString: Untagged
@@ -259,24 +261,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &8840198033997384459
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2044242680034005892}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e3b308fbab84113a9a745871726975d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  previousNode: {fileID: 0}
-  currentNode: {fileID: 0}
-  interact: {fileID: 4551063502819420570, guid: 4bebb9c2fac873845b09705e10d39ed3, type: 3}
-  movement: {fileID: 7743625893090000019, guid: 4bebb9c2fac873845b09705e10d39ed3, type: 3}
-  exclamationMark: {fileID: 5079688818800102180}
-  exclamationSound: 17
 --- !u!65 &9047673860462274152
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -390,6 +374,44 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cf20cf94a71542e8993f56b73f38862e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8311404996690355861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2044242680034005892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7a7431b1b4d400ebd73dd840fe8cdd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-5568503817029272995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2044242680034005892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e79d84f5fb6495eb157ff75a077bbf5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToEnable: {fileID: 5079688818800102180}
+  canGiveDirectionsSound: 17
+--- !u!114 &-3533194202911057445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2044242680034005892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ab20971c2424fefa32b39bb05803c07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2461998075688525328

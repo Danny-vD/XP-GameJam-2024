@@ -5,7 +5,7 @@ using VDFramework;
 
 namespace Gameplay.DirectionsSystem.NPCs
 {
-	[RequireComponent(typeof(DirectionsReceiver)), DisallowMultipleComponent]
+	[DisallowMultipleComponent]
 	public class DirectionsHolder : BetterMonoBehaviour
 	{
 		public Queue<AbstractMoveCommand> KnownDirections { get; private set; } = new Queue<AbstractMoveCommand>();

@@ -9,7 +9,6 @@ namespace MapMovement
 	public class PlayerMovement : BetterMonoBehaviour, IActorMover
 	{
 		public event Action OnMovementStart = delegate { };
-		public event Action OnMovementCancelled = delegate { };
 		public event Action OnEnterIdle = delegate { };
 
 		[SerializeField]
@@ -58,7 +57,6 @@ namespace MapMovement
 			isMoving = false;
 
 			OnEnterIdle.Invoke();
-			OnMovementCancelled.Invoke();
 		}
 
 		private IEnumerator MovePlayer()
