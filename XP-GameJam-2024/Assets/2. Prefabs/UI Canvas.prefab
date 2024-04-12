@@ -378,7 +378,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minutes: 1
-  seconds: 0
+  seconds: 50
 --- !u!114 &7028417389235788423
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -391,8 +391,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 093eead2e65340a9b2e4a6c50694be99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartTime: {x: 12, y: 0}
-  EndTime: {x: 23, y: 0}
+  StartTime: {x: 7, y: 0}
+  EndTime: {x: 24, y: 0}
   inGameMinutesUpdateInterval: 10
   gameTimer: {fileID: 8699530956119849873}
   timerLabels:

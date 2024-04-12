@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4199333752695985533}
   - component: {fileID: 3312861285638608839}
   - component: {fileID: 468309202905642664}
-  - component: {fileID: 7928701055381529396}
   - component: {fileID: 6641262916280517375}
   m_Layer: 0
   m_Name: Ico
@@ -80,20 +79,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &7928701055381529396
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2810390580432136600}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87bfcd712e7b1514abf97edc651ff8ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  arrivalDistance: 2
 --- !u!114 &6641262916280517375
 MonoBehaviour:
   m_ObjectHideFlags: 0

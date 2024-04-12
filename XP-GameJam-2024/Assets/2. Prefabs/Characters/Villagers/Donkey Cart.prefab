@@ -249,11 +249,11 @@ GameObject:
   - component: {fileID: 2005021220666811529}
   - component: {fileID: 618461149530732730}
   - component: {fileID: 350003268982266208}
-  - component: {fileID: 6592608628961990216}
   - component: {fileID: 411422841393533738}
   - component: {fileID: 4474150292154457346}
   - component: {fileID: -8090510020798895039}
   - component: {fileID: -8890241413866737584}
+  - component: {fileID: 6276966228212408774}
   m_Layer: 7
   m_Name: Donkey Cart
   m_TagString: Untagged
@@ -375,20 +375,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &6592608628961990216
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4554990559485615155}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87bfcd712e7b1514abf97edc651ff8ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  arrivalDistance: 4
 --- !u!208 &411422841393533738
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -469,6 +455,18 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
+--- !u!114 &6276966228212408774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4554990559485615155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf20cf94a71542e8993f56b73f38862e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6613219167918700274
 GameObject:
   m_ObjectHideFlags: 0

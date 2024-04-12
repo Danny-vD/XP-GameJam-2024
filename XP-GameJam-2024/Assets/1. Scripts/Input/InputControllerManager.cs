@@ -1,7 +1,5 @@
 using System.Collections.Generic;
 using System.Linq;
-using FMODUtilityPackage.Core;
-using FMODUtilityPackage.Enums;
 using Input.Enum;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -20,43 +18,14 @@ namespace Input
 
 		public ControlType CurrentControlType { get; private set; }
 
-		private FMOD.Studio.EventInstance playSlowdown;
-		private FMOD.Studio.EventInstance playSpeedup;
-
 		protected override void Awake()
 		{
 			base.Awake();
-
-			// TODO: Don't do this here
-			Time.timeScale = 1;
-			AudioParameterManager.SetGlobalParameter("TimeSlowed", 0);
-			playSlowdown = AudioPlayer.GetEventInstance(AudioEventType.Sound_Effects_Time_TimeSlowdown);
-			playSpeedup = playSlowdown = AudioPlayer.GetEventInstance(AudioEventType.Sound_Effects_Time_TimeSpeedup);
 
 			SetActionsMapsPerControlType();
 
 			CurrentControlType = default;
 			SetControls(default);
-		}
-
-		private void OnOverworldInteraction(InputAction.CallbackContext obj)
-		{
-			// Trigger time dilation
-			Time.timeScale = 0.2f;
-			AudioParameterManager.SetGlobalParameter("TimeSlowed", 1); // TODO Don't do this here
-			playSlowdown.start();
-
-			ChangeControls(ControlType.Special);
-		}
-
-		private void OnSpecialInteraction(InputAction.CallbackContext obj)
-		{
-			//Trigger time dilation
-			Time.timeScale = 1.0f;
-			AudioParameterManager.SetGlobalParameter("TimeSlowed", 0); // TODO Don't do this here
-			playSpeedup.start();
-
-			ChangeControls(ControlType.Overworld);
 		}
 
 		public void ChangeControls(ControlType controlType)

@@ -1,6 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using Gameplay.DirectionsSystem.NPCs;
+using Gameplay.DirectionsSystem.Utility;
 using Gameplay.InteractSystem.Player;
+using MapMovement.Commands.Interface;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using VDFramework;
@@ -15,15 +19,19 @@ namespace Gameplay.DirectionsSystem.Player
 	 */
 	public class DirectionGiver : BetterMonoBehaviour
 	{
+		public event Action<AbstractMoveCommand> OnMovementAdded = delegate { };
+
 		[SerializeField]
 		private InputActionReference specialMovementInput;
 
 		[SerializeField]
 		private InputActionReference specialInteractInput;
-		
+
 		private List<DirectionsReceiver> directionsReceivers;
-		
+
 		private PlayerInteract playerInteract;
+
+		private readonly Queue<AbstractMoveCommand> directions = new Queue<AbstractMoveCommand>();
 
 		private void Awake()
 		{
@@ -32,12 +40,35 @@ namespace Gameplay.DirectionsSystem.Player
 
 		private void OnEnable()
 		{
-			playerInteract.OnInteractWithDirectionReceivers += SetDirectionReceiver;
+			playerInteract.OnInteractWithDirectionReceivers += SetDirectionReceivers;
+
+			specialMovementInput.action.performed += AddDirection;
+			specialInteractInput.action.performed += SendDirections;
 		}
 
-		private void SetDirectionReceiver(List<DirectionsReceiver> directionReceivers)
+		private void SetDirectionReceivers(List<DirectionsReceiver> directionsReceiversParam)
 		{
-			this.directionsReceivers = directionReceivers;
+			directions.Clear();
+			directionsReceivers = directionsReceiversParam;
+		}
+
+		private void SendDirections(InputAction.CallbackContext callbackContext)
+		{
+			foreach (DirectionsReceiver directionsReceiver in directionsReceivers.Where(directionsReceiver => directionsReceiver.CanReceiveDirections))
+			{
+				directionsReceiver.SetDirections(directions);
+			}
+		}
+
+		private void AddDirection(InputAction.CallbackContext callbackContext)
+		{
+			Vector2 direction = callbackContext.ReadValue<Vector2>();
+
+			if (Vector2ToMovementCommand.TryGetCommand(direction, out AbstractMoveCommand moveCommand))
+			{
+				directions.Enqueue(moveCommand);
+				OnMovementAdded.Invoke(moveCommand);
+			}
 		}
 	}
 }

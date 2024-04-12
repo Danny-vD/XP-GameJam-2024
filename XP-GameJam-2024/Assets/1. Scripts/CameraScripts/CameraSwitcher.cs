@@ -1,5 +1,5 @@
-﻿using UnityEngine;
-using UnityEngine.InputSystem;
+﻿using Input.Events;
+using UnityEngine;
 using VDFramework;
 
 namespace CameraScripts
@@ -12,34 +12,28 @@ namespace CameraScripts
 		[SerializeField]
 		private GameObject camera2;
 
-		[SerializeField]
-		private InputActionReference overworldInteract; // switches to camera 2
-		
-		[SerializeField]
-		private InputActionReference specialInteract; // switches to camera 1
-
-		private void Awake()
+		private void OnEnable()
 		{
-			overworldInteract.action.performed += SwitchToCamera2;
-			specialInteract.action.performed   += SwitchToCamera1;
+			SwitchToNormalInputEvent.AddListener(SwitchToCamera1);
+			SwitchToSpecialInputEvent.AddListener(SwitchToCamera2);
 		}
 
-		private void SwitchToCamera1(InputAction.CallbackContext obj)
+		private void OnDisable()
+		{
+			SwitchToNormalInputEvent.RemoveListener(SwitchToCamera1);
+			SwitchToSpecialInputEvent.RemoveListener(SwitchToCamera2);
+		}
+
+		private void SwitchToCamera1()
 		{
 			camera1.SetActive(true);
 			camera2.SetActive(false);
 		}
 
-		private void SwitchToCamera2(InputAction.CallbackContext obj)
+		private void SwitchToCamera2()
 		{
 			camera1.SetActive(false);
 			camera2.SetActive(true);
-		}
-
-		private void OnDestroy()
-		{
-			overworldInteract.action.performed -= SwitchToCamera2;
-			specialInteract.action.performed   -= SwitchToCamera1;
 		}
 	}
 }

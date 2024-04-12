@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Gameplay.DirectionsSystem.NPCs;
 using Gameplay.InteractSystem.Interfaces;
 using UnityEngine;
@@ -50,16 +51,20 @@ namespace Gameplay.InteractSystem.Player
 
 		private void Interact(InputAction.CallbackContext obj)
 		{
-			if (directionsReceivers.Count > 0)
+			List<DirectionsReceiver> availableReceivers = directionsReceivers.Where(receiver => receiver.CanReceiveDirections).ToList();
+			
+			if (availableReceivers.Count > 0)
 			{
-				OnInteractWithDirectionReceivers.Invoke(directionsReceivers);
+				OnInteractWithDirectionReceivers.Invoke(availableReceivers);
 
 				return;
 			}
 
-			if (interactables.Count > 0)
+			List<IInteractable> availableInteractables = interactables.Where(interactable => interactable.CanInteract).ToList();
+			
+			if (availableInteractables.Count > 0)
 			{
-				foreach (IInteractable interactable in interactables)
+				foreach (IInteractable interactable in availableInteractables)
 				{
 					interactable.Interact();
 				}

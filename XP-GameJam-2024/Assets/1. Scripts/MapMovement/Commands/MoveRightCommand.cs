@@ -23,7 +23,7 @@ namespace MapMovement.Commands
 			int forwardDirectionIndex = -1;
 
 			float highestSignedAngle = 0;
-			float lowestUnsignedAngle = MoveForwardCommand.FORWARD_ANGLE_THRESHOLD;
+			float lowestUnsignedAngle = MoveUpCommand.FORWARD_ANGLE_THRESHOLD;
 
 			Vector3 currentNodePosition = currentNode.transform.position;
 

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using Gameplay.DirectionsSystem.NPCs;
 using Gameplay.InteractSystem.Player;
 using Input.Enum;
@@ -14,7 +15,7 @@ namespace Input
 	{
 		[SerializeField]
 		private InputActionReference specialInteractInput;
-		
+
 		private PlayerInteract playerInteract;
 
 		private void Awake()
@@ -24,13 +25,13 @@ namespace Input
 
 		private void OnEnable()
 		{
-			specialInteractInput.action.performed  += SwitchToNormalInput;
+			specialInteractInput.action.performed           += SwitchToNormalInput;
 			playerInteract.OnInteractWithDirectionReceivers += SwitchToSpecialInput;
 		}
 
 		private void OnDisable()
 		{
-			specialInteractInput.action.performed  -= SwitchToNormalInput;
+			specialInteractInput.action.performed           -= SwitchToNormalInput;
 			playerInteract.OnInteractWithDirectionReceivers -= SwitchToSpecialInput;
 		}
 
@@ -38,7 +39,7 @@ namespace Input
 		{
 			SwitchToNormalInput();
 		}
-		
+
 		private static void SwitchToNormalInput()
 		{
 			InputControllerManager.Instance.ChangeControls(ControlType.Overworld);
@@ -47,7 +48,7 @@ namespace Input
 
 		private static void SwitchToSpecialInput(List<DirectionsReceiver> villagers)
 		{
-			InputControllerManager.Instance.ChangeControls(ControlType.Special);
+			InputControllerManager.Instance.ChangeControls(ControlType.Special); // The input used for giving directions
 			EventManager.RaiseEvent(new SwitchToSpecialInputEvent());
 		}
 	}

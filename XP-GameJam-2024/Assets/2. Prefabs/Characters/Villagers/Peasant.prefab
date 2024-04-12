@@ -332,6 +332,7 @@ GameObject:
   - component: {fileID: 347039413086227410}
   - component: {fileID: -8796389342310124591}
   - component: {fileID: 5067015785519606977}
+  - component: {fileID: -5306724338247183006}
   m_Layer: 7
   m_Name: Peasant
   m_TagString: Untagged
@@ -574,6 +575,18 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
+--- !u!114 &-5306724338247183006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4802565420961918426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf20cf94a71542e8993f56b73f38862e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4806259208403598361
 GameObject:
   m_ObjectHideFlags: 0

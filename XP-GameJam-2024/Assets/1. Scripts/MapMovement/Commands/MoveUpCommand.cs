@@ -7,7 +7,7 @@ using VDFramework.Extensions;
 
 namespace MapMovement.Commands
 {
-	public class MoveForwardCommand : AbstractMoveCommand
+	public class MoveUpCommand : AbstractMoveCommand
 	{
 		public const float FORWARD_ANGLE_THRESHOLD = 45;
 
@@ -61,7 +61,7 @@ namespace MapMovement.Commands
 
 		public static AbstractMoveCommand NewInstance()
 		{
-			return new MoveForwardCommand();
+			return new MoveUpCommand();
 		}
 	}
 }

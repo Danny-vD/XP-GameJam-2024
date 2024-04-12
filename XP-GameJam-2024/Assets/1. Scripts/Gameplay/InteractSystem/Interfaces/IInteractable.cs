@@ -6,6 +6,8 @@ namespace Gameplay.InteractSystem.Interfaces
 	{
 		event Action OnInteract;
 
+		bool CanInteract { get; }
+
 		void Interact();
 	}
 }

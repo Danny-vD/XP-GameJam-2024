@@ -1516,6 +1516,7 @@ GameObject:
   m_Component:
   - component: {fileID: 134421897}
   - component: {fileID: 134421896}
+  - component: {fileID: 134421898}
   m_Layer: 0
   m_Name: Music parameter setter
   m_TagString: Untagged
@@ -1551,6 +1552,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &134421898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 134421895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b604c7ca58d4043999c0891ac077834, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &144631145
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1642,6 +1655,14 @@ PrefabInstance:
     - target: {fileID: 7170980734845445717, guid: 5ee1dd19a96224b1b89e46076d812b4a, type: 3}
       propertyPath: m_Name
       value: UI Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 8699530956119849873, guid: 5ee1dd19a96224b1b89e46076d812b4a, type: 3}
+      propertyPath: minutes
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8699530956119849873, guid: 5ee1dd19a96224b1b89e46076d812b4a, type: 3}
+      propertyPath: seconds
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2378,8 +2399,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camera1: {fileID: 2098681850457998498}
   camera2: {fileID: 2031152827}
-  overworldInteract: {fileID: -4836520122060725153, guid: 4bebb9c2fac873845b09705e10d39ed3, type: 3}
-  specialInteract: {fileID: 4551063502819420570, guid: 4bebb9c2fac873845b09705e10d39ed3, type: 3}
 --- !u!4 &397137568
 Transform:
   m_ObjectHideFlags: 0
@@ -4423,7 +4442,8 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 99610776}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7928701055381529396, guid: 701d38f1223f9b442a1d0619443a6863, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -8163,6 +8183,51 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.50000006
   m_Center: {x: 0.000000232063, y: 0.21133336, z: 0.000000004399534}
+--- !u!1 &1505737546
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1505737547}
+  - component: {fileID: 1505737548}
+  m_Layer: 0
+  m_Name: Timescale Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1505737547
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1505737546}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 14.093285, y: -155.89807, z: 83.9993}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1505737548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1505737546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e7fbb010be84e3da4ba0832156778ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slowedTimeScale: 0.2
 --- !u!1 &1509923291
 GameObject:
   m_ObjectHideFlags: 0
@@ -12448,3 +12513,4 @@ SceneRoots:
   - {fileID: 1890823383}
   - {fileID: 134421897}
   - {fileID: 397137568}
+  - {fileID: 1505737547}

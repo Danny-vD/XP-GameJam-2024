@@ -60,8 +60,8 @@ namespace MapMovement.NPCs
 
 			commandByVector = new Dictionary<Vector2, Func<AbstractMoveCommand>>
 			{
-				{ Vector2.down, MoveBackwardsCommand.NewInstance },
-				{ Vector2.up, MoveForwardCommand.NewInstance },
+				{ Vector2.down, MoveDownCommand.NewInstance },
+				{ Vector2.up, MoveUpCommand.NewInstance },
 				{ Vector2.left, MoveLeftCommand.NewInstance },
 				{ Vector2.right, MoveRightCommand.NewInstance },
 			};

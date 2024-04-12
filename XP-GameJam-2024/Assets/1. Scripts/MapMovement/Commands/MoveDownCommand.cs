@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace MapMovement.Commands
 {
-	public class MoveBackwardsCommand : AbstractMoveCommand
+	public class MoveDownCommand : AbstractMoveCommand
 	{
 		public override Intersection GetNextNode(Intersection currentNode) => currentNode.GetConnectingIntersection(Direction.Down);
 
@@ -16,7 +16,7 @@ namespace MapMovement.Commands
 
 		public static AbstractMoveCommand NewInstance()
 		{
-			return new MoveBackwardsCommand();
+			return new MoveDownCommand();
 		}
 	}
 }
