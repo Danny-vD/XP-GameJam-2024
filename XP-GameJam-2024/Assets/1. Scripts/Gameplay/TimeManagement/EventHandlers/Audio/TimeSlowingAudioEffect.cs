@@ -1,5 +1,4 @@
-﻿using System;
-using FMODUtilityPackage.Core;
+﻿using FMODUtilityPackage.Core;
 using FMODUtilityPackage.Enums;
 using Gameplay.TimeManagement.Events;
 using VDFramework;

@@ -1,5 +1,4 @@
-﻿using System;
-using Gameplay.TimeManagement.Events;
+﻿using Gameplay.TimeManagement.Events;
 using Input.Events;
 using UnityEngine;
 using VDFramework;

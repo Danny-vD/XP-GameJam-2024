@@ -1656,14 +1656,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI Canvas
       objectReference: {fileID: 0}
-    - target: {fileID: 8699530956119849873, guid: 5ee1dd19a96224b1b89e46076d812b4a, type: 3}
-      propertyPath: minutes
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8699530956119849873, guid: 5ee1dd19a96224b1b89e46076d812b4a, type: 3}
-      propertyPath: seconds
-      value: 50
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
