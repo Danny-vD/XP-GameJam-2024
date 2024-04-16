@@ -4,7 +4,7 @@ namespace FMODUtilityPackage.Enums
 	{
 		Master = 0, // Master bus, do not delete!
 		//Ambient,
-		//Music,
-		//SFX,
+		Music,
+		SFX,
 	}
 }

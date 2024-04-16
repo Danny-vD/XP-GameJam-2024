@@ -1363,8 +1363,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputActionAsset: {fileID: -944628639613478452, guid: 4bebb9c2fac873845b09705e10d39ed3, type: 3}
-  specialInteraction: {fileID: 4551063502819420570, guid: 4bebb9c2fac873845b09705e10d39ed3, type: 3}
-  overworldInteraction: {fileID: 7743625893090000019, guid: 4bebb9c2fac873845b09705e10d39ed3, type: 3}
 --- !u!4 &301936653
 Transform:
   m_ObjectHideFlags: 0
@@ -3397,6 +3395,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1073190846}
   - component: {fileID: 1073190847}
+  - component: {fileID: 1073190848}
   m_Layer: 5
   m_Name: Audio Slider
   m_TagString: Untagged
@@ -3478,6 +3477,20 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1073190848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1073190845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d341e139b78a3c94cbef40b7800f828b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioBus: 2
+  minMaxVolume: {x: 0, y: 1}
 --- !u!1 &1073676752
 GameObject:
   m_ObjectHideFlags: 0
@@ -5120,9 +5133,21 @@ MonoBehaviour:
           Data3: 544706989
           Data4: -891269118
         Path: event:/Sound Effects/NPCs/windMill
+    - key: 25
+      value:
+        Guid:
+          Data1: 0
+          Data2: 0
+          Data3: 0
+          Data4: 0
+        Path: 
     buses:
     - key: 0
       value: bus:/
+    - key: 1
+      value: bus:/Music
+    - key: 2
+      value: bus:/SFX
     emitterEvents:
     - key: 0
       value: 1
@@ -5130,6 +5155,12 @@ MonoBehaviour:
       value: 2
   initialVolumes:
   - key: 0
+    value: 1
+    isMuted: 0
+  - key: 1
+    value: 1
+    isMuted: 0
+  - key: 2
     value: 1
     isMuted: 0
 --- !u!1 &1689110510
@@ -5214,6 +5245,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1714648945}
   - component: {fileID: 1714648946}
+  - component: {fileID: 1714648947}
   m_Layer: 5
   m_Name: Music Slider
   m_TagString: Untagged
@@ -5295,6 +5327,20 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1714648947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1714648944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d341e139b78a3c94cbef40b7800f828b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioBus: 1
+  minMaxVolume: {x: 0, y: 1}
 --- !u!1 &1749396900
 GameObject:
   m_ObjectHideFlags: 0
