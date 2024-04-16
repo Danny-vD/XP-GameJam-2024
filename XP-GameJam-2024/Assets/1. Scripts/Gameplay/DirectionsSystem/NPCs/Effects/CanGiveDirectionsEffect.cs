@@ -84,11 +84,6 @@ namespace Gameplay.DirectionsSystem.NPCs.Effects
 			objectToEnable.SetActive(false);
 		}
 
-		private void DisableEffects(Queue<AbstractMoveCommand> _)
-		{
-			DisableEffects();
-		}
-
 		private void OnDestroy()
 		{
 			villagerController.OnMovementStopped -= EnableEffectsIfPossible;
