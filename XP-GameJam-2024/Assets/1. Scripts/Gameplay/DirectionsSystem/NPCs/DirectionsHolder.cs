@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using MapMovement.Commands.Interface;
+using MapMovement.Commands.Interfaces;
 using UnityEngine;
 using VDFramework;
 
@@ -27,9 +27,19 @@ namespace Gameplay.DirectionsSystem.NPCs
 			directionsReceiver.OnDirectionsReceived -= SetDirections;
 		}
 
+		public bool TryGetNextDirection(out AbstractMoveCommand moveCommand)
+		{
+			return KnownDirections.TryDequeue(out moveCommand);
+		}
+
+		public void ClearAllDirections()
+		{
+			KnownDirections.Clear();
+		}
+
 		private void SetDirections(Queue<AbstractMoveCommand> directions)
 		{
-			KnownDirections = directions;
+			KnownDirections = new Queue<AbstractMoveCommand>(directions);
 		}
 	}
 }

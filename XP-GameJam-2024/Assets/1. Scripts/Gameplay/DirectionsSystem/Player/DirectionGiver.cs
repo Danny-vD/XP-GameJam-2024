@@ -4,7 +4,7 @@ using System.Linq;
 using Gameplay.DirectionsSystem.NPCs;
 using Gameplay.DirectionsSystem.Utility;
 using Gameplay.InteractSystem.Player;
-using MapMovement.Commands.Interface;
+using MapMovement.Commands.Interfaces;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using VDFramework;
@@ -54,6 +54,11 @@ namespace Gameplay.DirectionsSystem.Player
 
 		private void SendDirections(InputAction.CallbackContext callbackContext)
 		{
+			if (directions.Count == 0)
+			{
+				return;
+			}
+			
 			foreach (DirectionsReceiver directionsReceiver in directionsReceivers.Where(directionsReceiver => directionsReceiver.CanReceiveDirections))
 			{
 				directionsReceiver.SetDirections(directions);

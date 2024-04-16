@@ -484,7 +484,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59c7fa50add54422b6d9882d11c92390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  specialMovementInput: {fileID: -5256565308647169393, guid: 4bebb9c2fac873845b09705e10d39ed3, type: 3}
+  specialMovementInput: {fileID: 7743625893090000019, guid: 4bebb9c2fac873845b09705e10d39ed3, type: 3}
   specialInteractInput: {fileID: 4551063502819420570, guid: 4bebb9c2fac873845b09705e10d39ed3, type: 3}
 --- !u!114 &4658667028366675139
 MonoBehaviour:

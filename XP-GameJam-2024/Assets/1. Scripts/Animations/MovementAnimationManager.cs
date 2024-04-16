@@ -1,4 +1,5 @@
 ﻿using MapMovement;
+using MapMovement.Interfaces;
 using UnityEngine;
 using VDFramework;
 
@@ -22,13 +23,13 @@ namespace Animations
 		private void OnEnable()
 		{
 			actorMover.OnMovementStart += StartMoving;
-			actorMover.OnEnterIdle += StopMoving;
+			actorMover.OnMovementStopped += StopMoving;
 		}
 
 		private void OnDisable()
 		{
 			actorMover.OnMovementStart -= StartMoving;
-			actorMover.OnEnterIdle   -= StopMoving;
+			actorMover.OnMovementStopped   -= StopMoving;
 		}
 
 		private void StartMoving()

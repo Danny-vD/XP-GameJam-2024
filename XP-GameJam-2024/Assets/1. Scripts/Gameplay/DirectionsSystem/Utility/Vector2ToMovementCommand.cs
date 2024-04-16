@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using MapMovement.Commands;
-using MapMovement.Commands.Interface;
+using MapMovement.Commands.Interfaces;
 using UnityEngine;
 
 namespace Gameplay.DirectionsSystem.Utility
