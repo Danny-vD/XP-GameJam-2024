@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using VDFramework;
 
-namespace MapMovement
+namespace MapMovement.Player
 {
 	public class PlayerMovement : BetterMonoBehaviour, IActorMover
 	{

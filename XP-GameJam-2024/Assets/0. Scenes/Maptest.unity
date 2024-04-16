@@ -8736,6 +8736,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7493069970591329785, guid: fb1da4140fb31b34bb4bac4aa30ab116, type: 3}
       propertyPath: directionalConnections.serializedDictionary.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7493069970591329785, guid: fb1da4140fb31b34bb4bac4aa30ab116, type: 3}
+      propertyPath: directionalConnections.serializedDictionary.Array.data[3].key
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7493069970591329785, guid: fb1da4140fb31b34bb4bac4aa30ab116, type: 3}
@@ -8748,6 +8752,10 @@ PrefabInstance:
       objectReference: {fileID: 29745922}
     - target: {fileID: 7493069970591329785, guid: fb1da4140fb31b34bb4bac4aa30ab116, type: 3}
       propertyPath: directionalConnections.serializedDictionary.Array.data[2].value
+      value: 
+      objectReference: {fileID: 2091651061}
+    - target: {fileID: 7493069970591329785, guid: fb1da4140fb31b34bb4bac4aa30ab116, type: 3}
+      propertyPath: directionalConnections.serializedDictionary.Array.data[3].value
       value: 
       objectReference: {fileID: 2091651061}
     - target: {fileID: 8929965266714390052, guid: fb1da4140fb31b34bb4bac4aa30ab116, type: 3}
