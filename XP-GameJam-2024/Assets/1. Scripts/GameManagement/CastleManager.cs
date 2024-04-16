@@ -16,10 +16,8 @@ namespace GameManagement
 		{
 			if (!other.gameObject.layer.Equals(layer)) return;
 
-			AudioPlayer.PlayOneShot2D(AudioEventType.Sound_Effects_NPCs_Cheer);
-			Destroy(other.gameObject);
-
-			EventManager.RaiseEvent(new VillagerSavedEvent(other.GetComponent<Villager>()));
+			Villager villager = other.GetComponent<Villager>();
+			villager.Save();
 		}
 	}
 }

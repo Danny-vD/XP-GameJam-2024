@@ -12,7 +12,20 @@ namespace GameManagement
 	public class Villager : BetterMonoBehaviour
 	{
 		public event Action OnDeath;
+		public event Action OnSave;
 
+		public void Save()
+		{
+			Destroy(gameObject);
+			
+			EventManager.RaiseEvent(new VillagerSavedEvent(this));
+
+			AudioPlayer.PlayOneShot2D(AudioEventType.Sound_Effects_NPCs_Cheer);
+			
+			OnSave?.Invoke();
+			OnSave = null;
+		}
+		
 		public void Kill()
 		{
 			Destroy(gameObject);
