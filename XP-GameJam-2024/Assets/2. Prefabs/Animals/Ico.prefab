@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 3312861285638608839}
   - component: {fileID: 468309202905642664}
   - component: {fileID: 6641262916280517375}
+  - component: {fileID: -5655487439809497128}
+  - component: {fileID: -3186393014825901460}
   m_Layer: 0
   m_Name: Ico
   m_TagString: Untagged
@@ -110,6 +112,31 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
+--- !u!114 &-5655487439809497128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2810390580432136600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efd4ec9f11e44f69b499737e00e3f186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-3186393014825901460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2810390580432136600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdd3900cbb86457bb3add6297813cea3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  villagerToFollowAtStart: {fileID: 0}
 --- !u!1 &5342299782613497528
 GameObject:
   m_ObjectHideFlags: 0

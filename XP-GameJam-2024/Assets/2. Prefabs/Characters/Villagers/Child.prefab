@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 4895683240706189656}
   - component: {fileID: 7044801901195868378}
   - component: {fileID: -959052139762717169}
+  - component: {fileID: 652812585824671850}
   m_Layer: 0
   m_Name: Child
   m_TagString: Untagged
@@ -360,6 +361,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efd4ec9f11e44f69b499737e00e3f186, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &652812585824671850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1758250998038586010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdd3900cbb86457bb3add6297813cea3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  villagerToFollowAtStart: {fileID: 0}
 --- !u!1 &4162158258923607002
 GameObject:
   m_ObjectHideFlags: 0

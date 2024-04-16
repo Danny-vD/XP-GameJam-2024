@@ -253,6 +253,7 @@ GameObject:
   - component: {fileID: -8890241413866737584}
   - component: {fileID: -8090510020798895039}
   - component: {fileID: -4132266197403309944}
+  - component: {fileID: 1827771706468643148}
   m_Layer: 7
   m_Name: Donkey Cart
   m_TagString: Untagged
@@ -450,6 +451,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efd4ec9f11e44f69b499737e00e3f186, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1827771706468643148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4554990559485615155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdd3900cbb86457bb3add6297813cea3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  villagerToFollowAtStart: {fileID: 0}
 --- !u!1 &6613219167918700274
 GameObject:
   m_ObjectHideFlags: 0
