@@ -98,6 +98,7 @@ namespace MapMovement.NPCs
 			do
 			{
 				navMeshAgentManager.SetDestination(followTargetVillager.CachedTransform.position);
+				navMeshAgentManager.Start();
 				yield return null;
 			} while (IsFollowing);
 		}
