@@ -26,7 +26,9 @@ namespace Gameplay.DirectionsSystem.Waypoints
 
 		public bool TryGetConnectingIntersection(Direction direction, out AbstractWayPoint wayPoint)
 		{
-			return directionalConnections.TryGetValue(direction, out wayPoint);
+			bool success = directionalConnections.TryGetValue(direction, out wayPoint);
+
+			return success && !ReferenceEquals(wayPoint, null);
 		}
 	}
 }
