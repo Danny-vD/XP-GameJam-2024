@@ -141,6 +141,7 @@ GameObject:
   - component: {fileID: -5568503817029272995}
   - component: {fileID: -3533194202911057445}
   - component: {fileID: 1847353878670541164}
+  - component: {fileID: -2541220314845782045}
   m_Layer: 7
   m_Name: Shepherd
   m_TagString: Untagged
@@ -427,6 +428,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efd4ec9f11e44f69b499737e00e3f186, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-2541220314845782045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2044242680034005892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54d6628d73e14dda8862a7c43a072026, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  persistInPlayMode: 1
 --- !u!1 &2461998075688525328
 GameObject:
   m_ObjectHideFlags: 0
