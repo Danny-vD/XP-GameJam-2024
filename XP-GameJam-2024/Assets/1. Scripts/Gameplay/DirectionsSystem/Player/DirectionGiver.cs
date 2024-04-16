@@ -54,6 +54,11 @@ namespace Gameplay.DirectionsSystem.Player
 
 		private void SendDirections(InputAction.CallbackContext callbackContext)
 		{
+			if (directions.Count == 0)
+			{
+				return;
+			}
+			
 			foreach (DirectionsReceiver directionsReceiver in directionsReceivers.Where(directionsReceiver => directionsReceiver.CanReceiveDirections))
 			{
 				directionsReceiver.SetDirections(directions);

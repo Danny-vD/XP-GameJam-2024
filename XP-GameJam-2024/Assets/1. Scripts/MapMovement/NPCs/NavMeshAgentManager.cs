@@ -28,7 +28,7 @@ namespace MapMovement.NPCs
 
 		private void LateUpdate()
 		{
-			if (DistanceToTarget <= 0)
+			if (IsMoving && DistanceToTarget <= 0)
 			{
 				agent.isStopped = true;
 
@@ -36,13 +36,17 @@ namespace MapMovement.NPCs
 				OnMovementStopped.Invoke();
 			}
 		}
-		
+
 		public bool SetDestination(Vector3 destination)
 		{
 			if (agent.SetDestination(destination))
 			{
 				OnDestinationSet.Invoke();
-				OnMovementStarted.Invoke();
+
+				if (!agent.isStopped)
+				{
+					OnMovementStarted.Invoke();
+				}
 
 				distanceAtStart = (destination - agent.nextPosition).magnitude;
 				return true;
@@ -57,10 +61,14 @@ namespace MapMovement.NPCs
 			OnMovementStopped.Invoke();
 		}
 
-		public void Resume()
+		public void Start()
 		{
 			agent.isStopped = false;
-			OnMovementStarted.Invoke();
+
+			if (agent.hasPath)
+			{
+				OnMovementStarted.Invoke();
+			}
 		}
 	}
 }

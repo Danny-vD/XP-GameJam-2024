@@ -1,12 +1,9 @@
-using MapMovement.Waypoints;
-using UnityEngine;
+using Gameplay.DirectionsSystem.Waypoints;
 
 namespace MapMovement.Commands.Interface
 {
     public abstract class AbstractMoveCommand
     {
-        public abstract Intersection GetNextNode(Intersection currentNode);
-        
-        public abstract Intersection CalculateNextNode(Intersection currentNode, Intersection previousNode, Transform transform, Vector3 movementDirection);
+        public abstract bool TryGetNextNode(Intersection currentNode, out AbstractWayPoint nextPoint);
     }
 }

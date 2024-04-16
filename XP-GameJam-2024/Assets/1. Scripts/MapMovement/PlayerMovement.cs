@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using MapMovement.Interfaces;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using VDFramework;
@@ -9,7 +10,7 @@ namespace MapMovement
 	public class PlayerMovement : BetterMonoBehaviour, IActorMover
 	{
 		public event Action OnMovementStart = delegate { };
-		public event Action OnEnterIdle = delegate { };
+		public event Action OnMovementStopped = delegate { };
 
 		[SerializeField]
 		[Tooltip("The speed of the player in m/s")]
@@ -56,7 +57,7 @@ namespace MapMovement
 		{
 			isMoving = false;
 
-			OnEnterIdle.Invoke();
+			OnMovementStopped.Invoke();
 		}
 
 		private IEnumerator MovePlayer()

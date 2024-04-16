@@ -1,17 +1,14 @@
+using Gameplay.DirectionsSystem.Waypoints;
 using MapMovement.Commands.Interface;
 using MapMovement.Enums;
-using MapMovement.Waypoints;
-using UnityEngine;
 
 namespace MapMovement.Commands
 {
 	public class MoveDownCommand : AbstractMoveCommand
 	{
-		public override Intersection GetNextNode(Intersection currentNode) => currentNode.GetConnectingIntersection(Direction.Down);
-
-		public override Intersection CalculateNextNode(Intersection currentNode, Intersection previousNode, Transform transform, Vector3 movementDirection)
+		public override bool TryGetNextNode(Intersection currentNode, out AbstractWayPoint nextPoint)
 		{
-			return previousNode;
+			return currentNode.TryGetConnectingIntersection(Direction.Down, out nextPoint);
 		}
 
 		public static AbstractMoveCommand NewInstance()

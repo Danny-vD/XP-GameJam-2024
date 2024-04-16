@@ -27,9 +27,19 @@ namespace Gameplay.DirectionsSystem.NPCs
 			directionsReceiver.OnDirectionsReceived -= SetDirections;
 		}
 
+		public bool TryGetNextDirection(out AbstractMoveCommand moveCommand)
+		{
+			return KnownDirections.TryDequeue(out moveCommand);
+		}
+
+		public void ClearAllDirections()
+		{
+			KnownDirections.Clear();
+		}
+
 		private void SetDirections(Queue<AbstractMoveCommand> directions)
 		{
-			KnownDirections = directions;
+			KnownDirections = new Queue<AbstractMoveCommand>(directions);
 		}
 	}
 }
