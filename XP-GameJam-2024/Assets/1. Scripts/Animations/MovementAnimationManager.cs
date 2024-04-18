@@ -1,5 +1,4 @@
-﻿using MapMovement;
-using MapMovement.Interfaces;
+﻿using MapMovement.Interfaces;
 using UnityEngine;
 using VDFramework;
 

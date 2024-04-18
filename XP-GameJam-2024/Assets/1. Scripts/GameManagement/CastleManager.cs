@@ -1,9 +1,5 @@
-using FMODUtilityPackage.Core;
-using FMODUtilityPackage.Enums;
-using GameManagement.Events;
 using UnityEngine;
 using VDFramework;
-using VDFramework.EventSystem;
 
 namespace GameManagement
 {

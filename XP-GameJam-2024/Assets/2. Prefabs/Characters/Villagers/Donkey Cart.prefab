@@ -250,12 +250,12 @@ GameObject:
   - component: {fileID: 618461149530732730}
   - component: {fileID: 350003268982266208}
   - component: {fileID: 4474150292154457346}
-  - component: {fileID: -8890241413866737584}
   - component: {fileID: -8090510020798895039}
   - component: {fileID: -4132266197403309944}
   - component: {fileID: 1827771706468643148}
   - component: {fileID: 1215891849608347786}
   - component: {fileID: 8540413035851999176}
+  - component: {fileID: 5996978272982225773}
   m_Layer: 7
   m_Name: Donkey Cart
   m_TagString: Untagged
@@ -398,37 +398,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3.030947, y: 2, z: 2.2659073}
   m_Center: {x: 3.1069727, y: 0, z: 0.04127979}
---- !u!114 &-8890241413866737584
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4554990559485615155}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: 
-  EventReference:
-    Guid:
-      Data1: 1397364655
-      Data2: 1141441975
-      Data3: 2058823815
-      Data4: 1505980527
-    Path: event:/Sound Effects/NPCs/donkeyCart
-  Event: 
-  PlayEvent: 1
-  StopEvent: 0
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  AllowNonRigidbodyDoppler: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!114 &-8090510020798895039
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -506,6 +475,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   persistInPlayMode: 1
+--- !u!114 &5996978272982225773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4554990559485615155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9efaf6ecf7b450caf1a2b012274a855, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioEventToPlay: 23
 --- !u!1 &6613219167918700274
 GameObject:
   m_ObjectHideFlags: 0
