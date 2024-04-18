@@ -197,6 +197,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "RemoveLastDirection",
+                    "type": "Button",
+                    "id": "e419d428-523e-4093-beae-26791d7010d4",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -265,6 +274,17 @@
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "1094fc3e-b121-4173-ac3f-bc94af2538bf",
+                    "path": "<Keyboard>/shift",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RemoveLastDirection",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }

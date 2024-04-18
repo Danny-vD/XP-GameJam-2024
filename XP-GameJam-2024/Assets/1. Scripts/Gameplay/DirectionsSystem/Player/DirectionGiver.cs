@@ -11,21 +11,19 @@ using VDFramework;
 
 namespace Gameplay.DirectionsSystem.Player
 {
-	/*
-	 * Listen to player interact, filter out the villagers
-	 *
-	 * Use special movement to set directions
-	 * sent to the villagers upon receiving special interact
-	 */
 	public class DirectionGiver : BetterMonoBehaviour
 	{
-		public event Action<AbstractMoveCommand> OnMovementAdded = delegate { };
+		public event Action<AbstractMoveCommand> OnDirectionAdded = delegate { };
+		public event Action<AbstractMoveCommand> OnDirectionRemoved = delegate { };
 
 		[SerializeField]
 		private InputActionReference specialMovementInput;
 
 		[SerializeField]
 		private InputActionReference specialInteractInput;
+
+		[SerializeField]
+		private InputActionReference removeLastDirectionInput;
 
 		private List<DirectionsReceiver> directionsReceivers;
 
@@ -42,8 +40,9 @@ namespace Gameplay.DirectionsSystem.Player
 		{
 			playerInteract.OnInteractWithDirectionReceivers += SetDirectionReceivers;
 
-			specialMovementInput.action.performed += AddDirection;
-			specialInteractInput.action.performed += SendDirections;
+			specialMovementInput.action.performed     += AddDirection;
+			removeLastDirectionInput.action.performed += RemoveLastDirection;
+			specialInteractInput.action.performed     += SendDirections;
 		}
 
 		private void SetDirectionReceivers(List<DirectionsReceiver> directionsReceiversParam)
@@ -58,7 +57,7 @@ namespace Gameplay.DirectionsSystem.Player
 			{
 				return;
 			}
-			
+
 			foreach (DirectionsReceiver directionsReceiver in directionsReceivers.Where(directionsReceiver => directionsReceiver.CanReceiveDirections))
 			{
 				directionsReceiver.SetDirections(directions);
@@ -72,7 +71,15 @@ namespace Gameplay.DirectionsSystem.Player
 			if (Vector2ToMovementCommand.TryGetCommand(direction, out AbstractMoveCommand moveCommand))
 			{
 				directions.Enqueue(moveCommand);
-				OnMovementAdded.Invoke(moveCommand);
+				OnDirectionAdded.Invoke(moveCommand);
+			}
+		}
+
+		private void RemoveLastDirection(InputAction.CallbackContext callbackContext)
+		{
+			if (directions.TryDequeue(out AbstractMoveCommand moveCommand))
+			{
+				OnDirectionRemoved.Invoke(moveCommand);
 			}
 		}
 	}
